@@ -23,6 +23,9 @@ import org.junit.Test;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AxiomType;
 import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
+import org.semanticweb.owlapi.model.OWLAnnotationPropertyDomainAxiom;
+import org.semanticweb.owlapi.model.OWLAnnotationPropertyRangeAxiom;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLDataFactory;
@@ -53,11 +56,13 @@ public class OWLAPITest {
 	OWLReasonerFactory reasonerFactory = null;
 	OWLReasoner reasoner = null;
 	OWLOntologyManager ontManager;
-
+	OWLClass cls;
+	
 	@Before
 	public void init() throws OWLOntologyCreationException, IOException {
 		ontManager = OWLManager.createOWLOntologyManager();
 		ontology = ontManager.loadOntologyFromOntologyDocument(new URL(ONT_URL).openStream());
+		cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
 		//localOntology= ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
 		reasonerFactory = new JFactFactory();
 		reasoner = reasonerFactory.createReasoner(ontology);
@@ -105,10 +110,8 @@ public class OWLAPITest {
 	}
 	@Test
 	public void listInstances() {
-		//to get individuals we need a reasoner. Will be use Jfactç
 		
-//		OWLClass cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
-		OWLClass cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"));
+		//to get individuals we need a reasoner. Will be use Jfactç
 		for (Node<OWLNamedIndividual> instance : reasoner.getInstances(cls, true)) {
 			System.out.println(instance);
 		}
@@ -117,7 +120,7 @@ public class OWLAPITest {
 	
 	@Test
 	public void listPropertiesOfClass() {
-		OWLClass cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"));
+		
 		for (OWLDataPropertyRangeAxiom element : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {	
 			System.out.println(element);
 
@@ -125,20 +128,28 @@ public class OWLAPITest {
 	}
 	@Test
 	public void listObjectPropertiesForClass() {
-		
+
 		//of all classes
 		for (OWLObjectPropertyDomainAxiom element : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
 			System.out.println(element);
 		}
-		
-		OWLClass cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"));
-		//of a certain class
+
+		//of a certain class 
+		OWLClass clase =ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun"));
 		for (OWLObjectPropertyDomainAxiom element : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
-			System.out.println(element);
-			if(element.getDomain().equals(cls)) {
+
+			if(element.getDomain().equals(clase)) {
 				System.out.println(element);				
 			}
 		}
+	}
+	
+	@Test
+	public void annotations() {
+		for (OWLAnnotationAssertionAxiom element: ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION)) {
+			System.out.println(element);
+		}
+		
 	}
 
 	@Test
@@ -146,8 +157,6 @@ public class OWLAPITest {
 		OWLOntology ontology;
 		OWLClass c;
 		OWLNamedIndividual v;
-
-
 	}
 
 }
