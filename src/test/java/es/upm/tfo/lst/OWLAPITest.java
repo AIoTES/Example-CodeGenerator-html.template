@@ -56,13 +56,11 @@ public class OWLAPITest {
 	OWLReasonerFactory reasonerFactory = null;
 	OWLReasoner reasoner = null;
 	OWLOntologyManager ontManager;
-	OWLClass cls;
 	
 	@Before
 	public void init() throws OWLOntologyCreationException, IOException {
 		ontManager = OWLManager.createOWLOntologyManager();
 		ontology = ontManager.loadOntologyFromOntologyDocument(new URL(ONT_URL).openStream());
-		cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
 		//localOntology= ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
 		reasonerFactory = new JFactFactory();
 		reasoner = reasonerFactory.createReasoner(ontology);
@@ -111,7 +109,8 @@ public class OWLAPITest {
 	@Test
 	public void listInstances() {
 		
-		//to get individuals we need a reasoner. Will be use Jfactç
+		//to get individuals we need a reasoner. Will be use Jfact
+		OWLClass cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
 		for (Node<OWLNamedIndividual> instance : reasoner.getInstances(cls, true)) {
 			System.out.println(instance);
 		}
