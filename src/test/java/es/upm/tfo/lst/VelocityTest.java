@@ -17,19 +17,22 @@ package es.upm.tfo.lst;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
+import org.apache.velocity.runtime.resource.loader.URLResourceLoader;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
  * Tests showcasing the basics of Velocity Template Language
  * @author amedrano
+ * http://velocity.apache.org/engine/2.0/translations/user-guide_es.html#Set
  *
- * @see <a href=http://velocity.apache.org/engine/1.7/user-guide.html>Velocity user guide</a>
+ * @see <a href=http://velocity.apache.org/engine/2.0/translations/user-guide_es.html>Velocity user guide</a>
  */
 public class VelocityTest {
 	
@@ -45,8 +48,10 @@ public class VelocityTest {
 			this.context = new VelocityContext();
 			this.engine = new VelocityEngine();
 			this.props = new Properties();
+			props.put("file.resource.loader.path", "src/test/resources/");	
+			this.engine.init(this.props);
 			this.template = engine.getTemplate("ifStatementTemplate.vm");
-			props.put("file.resource.loader.path", "src/test/resources/");
+
 			this.writer = new FileWriter(new File("target/output.txt"));
 			context.put("key1", "code generator");
 			context.put("key2", "velocity test");
@@ -64,8 +69,9 @@ public class VelocityTest {
 	
 	
 	@Test
-	public void ifStatementTest() {
+	public void ifStatementTest() throws IOException {
 		this.template.merge(context, writer);
+		this.writer.close();
 	}
 	
 	@Test
@@ -81,6 +87,10 @@ public class VelocityTest {
 	@Test
 	public void importExistentTemplate() {
 		
+	}
+	
+	@Test
+	public void usingContextContentTest() {
 		
 	}
 

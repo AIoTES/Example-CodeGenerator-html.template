@@ -1,1 +1,11 @@
-asd
+#set($examplevar = "example")
+
+#if($examplevar == "example")
+	the variable's value match
+#end
+
+#if($examplevar == "error")
+	the variable's value match
+#else
+	the variable's value dont match
+#end
