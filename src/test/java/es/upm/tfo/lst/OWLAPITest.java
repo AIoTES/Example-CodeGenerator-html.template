@@ -136,10 +136,10 @@ public class OWLAPITest {
 		//of a certain class 
 		OWLClass clase =ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun"));
 		for (OWLObjectPropertyDomainAxiom element : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
-
-			if(element.getDomain().equals(clase)) {
-				System.out.println(element);				
-			}
+				System.out.println(element);
+//			if(element.getDomain().equals(clase)) {
+//				System.out.println(element);				
+//			}
 		}
 	}
 	
