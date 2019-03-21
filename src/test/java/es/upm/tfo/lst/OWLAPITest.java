@@ -35,6 +35,7 @@ import org.semanticweb.owlapi.model.OWLDataPropertyDomainAxiom;
 import org.semanticweb.owlapi.model.OWLDataPropertyRangeAxiom;
 import org.semanticweb.owlapi.model.OWLDatatype;
 import org.semanticweb.owlapi.model.OWLDatatypeDefinitionAxiom;
+import org.semanticweb.owlapi.model.OWLDeclarationAxiom;
 import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLEquivalentDataPropertiesAxiom;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
@@ -80,7 +81,9 @@ public class OWLAPITest {
 			System.out.println("DATA_PROPERTY_DOMAIN "+ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN).size());
 			System.out.println("DATA_PROPERTY_RANGE "+ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
 			System.out.println("DATATYPE_DEFINITION "+ontology.getAxioms(AxiomType.DATATYPE_DEFINITION).size());
-
+			System.out.println("ANNOTATION_PROPERTY_DOMAIN "+ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_DOMAIN).size());
+			System.out.println("ANNOTATION_PROPERTY_RANGE "+ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_RANGE).size());
+			System.out.println("ANNOTATION_ASSERTION "+ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION).size());
 		} catch (Exception e) {
 			e.printStackTrace();
 
@@ -94,15 +97,24 @@ public class OWLAPITest {
 			System.out.println(a);
 		}
 	}
-
+	@Test
 	public void listClasses() {
+		for (OWLAxiom a : ontology.getAxioms()) {
+			if (a.isOfType(AxiomType.DECLARATION)  && ((OWLDeclarationAxiom) a).getEntity().isOWLClass()) {
+			OWLClass cls = (OWLClass)a.getClassesInSignature().toArray()[0];
+					System.out.println(cls.getIRI().getFragment());
+			}
 
+		}
+		
 	}
+	@Test
 
 	public void listInstances() {
 
 	}
-
+	
+	@Test
 	public void listPropertiesForClass() {
 		OWLClass cls = (OWLClass) ontology.getClassesInSignature().toArray()[3];
 
