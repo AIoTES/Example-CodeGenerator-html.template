@@ -1,0 +1,625 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#"
+     xml:base="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string">
+        <rdfs:comment>timestamp of starting</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#auc -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#auc">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#audio_file -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#audio_file">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Filename of audio file</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#bips -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#bips">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#body -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#body">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#cohort -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#cohort">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Cohort in study ( Experimental or Control )</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#completeness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#completeness">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#decision_reason -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#decision_reason">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#difficulty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#difficulty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#dificulty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#dificulty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#directions_errors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#directions_errors">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#duration">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#education -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#education">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#errors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#errors">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#exit_reason -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#exit_reason">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>reason for exit</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#exp_status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#exp_status">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Experimental Status (Relutado, Activo, Abandono, Completado)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#gender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#hits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#hits">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#iid -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#iid">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#iot_slot -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#iot_slot">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#iss -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#iss">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#lat">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#level">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#line_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#line_id">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#living_cond -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#living_cond">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#living_env -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#living_env">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#living_status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#living_status">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#long -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#long">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#max_rt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#max_rt">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#mean_rt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#mean_rt">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#mess -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#mess">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#min_rt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#min_rt">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#moves -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#moves">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#p_end -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#p_end">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#p_start -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#p_start">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#password -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#password">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#phase -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#phase">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#practice_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#practice_type">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#priority -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#priority">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#project_phase -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#project_phase">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Project phase</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#reply_adress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#reply_adress">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#results -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#results">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#role -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#role">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#scope -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#scope">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sid -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sid">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#solved -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#solved">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#start -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#start">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#status">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#status_practice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#status_practice">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#std_rt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#std_rt">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#taps -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#taps">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#taps_errors -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#taps_errors">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#target_group -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#target_group">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#tech_level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#tech_level">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#timeouts -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#timeouts">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#ts_enter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#ts_enter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Timestamp of starting</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#ts_exit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#ts_exit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Timestamp of ending</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#uid -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#uid">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#username -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#username">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#week -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#week">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Week of the session</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#who_decided -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#who_decided">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#workig_status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#workig_status">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#year_birth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#year_birth">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#incidence_details"/>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#sociodemo_details"/>
+    
+
+
+    <!-- http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#user -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/eduardo/ontologies/2019/1/untitled-ontology-76#user"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
