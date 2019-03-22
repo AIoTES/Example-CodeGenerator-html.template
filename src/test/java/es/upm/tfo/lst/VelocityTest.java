@@ -50,48 +50,51 @@ public class VelocityTest {
 			this.props = new Properties();
 			props.put("file.resource.loader.path", "src/test/resources/");	
 			this.engine.init(this.props);
-			this.template = engine.getTemplate("ifStatementTemplate.vm");
-
 			this.writer = new FileWriter(new File("target/output.txt"));
+			String [] arrayOfMonths = {"January","February","March","April","May"};
 			context.put("key1", "code generator");
 			context.put("key2", "velocity test");
-			context.put("key 3", "universidad politecnica de maidrid");
+			context.put("key3", "universidad politecnica de maidrid");
 			context.put("key4", "java projects");
 			context.put("key5", "how to use velocity");
 			context.put("key6", "Madrid, Spain");
 			context.put("key7", "Maven Projects");
+			context.put("arrayOfMonths", arrayOfMonths);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		
 	}
-	
+	@Test
+	public void variablesTest() {
+		//TODO ver directamente la plantilla de velocity?
+	}
 	
 	@Test
 	public void ifStatementTest() throws IOException {
+		this.template = engine.getTemplate("ifStatementTemplate.vm");
 		this.template.merge(context, writer);
 		this.writer.close();
 	}
 	
 	@Test
-	public void macroTest() {
-		
+	public void macroTest() throws IOException{
+		this.template = engine.getTemplate("macroTest.vm");
+		this.template.merge(context, writer);
+		this.writer.close();
 	}
-	
-	@Test
-	public void variablesTest() {
-		
-	}
-	
+
 	@Test
 	public void importExistentTemplate() {
 		
 	}
 	
 	@Test
-	public void usingContextContentTest() {
-		
+	public void usingContextContentTest() throws IOException{
+		this.template = engine.getTemplate("contextContent.vm");
+		this.template.merge(context, writer);
+		this.writer.close();
 	}
 
 }

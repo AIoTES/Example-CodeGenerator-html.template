@@ -1,11 +1,29 @@
 #set($examplevar = "example")
+Defining and initializing a variable:
+#[[#set($examplevar = "example")]]#
 
-#if($examplevar == "example")
+Testing the if statement: 
+
+#[[#if($examplevar == "example")
 	the variable's value match
+#end]]#
+result:
+#if($examplevar == "example")
+	the variable's value match? true
 #end
 
-#if($examplevar == "error")
+Testing the if-else statement:
+
+#[[#if($examplevar == "someTestText")
 	the variable's value match
 #else
-	the variable's value dont match
+	the variable's value don't match
+#end]]#
+result:
+#if($examplevar == "someTestText")
+	the variable's value match
+#else
+	the variable's value don't match
 #end
+
+
