@@ -41,7 +41,6 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 
 import uk.ac.manchester.cs.jfact.JFactFactory;
 
-
 /**
  * @author amedrano
  *
@@ -50,7 +49,7 @@ public class OWLAPITest {
 
 	private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
 
-	OWLOntology ontology,localOntology;
+	OWLOntology ontology, localOntology;
 	OWLReasonerFactory reasonerFactory = null;
 	OWLReasoner reasoner = null;
 	OWLOntologyManager ontManager;
@@ -59,7 +58,8 @@ public class OWLAPITest {
 	public void init() throws OWLOntologyCreationException, IOException {
 		ontManager = OWLManager.createOWLOntologyManager();
 		ontology = ontManager.loadOntologyFromOntologyDocument(new URL(ONT_URL).openStream());
-		//localOntology= ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
+		// localOntology=
+		// ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
 		reasonerFactory = new JFactFactory();
 		reasoner = reasonerFactory.createReasoner(ontology);
 	}
@@ -69,17 +69,20 @@ public class OWLAPITest {
 
 		try {
 			System.out.println(ontology.getOntologyID().getOntologyIRI().get());
-			System.out.println("getClassesInSignature() "+ontology.getClassesInSignature().size());
-			System.out.println("getDataPropertiesInSignature() "+ontology.getDataPropertiesInSignature().size());
-			System.out.println("getDatatypesInSignature() "+ontology.getDatatypesInSignature().size());
-			System.out.println("getAxioms "+ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
-			System.out.println("DATA_PROPERTY_ASSERTION "+ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION).size());
-			System.out.println("DATA_PROPERTY_DOMAIN "+ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN).size());
-			System.out.println("DATA_PROPERTY_RANGE "+ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
-			System.out.println("DATATYPE_DEFINITION "+ontology.getAxioms(AxiomType.DATATYPE_DEFINITION).size());
-			System.out.println("ANNOTATION_PROPERTY_DOMAIN "+ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_DOMAIN).size());
-			System.out.println("ANNOTATION_PROPERTY_RANGE "+ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_RANGE).size());
-			System.out.println("ANNOTATION_ASSERTION "+ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION).size());
+			System.out.println("getClassesInSignature() " + ontology.getClassesInSignature().size());
+			System.out.println("getDataPropertiesInSignature() " + ontology.getDataPropertiesInSignature().size());
+			System.out.println("getDatatypesInSignature() " + ontology.getDatatypesInSignature().size());
+			System.out.println("getAxioms " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
+			System.out
+					.println("DATA_PROPERTY_ASSERTION " + ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION).size());
+			System.out.println("DATA_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN).size());
+			System.out.println("DATA_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
+			System.out.println("DATATYPE_DEFINITION " + ontology.getAxioms(AxiomType.DATATYPE_DEFINITION).size());
+			System.out.println(
+					"ANNOTATION_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_DOMAIN).size());
+			System.out.println(
+					"ANNOTATION_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_RANGE).size());
+			System.out.println("ANNOTATION_ASSERTION " + ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION).size());
 		} catch (Exception e) {
 			e.printStackTrace();
 
@@ -91,23 +94,23 @@ public class OWLAPITest {
 	public void ontologyAxioms() {
 		for (OWLAxiom a : ontology.getAxioms()) {
 			if (a.isOfType(AxiomType.SUBCLASS_OF)) {
-			System.out.println(a);
+				System.out.println(a);
+			}
 		}
-	}
 	}
 
 	@Test
 	public void ontologyAnnotations() {
 		for (OWLAnnotation a : ontology.getAnnotations()) {
-				System.out.println(a);
+			System.out.println(a);
 		}
 	}
 
 	@Test
 	public void ontologyClassDeclarations() {
 		for (OWLAxiom a : ontology.getAxioms()) {
-			if (a.isOfType(AxiomType.DECLARATION)  && ((OWLDeclarationAxiom) a).getEntity().isOWLClass()) {
-				OWLClass cls = (OWLClass)((OWLDeclarationAxiom) a).getEntity();
+			if (a.isOfType(AxiomType.DECLARATION) && ((OWLDeclarationAxiom) a).getEntity().isOWLClass()) {
+				OWLClass cls = (OWLClass) ((OWLDeclarationAxiom) a).getEntity();
 				System.out.println(cls.getIRI().getFragment());
 			}
 		}
@@ -122,14 +125,15 @@ public class OWLAPITest {
 
 	@Test
 	public void listInstances() {
-		//to get individuals we need a reasoner. Will be use Jfact
+		// to get individuals we need a reasoner. Will be use Jfact
 //		OWLClass cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
 //		for (Node<OWLNamedIndividual> instance : reasoner.getInstances(cls, true)) {
 //			System.out.println(instance);
 //		}
-		// it is not necesary to have a reasoner if we just want to list all instances, independently of their class.
+		// it is not necesary to have a reasoner if we just want to list all instances,
+		// independently of their class.
 		for (OWLAxiom a : ontology.getAxioms()) {
-			if (a.isOfType(AxiomType.DECLARATION)  && ((OWLDeclarationAxiom) a).getEntity().isOWLNamedIndividual()) {
+			if (a.isOfType(AxiomType.DECLARATION) && ((OWLDeclarationAxiom) a).getEntity().isOWLNamedIndividual()) {
 				OWLNamedIndividual namedI = (OWLNamedIndividual) ((OWLDeclarationAxiom) a).getEntity();
 				System.out.println(namedI.getIRI().getFragment());
 			}
@@ -139,11 +143,11 @@ public class OWLAPITest {
 	@Test
 	public void listAllEnumerations() {
 		for (OWLAxiom a : ontology.getAxioms()) {
-			if(a.isOfType(AxiomType.EQUIVALENT_CLASSES))
-				for ( OWLClassExpression ce : ((OWLEquivalentClassesAxiom)a).getClassExpressions()) {
+			if (a.isOfType(AxiomType.EQUIVALENT_CLASSES))
+				for (OWLClassExpression ce : ((OWLEquivalentClassesAxiom) a).getClassExpressions()) {
 					if (ce instanceof OWLObjectOneOf) {
-						//https://stackoverflow.com/questions/3087083/velocity-test-instanceof
-						Set<OWLIndividual> ind = ((OWLObjectOneOf)ce).getIndividuals();
+						// https://stackoverflow.com/questions/3087083/velocity-test-instanceof
+						Set<OWLIndividual> ind = ((OWLObjectOneOf) ce).getIndividuals();
 						System.out.println(a);
 						for (OWLIndividual i : ind) {
 							System.out.println("\t" + i.toStringID());
@@ -155,11 +159,10 @@ public class OWLAPITest {
 
 	@Test
 	public void assertionAnnotations() {
-		for (OWLAnnotationAssertionAxiom element: ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION)) {
+		for (OWLAnnotationAssertionAxiom element : ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION)) {
 			System.out.println(element);
 		}
 
 	}
 
 }
-
