@@ -114,6 +114,11 @@ public class OWLAPITest {
 		for (Node<OWLNamedIndividual> instance : reasoner.getInstances(cls, true)) {
 			System.out.println(instance);
 		}
+		
+		//get instances without using a reasoner
+		for (OWLNamedIndividual individual: this.ontology.getIndividualsInSignature()) {
+			System.out.println("individual "+individual.getIRI().getFragment());
+		}
 
 	}
 	
