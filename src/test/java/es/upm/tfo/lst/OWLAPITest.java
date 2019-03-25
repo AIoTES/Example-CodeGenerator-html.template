@@ -39,6 +39,9 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 
+import com.github.jsonldjava.core.RDFDataset.IRI;
+import com.github.jsonldjava.core.RDFDataset.Node;
+
 import uk.ac.manchester.cs.jfact.JFactFactory;
 
 /**
@@ -115,23 +118,21 @@ public class OWLAPITest {
 			}
 		}
 	}
-<<<<<<< HEAD
 	@Test
 	public void listInstances() {
 		
 		//to get individuals we need a reasoner. Will be use Jfact
-		OWLClass cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
-		for (Node<OWLNamedIndividual> instance : reasoner.getInstances(cls, true)) {
-			System.out.println(instance);
-		}
+//		OWLClass cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
+//		for (org.semanticweb.owlapi.reasoner.Node<OWLNamedIndividual> instance : reasoner.getInstances(cls, true)) {
+//			System.out.println(instance);
+//		}
 		
 		//get instances without using a reasoner
 		for (OWLNamedIndividual individual: this.ontology.getIndividualsInSignature()) {
 			System.out.println("individual "+individual.getIRI().getFragment());
 		}
-=======
->>>>>>> bb5197699d792c4f667030ae47c7f6c663cdfbdd
 
+	}
 	@Test
 	public void listClasses() {
 		for (OWLClass cls : ontology.getClassesInSignature()) {
@@ -139,22 +140,7 @@ public class OWLAPITest {
 		}
 	}
 
-	@Test
-	public void listInstances() {
-		// to get individuals we need a reasoner. Will be use Jfact
-//		OWLClass cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
-//		for (Node<OWLNamedIndividual> instance : reasoner.getInstances(cls, true)) {
-//			System.out.println(instance);
-//		}
-		// it is not necesary to have a reasoner if we just want to list all instances,
-		// independently of their class.
-		for (OWLAxiom a : ontology.getAxioms()) {
-			if (a.isOfType(AxiomType.DECLARATION) && ((OWLDeclarationAxiom) a).getEntity().isOWLNamedIndividual()) {
-				OWLNamedIndividual namedI = (OWLNamedIndividual) ((OWLDeclarationAxiom) a).getEntity();
-				System.out.println(namedI.getIRI().getFragment());
-			}
-		}
-	}
+
 
 	@Test
 	public void listAllEnumerations() {
