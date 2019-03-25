@@ -1,11 +1,11 @@
 In this template will be use the data putted into VelocityContext outside, in java code
 
-Access to variables...
+Access to variables passed into VelocityContext in Java code...
 
-can use #[[$key1]]# to get the value -> $key1 | or use #[[${key1}]]# to get value -> ${key1}
-can use #[[$key2]]# to get the value -> $key2 | or use #[[${key2}]]# to get value -> ${key2}
-can use #[[$key3]]# to get the value -> $key3 | or use #[[${key3}]]# to get value -> ${key3}
-can use #[[$key4]]# to get the value -> $key4 | or use #[[${key4}]]# to get value -> ${key4}
-can use #[[$key5]]# to get the value -> $key5 | or use #[[${key5}]]# to get value -> ${key5}
-can use #[[$key6]]# to get the value -> $key6 | or use #[[${key6}]]# to get value -> ${key6}
-can use #[[$key7]]# to get the value -> $key7 | or use #[[${key7}]]# to get value -> ${key7}
+${key1}
+${key2}
+${key3}
+${key4}
+${key5}
+${key6}
+${key7}
