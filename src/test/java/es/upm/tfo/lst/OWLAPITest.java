@@ -31,6 +31,7 @@ import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLDeclarationAxiom;
 import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
+import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLObjectOneOf;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -92,17 +93,21 @@ public class OWLAPITest {
 
 	@Test
 	public void ontologyAxioms() {
-		for (OWLAxiom a : ontology.getAxioms()) {
-			if (a.isOfType(AxiomType.SUBCLASS_OF)) {
+		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
 				System.out.println(a);
-			}
+		}
+
+		for (OWLAxiom a : AxiomType.getAxiomsWithoutTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
+				System.out.println(a);
 		}
 	}
 
 	@Test
 	public void ontologyAnnotations() {
 		for (OWLAnnotation a : ontology.getAnnotations()) {
-			System.out.println(a);
+			//System.out.println(a);
+			System.out.println(a.getProperty().getIRI());
+			System.out.println(((OWLLiteral) a.getValue()).getLiteral());
 		}
 	}
 
@@ -163,6 +168,14 @@ public class OWLAPITest {
 			System.out.println(element);
 		}
 
+	}
+
+	@Test
+	public void listAxioms4Classe() {
+		OWLClass cls = (OWLClass) ontology.getClassesInSignature().toArray()[3];
+		for (OWLAxiom a : ontology.getAxioms(cls)) {
+			System.out.println(a);
+		}
 	}
 
 }
