@@ -27,35 +27,21 @@ $item
 
 Calling a local macro without any parameter
 
-#[[#macro(BasicMacro)
-content to be printed
-#end]]#
 
 #BasicMacro()
 
 Calling a local macro with one parameter
-#[[#macro(SimpleMacro $value)
-content to be printed
-#end]]#
+
 #SimpleMacro($exampleVariable)
 
 Calling a local macro with three parameters
 
-#[[#macro(SimpleMacroMultipmeParameters $value $parameter $reference)
-content to be printed: ${value}
-content to be printed: $parameter
-content to be printed: $reference
-#end]]#
+
 
 #SimpleMacroMultipmeParameters( $exampleVariable $testVariable $velocityExample)
 
 Calling a local macro with one array as parameter
 note: the array used into this example is put into VelocityContext at the moment to merge the template with the context. See the java code
-#[[#macro(MacroArray $array)
-#foreach($item in $array)
-$item
-#end
-#end]]#
+
 
 #MacroArray($arrayOfMonths)
-

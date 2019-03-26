@@ -28,17 +28,26 @@ import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
+import org.semanticweb.owlapi.model.OWLDataPropertyAssertionAxiom;
+import org.semanticweb.owlapi.model.OWLDataPropertyDomainAxiom;
+import org.semanticweb.owlapi.model.OWLDataPropertyRangeAxiom;
 import org.semanticweb.owlapi.model.OWLDeclarationAxiom;
 import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLObjectOneOf;
+import org.semanticweb.owlapi.model.OWLObjectPropertyAssertionAxiom;
+import org.semanticweb.owlapi.model.OWLObjectPropertyDomainAxiom;
+import org.semanticweb.owlapi.model.OWLObjectPropertyRangeAxiom;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
+
+import com.github.jsonldjava.core.RDFDataset.IRI;
+import com.github.jsonldjava.core.RDFDataset.Node;
 
 import uk.ac.manchester.cs.jfact.JFactFactory;
 
@@ -113,14 +122,32 @@ public class OWLAPITest {
 
 	@Test
 	public void ontologyClassDeclarations() {
+		System.out.println("ontology.getAxioms()");
+		
 		for (OWLAxiom a : ontology.getAxioms()) {
 			if (a.isOfType(AxiomType.DECLARATION) && ((OWLDeclarationAxiom) a).getEntity().isOWLClass()) {
 				OWLClass cls = (OWLClass) ((OWLDeclarationAxiom) a).getEntity();
 				System.out.println(cls.getIRI().getFragment());
 			}
 		}
+		
+		
+//		System.out.println("\n ontology.getAxioms(AxiomType.DECLARATION) \n");
+//		
+//		for (OWLDeclarationAxiom declarations: ontology.getAxioms(AxiomType.DECLARATION)) {
+//			OWLClass cls = (OWLClass) ((OWLDeclarationAxiom) declarations).getEntity();
+//			System.out.println(cls.getIRI().getFragment());	
+//		}
 	}
+	@Test
+	public void listInstances() {
+		//get instances without using a reasoner
+		for (OWLNamedIndividual individual: this.ontology.getIndividualsInSignature()) {
+			System.out.println("individual "+individual.getIRI().getFragment());
+		}
+		
 
+	}
 	@Test
 	public void listClasses() {
 		for (OWLClass cls : ontology.getClassesInSignature()) {
@@ -129,20 +156,41 @@ public class OWLAPITest {
 	}
 
 	@Test
-	public void listInstances() {
-		// to get individuals we need a reasoner. Will be use Jfact
-//		OWLClass cls = ontManager.getOWLDataFactory().getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
-//		for (Node<OWLNamedIndividual> instance : reasoner.getInstances(cls, true)) {
-//			System.out.println(instance);
-//		}
-		// it is not necesary to have a reasoner if we just want to list all instances,
-		// independently of their class.
-		for (OWLAxiom a : ontology.getAxioms()) {
-			if (a.isOfType(AxiomType.DECLARATION) && ((OWLDeclarationAxiom) a).getEntity().isOWLNamedIndividual()) {
-				OWLNamedIndividual namedI = (OWLNamedIndividual) ((OWLDeclarationAxiom) a).getEntity();
-				System.out.println(namedI.getIRI().getFragment());
-			}
+	public void getDataPropertiesTest() {
+		
+		for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
+			System.out.println("DATA_PROPERTY_DOMAIN "+item);
 		}
+		System.out.println("------");
+		for (OWLDataPropertyAssertionAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION)) {
+			System.out.println("DATA_PROPERTY_ASSERTION "+item);
+		}
+		System.out.println("------");
+		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
+			System.out.println("DATA_PROPERTY_RANGE "+item);
+		}
+
+		
+	
+	
+	
+	}
+	
+	@Test
+	public void getObjectPropertiesTest() {
+		System.out.println("------");
+		for (OWLObjectPropertyDomainAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
+			System.out.println("OBJECT_PROPERTY_DOMAIN "+item);
+		}
+		System.out.println("------");
+		for (OWLObjectPropertyAssertionAxiom item: ontology.getAxioms(AxiomType.OBJECT_PROPERTY_ASSERTION)) {
+			System.out.println("OBJECT_PROPERTY_ASSERTION "+item);
+		}
+		System.out.println("------");
+		for (OWLObjectPropertyRangeAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_RANGE)) {
+			System.out.println("OBJECT_PROPERTY_RANGE "+item);
+		}
+	
 	}
 
 	@Test
