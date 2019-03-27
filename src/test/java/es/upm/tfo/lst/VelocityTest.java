@@ -81,7 +81,6 @@ public class VelocityTest {
 		writer.flush();
 		System.err.flush();
 		System.err.println("================= End of " + name.getMethodName() + " =================");
-
 	}
 
 	@Test

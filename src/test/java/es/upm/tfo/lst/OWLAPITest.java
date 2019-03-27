@@ -16,14 +16,9 @@
 package es.upm.tfo.lst;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.URL;
-import java.util.Date;
-import java.util.Properties;
 import java.util.Set;
 
-import org.apache.velocity.VelocityContext;
-import org.apache.velocity.app.VelocityEngine;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -54,9 +49,6 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
-
-import com.github.jsonldjava.core.RDFDataset.IRI;
-import com.github.jsonldjava.core.RDFDataset.Node;
 
 import uk.ac.manchester.cs.jfact.JFactFactory;
 
