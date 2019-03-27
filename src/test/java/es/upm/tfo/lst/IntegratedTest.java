@@ -59,7 +59,6 @@ public class IntegratedTest {
 	public void init() throws OWLOntologyCreationException, IOException {
 		ontManager = OWLManager.createOWLOntologyManager();
 		this.ontology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
-		this.context = new VelocityContext();
 		this.engine = new VelocityEngine();
 		this.props = new Properties();
 		props.put("file.resource.loader.path", "src/test/resources/");	
@@ -74,10 +73,12 @@ public class IntegratedTest {
 		try {
 			OWLDataFactory manager = ontManager.getOWLDataFactory();
 			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#American"));
+			this.context = new VelocityContext();
 			this.context.put("class", cls);
 			this.context.put("ontology", this.ontology);
 			this.context.put("Date", new Date());
 			this.writer = new FileWriter(new File("target/class.java"));
+			//aqui para cambiar el .vm y probar otras templates 
 			this.template = engine.getTemplate("/uAAl/Class.java.vm");
 			this.template.merge(context, writer);
 			this.writer.close();
