@@ -15,10 +15,76 @@
  ******************************************************************************/
 package es.upm.tfo.lst;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Date;
+import java.util.Properties;
+
+import org.apache.velocity.Template;
+import org.apache.velocity.VelocityContext;
+import org.apache.velocity.app.VelocityEngine;
+import org.junit.Before;
+import org.junit.Test;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.reasoner.OWLReasoner;
+import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
+
+import uk.ac.manchester.cs.jfact.JFactFactory;
+
 /**
  * @author amedrano
  *
  */
 public class IntegratedTest {
+	
+	
+	OWLOntology ontology=null;
+	OWLReasonerFactory reasonerFactory = null;
+	OWLOntologyManager ontManager=null;
+	VelocityContext context=null;
+	Template template = null;
+	VelocityEngine engine = null;
+	Properties props = null;
+	FileWriter writer = null;
+	
+	@Before
+	public void init() throws OWLOntologyCreationException, IOException {
+		ontManager = OWLManager.createOWLOntologyManager();
+		this.ontology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
+		this.context = new VelocityContext();
+		this.engine = new VelocityEngine();
+		this.props = new Properties();
+		props.put("file.resource.loader.path", "src/test/resources/");	
+		this.engine.init(this.props);
+		this.writer = new FileWriter(new File("target/output.txt"));
+	}
+	
+	
+	@Test
+	public void classAccessTest() {
+		//aplicar la template de clases para este caso
+		try {
+			OWLDataFactory manager = ontManager.getOWLDataFactory();
+			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#American"));
+			this.context.put("class", cls);
+			this.context.put("ontology", this.ontology);
+			this.context.put("Date", new Date());
+			this.writer = new FileWriter(new File("target/class.java"));
+			this.template = engine.getTemplate("/uAAl/Class.java.vm");
+			this.template.merge(context, writer);
+			this.writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 
 }
