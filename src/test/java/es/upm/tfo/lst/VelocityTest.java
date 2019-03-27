@@ -67,6 +67,8 @@ public class VelocityTest {
 			context.put("key7", "Maven Projects");
 			context.put("arrayOfMonths", arrayOfMonths);
 			context.put("date", new Date());
+			System.err.flush();
+			System.out.flush();
 			System.err.println("");
 			System.err.println("================ Start of " + name.getMethodName() + " ================");
 		} catch (Exception e) {
@@ -77,12 +79,8 @@ public class VelocityTest {
 	@After
 	public void end() {
 		System.out.flush();
+		System.err.flush();
 		System.err.println("================= End of " + name.getMethodName() + " =================");
-	}
-
-	@Test
-	public void variablesTest() {
-		//TODO ver directamente la plantilla de velocity?
 	}
 
 	@Test
