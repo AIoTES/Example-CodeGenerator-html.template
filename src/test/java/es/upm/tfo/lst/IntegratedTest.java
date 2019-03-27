@@ -24,6 +24,7 @@ import java.util.Properties;
 
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
+import org.apache.velocity.app.FieldMethodizer;
 import org.apache.velocity.app.VelocityEngine;
 import org.junit.Before;
 import org.junit.Test;
@@ -45,7 +46,7 @@ import uk.ac.manchester.cs.jfact.JFactFactory;
  */
 public class IntegratedTest {
 	
-	
+	private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
 	OWLOntology ontology=null;
 	OWLReasonerFactory reasonerFactory = null;
 	OWLOntologyManager ontManager=null;
@@ -58,7 +59,8 @@ public class IntegratedTest {
 	@Before
 	public void init() throws OWLOntologyCreationException, IOException {
 		ontManager = OWLManager.createOWLOntologyManager();
-		this.ontology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
+		//this.ontology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
+		this.ontology = ontManager.loadOntologyFromOntologyDocument(new URL(ONT_URL).openStream());
 		this.engine = new VelocityEngine();
 		this.props = new Properties();
 		props.put("file.resource.loader.path", "src/test/resources/");	
@@ -72,11 +74,12 @@ public class IntegratedTest {
 		//aplicar la template de clases para este caso
 		try {
 			OWLDataFactory manager = ontManager.getOWLDataFactory();
-			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#American"));
+			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
 			this.context = new VelocityContext();
 			this.context.put("class", cls);
 			this.context.put("ontology", this.ontology);
 			this.context.put("Date", new Date());
+			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
 			this.writer = new FileWriter(new File("target/class.java"));
 			//aqui para cambiar el .vm y probar otras templates 
 			this.template = engine.getTemplate("/uAAl/Class.java.vm");
@@ -85,6 +88,26 @@ public class IntegratedTest {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void ontologyTest() {
+		try {
+			OWLDataFactory manager = ontManager.getOWLDataFactory();
+			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
+			this.context = new VelocityContext();
+			this.context.put("ontology", this.ontology);
+			this.context.put("Date", new Date());
+			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
+			this.writer = new FileWriter(new File("target/ontology.java"));
+			//aqui para cambiar el .vm y probar otras templates 
+			this.template = engine.getTemplate("/uAAl/Ontology.java.vm");
+			this.template.merge(context, writer);
+			this.writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 
