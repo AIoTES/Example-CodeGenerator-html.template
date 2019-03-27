@@ -19,8 +19,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Set;
 
+import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestName;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AxiomType;
 import org.semanticweb.owlapi.model.OWLAnnotation;
@@ -46,9 +50,6 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 
-import com.github.jsonldjava.core.RDFDataset.IRI;
-import com.github.jsonldjava.core.RDFDataset.Node;
-
 import uk.ac.manchester.cs.jfact.JFactFactory;
 
 /**
@@ -59,19 +60,37 @@ public class OWLAPITest {
 
 	private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
 
-	OWLOntology ontology, localOntology;
-	OWLReasonerFactory reasonerFactory = null;
-	OWLReasoner reasoner = null;
-	OWLOntologyManager ontManager;
+	static OWLOntology ontology, localOntology;
+	static OWLReasonerFactory reasonerFactory = null;
+	static OWLReasoner reasoner = null;
+	static OWLOntologyManager ontManager;
 
-	@Before
-	public void init() throws OWLOntologyCreationException, IOException {
+    @Rule public TestName name = new TestName();
+
+	@BeforeClass
+	static public void init() throws OWLOntologyCreationException, IOException {
 		ontManager = OWLManager.createOWLOntologyManager();
 		ontology = ontManager.loadOntologyFromOntologyDocument(new URL(ONT_URL).openStream());
 		// localOntology=
 		// ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
 		reasonerFactory = new JFactFactory();
 		reasoner = reasonerFactory.createReasoner(ontology);
+	}
+
+	@Before
+	public void start() {
+		System.err.flush();
+		System.out.flush();
+		System.err.println("");
+		System.err.println("================ Start of " + name.getMethodName() + " ================");
+
+	}
+
+	@After
+	public void end() {
+		System.out.flush();
+		System.err.flush();
+		System.err.println("================= End of " + name.getMethodName() + " =================");
 	}
 
 	@Test
@@ -123,20 +142,20 @@ public class OWLAPITest {
 	@Test
 	public void ontologyClassDeclarations() {
 		System.out.println("ontology.getAxioms()");
-		
+
 		for (OWLAxiom a : ontology.getAxioms()) {
 			if (a.isOfType(AxiomType.DECLARATION) && ((OWLDeclarationAxiom) a).getEntity().isOWLClass()) {
 				OWLClass cls = (OWLClass) ((OWLDeclarationAxiom) a).getEntity();
 				System.out.println(cls.getIRI().getFragment());
 			}
 		}
-		
-		
+
+
 //		System.out.println("\n ontology.getAxioms(AxiomType.DECLARATION) \n");
-//		
+//
 //		for (OWLDeclarationAxiom declarations: ontology.getAxioms(AxiomType.DECLARATION)) {
 //			OWLClass cls = (OWLClass) ((OWLDeclarationAxiom) declarations).getEntity();
-//			System.out.println(cls.getIRI().getFragment());	
+//			System.out.println(cls.getIRI().getFragment());
 //		}
 	}
 	@Test
@@ -145,7 +164,7 @@ public class OWLAPITest {
 		for (OWLNamedIndividual individual: this.ontology.getIndividualsInSignature()) {
 			System.out.println("individual "+individual.getIRI().getFragment());
 		}
-		
+
 
 	}
 	@Test
@@ -157,7 +176,7 @@ public class OWLAPITest {
 
 	@Test
 	public void getDataPropertiesTest() {
-		
+
 		for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
 			System.out.println("DATA_PROPERTY_DOMAIN "+item);
 		}
@@ -170,12 +189,12 @@ public class OWLAPITest {
 			System.out.println("DATA_PROPERTY_RANGE "+item);
 		}
 
-		
-	
-	
-	
+
+
+
+
 	}
-	
+
 	@Test
 	public void getObjectPropertiesTest() {
 		System.out.println("------");
@@ -190,7 +209,7 @@ public class OWLAPITest {
 		for (OWLObjectPropertyRangeAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_RANGE)) {
 			System.out.println("OBJECT_PROPERTY_RANGE "+item);
 		}
-	
+
 	}
 
 	@Test

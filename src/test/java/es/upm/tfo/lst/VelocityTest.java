@@ -15,17 +15,20 @@
  ******************************************************************************/
 package es.upm.tfo.lst;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Writer;
+import java.util.Date;
 import java.util.Properties;
 
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
-import org.apache.velocity.runtime.resource.loader.URLResourceLoader;
+import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestName;
 
 /**
  * Tests showcasing the basics of Velocity Template Language
@@ -35,22 +38,25 @@ import org.junit.Test;
  * @see <a href=http://velocity.apache.org/engine/2.0/translations/user-guide_es.html>Velocity user guide</a>
  */
 public class VelocityTest {
-	
+
 	VelocityContext context=null;
 	Template template = null;
 	VelocityEngine engine = null;
 	Properties props = null;
-	FileWriter writer = null;
-	
+	Writer writer = null;
+
+    @Rule public TestName name = new TestName();
+
 	@Before
 	public void init() {
 		try {
 			this.context = new VelocityContext();
 			this.engine = new VelocityEngine();
 			this.props = new Properties();
-			props.put("file.resource.loader.path", "src/test/resources/");	
+			props.put("file.resource.loader.path", "src/test/resources/");
 			this.engine.init(this.props);
-			this.writer = new FileWriter(new File("target/output.txt"));
+//			this.writer = new FileWriter(new File("target/output.txt"));
+			this.writer = new PrintWriter(System.out);;
 			String [] arrayOfMonths = {"January","February","March","April","May"};
 			context.put("key1", "code generator");
 			context.put("key2", "velocity test");
@@ -60,56 +66,44 @@ public class VelocityTest {
 			context.put("key6", "Madrid, Spain");
 			context.put("key7", "Maven Projects");
 			context.put("arrayOfMonths", arrayOfMonths);
+			context.put("date", new Date());
+			System.err.flush();
+			writer.flush();
+			System.err.println("");
+			System.err.println("================ Start of " + name.getMethodName() + " ================");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
-	@Test
-	public void VelocityTricks() {
-		try {
-			this.template = engine.getTemplate("/uAAl/Class.java.vm");
-			this.template.merge(context, writer);
-			this.writer.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-			
-		}
-	
-		
+
+	@After
+	public void end() throws IOException {
+		writer.flush();
+		System.err.flush();
+		System.err.println("================= End of " + name.getMethodName() + " =================");
 	}
-	
-	
-	@Test
-	public void variablesTest() {
-		//TODO ver directamente la plantilla de velocity?
-	}
-	
+
 	@Test
 	public void ifStatementTest() throws IOException {
 		this.template = engine.getTemplate("ifStatementTemplate.vm");
 		this.template.merge(context, writer);
-		this.writer.close();
 	}
-	
+
 	@Test
 	public void macroTest() throws IOException{
 		this.template = engine.getTemplate("macroTest.vm");
 		this.template.merge(context, writer);
-		this.writer.close();
 	}
 
 	@Test
 	public void importExistentTemplate() {
-		
+
 	}
-	
+
 	@Test
 	public void usingContextContentTest() throws IOException{
 		this.template = engine.getTemplate("contextContent.vm");
 		this.template.merge(context, writer);
-		this.writer.close();
 	}
 
 }
