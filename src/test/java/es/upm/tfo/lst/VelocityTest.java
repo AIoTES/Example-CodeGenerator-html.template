@@ -68,7 +68,7 @@ public class VelocityTest {
 			context.put("arrayOfMonths", arrayOfMonths);
 			context.put("date", new Date());
 			System.err.flush();
-			System.out.flush();
+			writer.flush();
 			System.err.println("");
 			System.err.println("================ Start of " + name.getMethodName() + " ================");
 		} catch (Exception e) {
@@ -77,24 +77,23 @@ public class VelocityTest {
 	}
 
 	@After
-	public void end() {
-		System.out.flush();
+	public void end() throws IOException {
+		writer.flush();
 		System.err.flush();
 		System.err.println("================= End of " + name.getMethodName() + " =================");
+
 	}
 
 	@Test
 	public void ifStatementTest() throws IOException {
 		this.template = engine.getTemplate("ifStatementTemplate.vm");
 		this.template.merge(context, writer);
-		this.writer.close();
 	}
 
 	@Test
 	public void macroTest() throws IOException{
 		this.template = engine.getTemplate("macroTest.vm");
 		this.template.merge(context, writer);
-		this.writer.close();
 	}
 
 	@Test
@@ -106,7 +105,6 @@ public class VelocityTest {
 	public void usingContextContentTest() throws IOException{
 		this.template = engine.getTemplate("contextContent.vm");
 		this.template.merge(context, writer);
-		this.writer.close();
 	}
 
 }

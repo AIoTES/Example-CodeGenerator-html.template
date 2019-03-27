@@ -5,43 +5,39 @@ Declarating some variables...
 #[[#set($exampleVariable="example variable content")
 #set($testVariable="testVariable content")
 #set($velocityExample="velocityExample data")]]#
+##
 #macro(BasicMacro)
 text printed into basic macro, without variables or logic
 #end
-
+##
 #macro(SimpleMacro $value)
 text printed into simple macro, printing a variable given as parameter: ${value}
 #end
-
+##
 #macro(SimpleMacroMultipmeParameters $value $parameter $reference)
 text printed into simple macro, printing a variable given as parameter: ${value}
 text printed into simple macro, printing a variable given as parameter: $parameter
 text printed into simple macro, printing a variable given as parameter: $reference
 #end
-
+##
 #macro(MacroArray $array)
-#foreach($item in $array)
-$item
+[#foreach($item in $array)
+$item, ##
+#end]
 #end
-#end
-
-Calling a local macro without any parameter
-
-
+##
+*Calling a local macro without any parameter*
 #BasicMacro()
 
-Calling a local macro with one parameter
 
+*Calling a local macro with one parameter*
 #SimpleMacro($exampleVariable)
 
-Calling a local macro with three parameters
+
+*Calling a local macro with three parameters*
+#SimpleMacroMultipmeParameters( $exampleVariable $testVariable "literal")
 
 
-
-#SimpleMacroMultipmeParameters( $exampleVariable $testVariable $velocityExample)
-
-Calling a local macro with one array as parameter
+*Calling a local macro with one array as parameter*
 note: the array used into this example is put into VelocityContext at the moment to merge the template with the context. See the java code
-
-
 #MacroArray($arrayOfMonths)

@@ -1,20 +1,17 @@
 #set($examplevar = "example")
+Testing the if statement:
 
-Testing the if statement: 
-
-result:
-#if($examplevar == "example")
-	the variable's value match? true
+result: #if($examplevar == "example")
+the variable's value match!
 #end
 
 Testing the if-else statement:
 
 result:
-
 #if($examplevar == "someTestText")
-	the variable's value match
+	the variable\'s value match!
 #else
-	the variable's value don't match
+	the variable's value don't match!
 #end
 
 
