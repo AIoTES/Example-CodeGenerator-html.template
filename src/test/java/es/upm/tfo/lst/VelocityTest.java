@@ -67,6 +67,21 @@ public class VelocityTest {
 		
 	}
 	@Test
+	public void VelocityTricks() {
+		try {
+			this.template = engine.getTemplate("/uAAl/Class.java.vm");
+			this.template.merge(context, writer);
+			this.writer.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		}
+	
+		
+	}
+	
+	
+	@Test
 	public void variablesTest() {
 		//TODO ver directamente la plantilla de velocity?
 	}
