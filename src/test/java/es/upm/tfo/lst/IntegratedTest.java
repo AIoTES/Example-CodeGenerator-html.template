@@ -76,13 +76,14 @@ public class IntegratedTest {
 			OWLDataFactory manager = ontManager.getOWLDataFactory();
 			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
 			this.context = new VelocityContext();
+			this.context.put("PackageBase","lst.tfo.upm.es");
 			this.context.put("class", cls);
 			this.context.put("ontology", this.ontology);
 			this.context.put("Date", new Date());
 			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
 			this.writer = new FileWriter(new File("target/class.java"));
 			//aqui para cambiar el .vm y probar otras templates 
-			this.template = engine.getTemplate("/uAAl/Class.java.vm");
+			this.template = engine.getTemplate("Class.java.vm");
 			this.template.merge(context, writer);
 			this.writer.close();
 		} catch (IOException e) {
@@ -96,12 +97,13 @@ public class IntegratedTest {
 			OWLDataFactory manager = ontManager.getOWLDataFactory();
 			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
 			this.context = new VelocityContext();
+			this.context.put("PackageBase","lst.tfo.upm.es");
 			this.context.put("ontology", this.ontology);
 			this.context.put("Date", new Date());
 			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
 			this.writer = new FileWriter(new File("target/ontology.java"));
 			//aqui para cambiar el .vm y probar otras templates 
-			this.template = engine.getTemplate("/uAAl/Ontology.java.vm");
+			this.template = engine.getTemplate("Ontology.java.vm");
 			this.template.merge(context, writer);
 			this.writer.close();
 		} catch (IOException e) {
@@ -110,5 +112,108 @@ public class IntegratedTest {
 		
 	}
 	
+	@Test
+	public void activatorTest() {
+		try {
+			OWLDataFactory manager = ontManager.getOWLDataFactory();
+			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
+			this.context = new VelocityContext();
+			this.context.put("PackageBase","lst.tfo.upm.es");
+			this.context.put("class", cls);
+			this.context.put("ontology", this.ontology);
+			this.context.put("Date", new Date());
+			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
+			this.writer = new FileWriter(new File("target/activator.java"));
+			//aqui para cambiar el .vm y probar otras templates 
+			this.template = engine.getTemplate("Activator.java.vm");
+			this.template.merge(context, writer);
+			this.writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void enumerationTest(){
+		try {
+			OWLDataFactory manager = ontManager.getOWLDataFactory();
+			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
+			this.context = new VelocityContext();
+			this.context.put("PackageBase","lst.tfo.upm.es");
+			this.context.put("class", cls);
+			this.context.put("ontology", this.ontology);
+			this.context.put("Date", new Date());
+			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
+			this.writer = new FileWriter(new File("target/enumeration.java"));
+			//aqui para cambiar el .vm y probar otras templates 
+			this.template = engine.getTemplate("Enumeration.java.vm");
+			this.template.merge(context, writer);
+			this.writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void factoryTest() {
+			try {
+				OWLDataFactory manager = ontManager.getOWLDataFactory();
+				OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
+				this.context = new VelocityContext();
+				this.context.put("PackageBase","lst.tfo.upm.es");
+				this.context.put("class", cls);
+				this.context.put("ontology", this.ontology);
+				this.context.put("Date", new Date());
+				this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
+				this.writer = new FileWriter(new File("target/factory.java"));
+				//aqui para cambiar el .vm y probar otras templates 
+				this.template = engine.getTemplate("Factory.java.vm");
+				this.template.merge(context, writer);
+				this.writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 
+	@Test
+	public void createClassTest() {
+		try {
+			OWLDataFactory manager = ontManager.getOWLDataFactory();
+			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
+			this.context = new VelocityContext();
+			this.context.put("PackageBase","lst.tfo.upm.es");
+			this.context.put("class", cls);
+			this.context.put("ontology", this.ontology);
+			this.context.put("Date", new Date());
+			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
+			this.writer = new FileWriter(new File("target/createClass.java"));
+			//aqui para cambiar el .vm y probar otras templates 
+			this.template = engine.getTemplate("createClass.vm");
+			this.template.merge(context, writer);
+			this.writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	@Test
+	public void pomTest(){
+		try {
+			OWLDataFactory manager = ontManager.getOWLDataFactory();
+			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
+			this.context = new VelocityContext();
+			this.context.put("PackageBase","lst.tfo.upm.es");
+			this.context.put("class", cls);
+			this.context.put("ontology", this.ontology);
+			this.context.put("Date", new Date());
+			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
+			this.writer = new FileWriter(new File("target/pom.java"));
+			//aqui para cambiar el .vm y probar otras templates 
+			this.template = engine.getTemplate("pom.xml.vm");
+			this.template.merge(context, writer);
+			this.writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
