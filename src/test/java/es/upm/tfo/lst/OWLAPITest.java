@@ -144,21 +144,12 @@ public class OWLAPITest {
 	@Test
 	public void ontologyClassDeclarations() {
 		System.out.println("ontology.getAxioms()");
+	
+		//en este for tambien da los names individuals y los object properties y las anotations
+		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
+			System.out.println(a);
+	}
 
-		for (OWLAxiom a : ontology.getAxioms()) {
-			if (a.isOfType(AxiomType.DECLARATION) && ((OWLDeclarationAxiom) a).getEntity().isOWLClass()) {
-				OWLClass cls = (OWLClass) ((OWLDeclarationAxiom) a).getEntity();
-				System.out.println(cls.getIRI().getFragment());
-			}
-		}
-
-
-//		System.out.println("\n ontology.getAxioms(AxiomType.DECLARATION) \n");
-//
-//		for (OWLDeclarationAxiom declarations: ontology.getAxioms(AxiomType.DECLARATION)) {
-//			OWLClass cls = (OWLClass) ((OWLDeclarationAxiom) declarations).getEntity();
-//			System.out.println(cls.getIRI().getFragment());
-//		}
 	}
 	@Test
 	public void listInstances() {
