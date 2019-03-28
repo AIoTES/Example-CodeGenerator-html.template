@@ -87,7 +87,7 @@ public class OWLAPITest {
 		System.err.println("================ Start of " + name.getMethodName() + " ================");
 
 	}
-
+	
 	@After
 	public void end() {
 		System.out.flush();
@@ -147,7 +147,8 @@ public class OWLAPITest {
 	
 		//en este for tambien da los names individuals y los object properties y las anotations
 		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-			System.out.println(a);
+			a.getClassesInSignature().stream().forEach(f->System.out.println(f.getIRI().getFragment()));
+			
 	}
 
 	}

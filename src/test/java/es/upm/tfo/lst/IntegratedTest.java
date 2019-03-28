@@ -15,9 +15,12 @@
  ******************************************************************************/
 package es.upm.tfo.lst;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.net.URL;
 import java.util.Date;
 import java.util.Properties;
@@ -26,6 +29,7 @@ import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.FieldMethodizer;
 import org.apache.velocity.app.VelocityEngine;
+import org.apache.velocity.app.event.implement.EscapeHtmlReference;
 import org.junit.Before;
 import org.junit.Test;
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -35,10 +39,7 @@ import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
-import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
-
-import uk.ac.manchester.cs.jfact.JFactFactory;
 
 /**
  * @author amedrano
@@ -55,6 +56,7 @@ public class IntegratedTest {
 	VelocityEngine engine = null;
 	Properties props = null;
 	FileWriter writer = null;
+	Reader templateReader ;
 	
 	@Before
 	public void init() throws OWLOntologyCreationException, IOException {
@@ -73,6 +75,7 @@ public class IntegratedTest {
 	public void classAccessTest() {
 		//aplicar la template de clases para este caso
 		try {
+			templateReader = new BufferedReader(new InputStreamReader(this.getClass().getClassLoader().getResource("Class.java.vm").openStream()));
 			OWLDataFactory manager = ontManager.getOWLDataFactory();
 			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
 			this.context = new VelocityContext();
@@ -82,6 +85,7 @@ public class IntegratedTest {
 			this.context.put("Date", new Date());
 			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
 			this.writer = new FileWriter(new File("target/class.java"));
+//			Velocity.evaluate(context, writer, "", templateReader);
 			//aqui para cambiar el .vm y probar otras templates 
 			this.template = engine.getTemplate("Class.java.vm");
 			this.template.merge(context, writer);
@@ -196,6 +200,7 @@ public class IntegratedTest {
 		}
 		
 	}
+	
 	@Test
 	public void pomTest(){
 		try {
@@ -216,4 +221,29 @@ public class IntegratedTest {
 			e.printStackTrace();
 		}
 	}
+	
+	@Test
+	public void webpage() {
+		try {
+			templateReader = new BufferedReader(new InputStreamReader(this.getClass().getClassLoader().getResource("Class.java.vm").openStream()));
+			OWLDataFactory manager = ontManager.getOWLDataFactory();
+			OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
+			this.context = new VelocityContext();
+			this.context.put("PackageBase","lst.tfo.upm.es");
+			this.context.put("class", cls);
+			this.context.put("ontology", this.ontology);
+			this.context.put("Date", new Date());
+			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
+			
+			this.writer = new FileWriter(new File("target/template.html"));
+//			Velocity.evaluate(context, writer, "", templateReader);
+			//aqui para cambiar el .vm y probar otras templates 
+			this.template = engine.getTemplate("WebsiteTemplate.vm");
+			this.template.merge(context, writer);
+			this.writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 }
