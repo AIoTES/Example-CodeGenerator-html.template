@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Template xmlns="http://www.example.org/exampleTemplate "
+	xmlns:x="http://www.w3.org/2001/XMLSchema-instance"
+	x:schemaLocation="http://www.example.org/exampleTemplate schema.xsd">
+	<template-name>universAAL Ontology full maven project</template-name>
+	<template-version>3.4.2-SNAPSHOT</template-version>
+	<template-description>Generates a full maven project containing the
+		java clases necesary to represent the ontologies in universAAL
+	</template-description>
+	<variables>
+		<variable>
+			<name>PackageBase</name>
+			<default>org.universAAL.ontology</default>
+			<required>true</required>
+			<description>Set the base package name for the project, ontologies
+				will be outputed to subpackages.
+			</description>
+		</variable>
+	</variables>
+	<macros>
+		<macro>
+			<template>Class.java.vm</template>
+			<for>class</for>
+			<output>#parse('common.vm')
+	#if ( "#isEnumeration($class)"  != "true")src/main/java/${
+				package($onotology).replace(".","/")
+				}/${className($class)}.java#end
+			</output>
+			<imports>
+					<FullyQalifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQalifiedName>
+			</imports>
+		</macro>
+		<macro>
+			<template>Enumeration.java.vm</template>
+			<for>class</for>
+			<output>#parse('common.vm')
+	#if ( "#isEnumeration($class)"  == "true")src/main/java/${
+				package($onotology).replace(".","/")
+				}/${className($class)}.java#end
+			</output>
+			<imports>
+					<FullyQalifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQalifiedName>
+			</imports>
+		</macro>
+		<macro>
+			<template>Ontology.java.vm</template>
+			<for>ontology</for>
+			<output>src/main/java/${
+				PackageBase.replace(".","/")
+				}/${
+				ontology.getOntologyID().getOntologyIRI().get().getFragment().toLowerCase()
+				}/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}Ontology.java
+			</output>
+			<imports>
+					<FullyQalifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQalifiedName>
+			</imports>
+		</macro>
+		<macro>
+			<template>Factory.java.vm</template>
+			<for>ontology</for>
+			<output>src/main/java/${
+				PackageBase.replace(".","/")
+				}/${ontology.getIRI().getFragment()}.java
+			</output>
+			<imports>
+					<FullyQalifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQalifiedName>
+					<FullyQalifiedName>org.semanticweb.owlapi.model.ClassExpressionType</FullyQalifiedName>
+			</imports>
+		</macro>
+
+		<macro>
+			<template>Activator.java.vm</template>
+			<for>project</for>
+			<output>src/main/java/${
+				PackageBase.replace(".","/")
+				}/Activator.java
+			</output>
+		</macro>
+		<macro>
+			<template>pom.xml.vm</template>
+			<for>project</for>
+			<output>pom.xml</output>
+		</macro>
+		<macro>
+			<template>ASL2.0.txt.vm</template>
+			<for>project</for>
+			<output>ASL2.0.txt</output>
+		</macro>
+
+	</macros>
+</Template>

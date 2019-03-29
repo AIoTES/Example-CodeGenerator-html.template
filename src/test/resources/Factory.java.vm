@@ -1,0 +1,25 @@
+#parse('common.vm')
+#license()
+package ${PackageBase};
+
+import org.universAAL.middleware.rdf.Resource;
+import org.universAAL.middleware.rdf.ResourceFactory;
+import #package($ontology).*;
+
+public class #ontFactory($ontology) implements ResourceFactory {
+
+	public Resource createInstance(String classURI, String instanceURI, int factoryIndex) {
+		switch (factoryIndex) {
+		#foreach( $axiom in ${ontology.getAxioms()})
+		#if(${axiom.isOfType($AxiomType.DECLARATION)} && ${axiom.getEntity().isOWLClass()})
+		## TODO: Skip Enumerations.
+		case ${foreach.index}:
+			return new #className(${axiom.getEntity()})(instanceURI);
+			break;
+		#end
+		#end
+		}
+		return null;
+	}
+
+}

@@ -1,0 +1,186 @@
+#parse('common.vm')
+#license()
+package #package($ontology);
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.universAAL.middleware.rdf.Resource;
+import org.universAAL.middleware.owl.ManagedIndividual;
+
+
+/**
+ * ## TODO add comment (in english) from rdfs:label and/or rdfs:comment
+ ## TODO Also add Template generation comment.
+ */
+ ## TODO resolve super class
+public class #className($class) extends ManagedIndividual {
+
+## TODO check and use NAMESPACE If possible
+	public static final String MY_URI = "$!{class.getIRI()}";
+## TODO iterate over Props
+
+#foreach( $prop in ${ontology.getAxioms($AxiomType.OBJECT_PROPERTY_DOMAIN)} )
+#if($prop.getDomain().equals($class))
+	public static final String #propVar($prop) = "${prop.getProperty().getNamedProperty().getIRI().getShortForm()}";
+#end
+#end
+#foreach( $prop in ${ontology.getAxioms($AxiomType.DATA_PROPERTY_DOMAIN)})
+#if($prop.getDomain().equals(cls))
+	public static final String #propVar($prop) = "${prop.getProperty().getNamedProperty().getIRI().getShortForm()}";
+#end
+#end
+	public #className($class)() {
+		super();
+	}
+
+	public #className($class)(String uri) {
+		super(uri);
+	}
+
+	public String getClassURI() {
+		return MY_URI;
+	}
+
+	/**
+	 *  This method is used for serialization purposes, to restrict the amount of
+	 *  information to serialize when forwarding it among nodes.
+	 *  For each property you must return one of {@link Resource\#PROP_SERIALIZATION_FULL},
+	 *  {@link Resource\#PROP_SERIALIZATION_REDUCED}, {@link Resource\#PROP_SERIALIZATION_OPTIONAL}
+	 *  or {@link Resource\#PROP_SERIALIZATION_UNDEFINED}.
+	 *  Refer to their javadoc to see what they mean.
+	 */
+	public int getPropSerializationType(String propURI) {
+## TODO iterate over props, checking if propURI is one of the class props
+## Else call super
+		return PROP_SERIALIZATION_FULL;
+	}
+
+	/**
+	 * Evaluate if an instance of the concept is properly
+	 * built, e.g. if all mandatory fields are present.
+	 */
+	public boolean isWellFormed() {
+## TODO iterate over Manadatory props, check if exsits
+		return true;
+	}
+
+## Macros for Properties getters and setters
+#macro( propGet $propName $rangeType $propVar)
+	public $prangeType get$propName() {
+		return ($rangeType) props.get($propVar);
+	}
+
+	public void setX($rangeType arg) {
+		props.put($propVar, arg);
+	}
+#end
+##
+#macro( propList $propName $rangeType $propVar)##
+public ${rangeType}[] get$propName() {
+		Object propList = props.get($propVar);
+		if (propList instanceof List) {
+			return (${rangeType}[]) ((List) propList).toArray(new Sensor[0]);
+		} else {
+			List returnList = new ArrayList();
+			if (propList != null)
+				returnList.add(($rangeType) propList);
+			return (${rangeType}[]) returnList.toArray(new $rangeType[0]);
+		}
+	}
+
+	public void set$propName(${rangeType}[] arg) {
+		List propList = new ArrayList(arg.length);
+		for (int i = 0; i < arg.length; i++) {
+			propList.add(arg[i]);
+		}
+		props.put($propVar, propList);
+	}
+
+	public List list$propName() {
+		Object propList = props.get($propVar);
+		if (propList instanceof List) {
+			return propList;
+		} else {
+			List returnList = new ArrayList();
+			if (propList != null)
+				returnList.add(($rangeType) propList);
+			return returnList;
+		}
+	}
+
+	public void add$propName($rangeType arg) {
+		Object propList = props.get($propVar);
+		if (propList instanceof List) {
+			List list = (List) propList;
+			list.add(arg);
+			props.put($propVar, list);
+		} else if (propList == null) {
+			props.put($propVar, arg);
+		} else {
+			List list = new ArrayList();
+			list.add(($rangeType) propList);
+			list.add(arg);
+			props.put($propVar, list);
+		}
+	}
+
+	public void remove$propName($rangeType arg) {
+		Object propList = props.get($propVar);
+		if (propList instanceof List){
+			List list = (List) propList;
+			list.remove(arg);
+			props.put(#propVar($prop), list);
+		} else if (propList == arg) {
+			props.remove(#propVar($prop));
+		}
+	}
+#end##
+## Iterate over Property Getters and Setters
+#foreach( $prop in ${ontology.getAxioms($AxiomType.OBJECT_PROPERTY_DOMAIN)} )
+#if($prop.getDomain().equals($class))
+#set( $propName = "${prop.getProperty().getNamedProperty().getIRI().getFragment()}")
+#set( $propName = "${propName.substring(0, 1).toUpperCase()}$propName.substring(1)")
+## TODO determine max cardinality (including Exact)
+## TODO determine rangeType
+#set($rangeType = "ManagedIndividual")
+#if($maxCardinality == 1)
+## case cardinality 0:1 1:1
+#propGet($propName $rangeType "#propVar($prop)")
+#else
+## case cardinality 0:n 1:n
+#propList($propName $rangeType "#propVar($prop)")
+#end
+#end
+#end
+#foreach( $prop in ${ontology.getAxioms($AxiomType.DATA_PROPERTY_DOMAIN)})
+#if($prop.getDomain().equals($class))
+## TODO determine max cardinality
+## TODO determine rangeType
+##set ($ragneType = "Object")
+#if($maxCardinality == 1)
+#if($rangeType == "Boolean")
+## subcase 1:1 0:1, boolean (is_)
+	public boolean is$propName() {
+		return (($rangeType) props.get(#propVar($prop))).booleanValue();
+	}
+
+	public void setX($rangeType arg) {
+		props.put(#propVar($prop), arg);
+	}
+
+	public void setX(boolean arg) {
+		props.put(#propVar($prop), Boolean.valueOf(arg));
+	}
+#else##
+## genericcase cardinality 0:1 1:1
+#propGet($propName $rangeType "#propVar($prop)")
+#end
+#else
+## case cardinality 0:n 1:n
+#propList($propName $rangeType "#propVar($prop)")
+#end
+#end
+#end
+
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.universAAL.ontology</groupId>
+    <artifactId>ont.pom</artifactId>
+    <version>3.4.2-SNAPSHOT</version>
+  </parent>
+  <artifactId>$mavenArtifactID</artifactId>
+  <packaging>bundle</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>org.universAAL.middleware</groupId>
+      <artifactId>mw.data.representation.core</artifactId>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>uaal</id>
+      <name>universAAL Repositories</name>
+      <url>http://depot.universaal.org/maven-repo/releases/</url>
+    </repository>
+  </repositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-Name>\${project.name}</Bundle-Name>
+            <Bundle-Description>\${project.description}</Bundle-Description>
+            <Bundle-SymbolicName>\${project.artifactId}</Bundle-SymbolicName>
+            #parse('common.vm')
+            <Export-Package>#foreach($ont in ${project.getOntologies()})
+			#package($ontology),
+			#end</Export-Package>
+            <Private-Package>org.universAAL.ontology;-split-package:=first</Private-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

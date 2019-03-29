@@ -1,0 +1,88 @@
+#parse('common.vm')
+#license()
+#getEnum($class)
+package #package($ontology);
+
+import org.universAAL.middleware.owl.ManagedIndividual;
+
+/**
+ * ## TODO add Javadoc + Template stamp
+ */
+public class #className($class) extends ManagedIndividual {
+
+	## TODO check and use NAMESPACE If possible
+	public static final String MY_URI = "$!{class.getIRI().getShortForm()}";
+
+	private int order;
+
+	private static final String[] names = {
+	#foreach($enumInd in $enum) ## TODO get Enumeration individuals
+					"${axiom.getEntity().getIRI()}",
+	#end
+				};
+
+	// These are all the possible instances of your enumeration: the individuals
+	#foreach($enumInd in $enum) ## TODO get Enumeration individuals
+	public static final #className($class) ${enumId.getURI().getFragment().toLowerCase()} = new #className($class)(${foreach.index});
+	#end
+
+	/**
+	 * This methods returns the list of all class members guaranteeing that no
+	 * other members will be created after a call to this method.
+	 */
+	public static ManagedIndividual[] getEnumerationMembers() {
+		return new ManagedIndividual[] { option1, option2, option3, option5, option4 };
+	}
+
+	// This is used privately. Constructs an individual based on the given
+	// numeric constant.
+	private MyEnumeration(int order) {
+		super(names[order]);
+		this.order = order;
+	}
+
+	public MyEnumeration() {
+		// Enumerations cannot be instantiated by other than themselves. This
+		// constructor must be empty to prevent this.
+	}
+
+
+	public int getPropSerializationType(String propURI) {
+		return PROP_SERIALIZATION_OPTIONAL;
+	}
+
+	public boolean isWellFormed() {
+		return true;
+	}
+
+	public static MyEnumeration getByOrder(int order) {
+		return getEnumerationMembers()[order];
+	}
+
+	// Returns the individual that matches the given name.
+	public static final MyEnumeration valueOf(String name) {
+		if (name == null)
+			return null;
+	#set($endIndex = ${enum.size()} - 1)
+
+		for (int i = 0; i <= $endIndex; i++)
+			if (names[i].equals(name) || names[i].endsWith(name))
+				return getByOrder(i);
+
+		return null;
+	}
+
+	public String name() {
+		return names[order];
+	}
+
+	public int ord() {
+		return order;
+	}
+
+	public boolean setProperty(String propURI, Object o) {
+		// do nothing
+		return false;
+	}
+
+}

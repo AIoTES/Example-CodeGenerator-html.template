@@ -1,0 +1,75 @@
+#parse('common.vm')
+#license()
+package #package($ontology);
+
+import org.universAAL.middleware.owl.DataRepOntology;
+import org.universAAL.middleware.owl.ManagedIndividual;
+import org.universAAL.middleware.owl.MergedRestriction;
+import org.universAAL.middleware.owl.OntClassInfoSetup;
+import org.universAAL.middleware.owl.Ontology;
+import org.universAAL.middleware.rdf.Resource;
+import org.universAAL.middleware.rdf.TypeMapper;
+import ${PackageBase}.#ontFactory($ontology);
+
+##TODO add javadoc + Template generation comment
+public class #ontClassName($ontology) extends Ontology {
+	// The factory is used for serialization
+	private static #ontFactory($ontology) factory = new #ontFactory($ontology)();
+	// Namespaces must follow this format
+	public static final String NAMESPACE = "${ontology.getOntologyID().getOntologyIRI().get().getNamespace()}";
+
+	public #ontClassName($ontology)(String ontURI) {
+		super(ontURI);
+	}
+
+	public #ontClassName($ontology)() {
+		super(NAMESPACE);
+	}
+
+	public void create() {
+	##Ontology level
+		#foreach ( $a in ${ontology.getAnnotations()})
+		getInfo().setProperty(${a.getProperty().getIRI()}, ${a.getValue().getLiteral()});
+		#end
+
+		#foreach( $import in ${ontology.getImports()})
+		addImport("${import.getOntologyID().getOntologyIRI().get().getNamespace()}");
+		#end
+	## Abstract Classes
+	## there are not OWL specification for Abstract Classes, this is used only for Enumerations
+	## Enumerations
+	#set( $enums = [])##
+	#foreach( $axiom in ${ontology.getAxioms()})
+	#if ( "#isEnumeration(${axiom.getEntity()})"  == "true")
+		#set( $exe = ${enums.add(${axiom.getEntity()})})
+		OntClassInfoSetup oci_#className(${axiom.getEntity()}) = createNewAbstractOntClassInfo(#className(${axiom.getEntity()}).MY_URI);
+		oci_#className(${axiom.getEntity()}).addSuperClass(ManagedIndividual.MY_URI);
+		oci_#className(${axiom.getEntity()}).toEnumeration(new ManagedIndividual[] {
+		#getEnum(${axiom.getEntity()})
+		#foreach($enumInd in $enum) ## TODO get Enumeration individuals
+				#className($axiom.getEntity()).$enumInd,
+		#end
+				});
+	#end
+	#end
+
+	## Classes
+	## Declare all Classes first
+	#foreach( $axiom in ${ontology.getAxioms()})
+	#if(${axiom.isOfType($AxiomType.DECLARATION)} && ${axiom.getEntity().isOWLClass()})
+	##TODO exclude enumerations
+		OntClassInfoSetup oci_#className(${axiom.getEntity()}) = createNewOntClassInfo(
+		#className(${axiom.getEntity()}).MY_URI, factory, ${foreach.index} ) ;
+	#end
+	## TODO Maybe create individuals TOO.
+
+	#end
+	#foreach( $axiom in ${ontology.getAxioms()})
+	#if(${axiom.isOfType($AxiomType.DECLARATION)} && ${axiom.getEntity().isOWLClass()})
+		#set($class = ${axiom.getEntity()})
+		#parse("createClass.vm")
+	#end
+	#end
+		## INSTANCES
+	}
+}

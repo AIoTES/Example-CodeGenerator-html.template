@@ -1,8 +1,0 @@
-#import("macroTest.vm")##
-#import("ifStatementTemplate.vm")##
-
-using he imported templates 
-
-#BasicMacro()
-#SimpleMacro($exampleVariable)
-#SimpleMacroMultipmeParameters( $exampleVariable $testVariable $velocityExample)

@@ -1,0 +1,35 @@
+#parse('common.vm')
+#license()
+package $PackageBase;
+
+import org.universAAL.middleware.container.ModuleContext;
+import org.universAAL.middleware.container.ModuleActivator;
+import org.universAAL.middleware.owl.Ontology;
+import org.universAAL.middleware.owl.OntologyManagement;
+#foreach($ont in ${project.getOntologies()})
+import #package($ontology).#ontClassName($ontology);
+#end
+
+/**
+ * Main Module Activator.
+ */
+public class Activator implements ModuleActivator {
+
+#foreach($ont in ${project.getOntologies()})
+	private Ontology #ontClassName($ontology).toLowerCase() = new #ontClassName($ontology)();
+#end
+
+	public void start(ModuleContext context) throws Exception {
+		OntologyManagement om = OntologyManagement.getInstance();
+		#foreach($ont in ${project.getOntologies()})
+		om.register(context, #ontClassName($ontology).toLowerCase());
+		#end
+	}
+
+	public void stop(ModuleContext context) throws Exception {
+		OntologyManagement om = OntologyManagement.getInstance();
+		#foreach($ont in ${project.getOntologies()})
+		om.unregister(context, #ontClassName($ontology).toLowerCase());
+		#end
+	}
+}
