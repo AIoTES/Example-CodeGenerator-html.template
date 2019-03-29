@@ -158,7 +158,7 @@ public class OWLAPITest {
 	
 		//en este for tambien da los names individuals y los object properties y las anotations
 		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-			a.getClassesInSignature().stream().forEach(f->System.out.println(f.getIRI().getFragment()));
+			//a.getClassesInSignature().stream().forEach(f->System.out.println(f.getIRI().getFragment()));
 			
 	}
 
