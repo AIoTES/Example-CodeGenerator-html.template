@@ -1,0 +1,8 @@
+this template import some another templates 
+#parse("macroTest.vm")
+
+#parse("ifStatementTest.vm")
+
+#parse("contextTest.vm")
+
+#iterator($arrayOfMonths)
