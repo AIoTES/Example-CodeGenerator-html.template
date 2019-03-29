@@ -1,0 +1,7 @@
+#macro(iterator $monthsArray)
+#foreach($value in $monthsArray)
+$value
+#end
+#end
+
+#iterator($arrayOfMonths)
