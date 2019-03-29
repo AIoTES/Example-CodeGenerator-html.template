@@ -104,15 +104,12 @@ public class OWLAPITest {
 			System.out.println("getDataPropertiesInSignature() " + ontology.getDataPropertiesInSignature().size());
 			System.out.println("getDatatypesInSignature() " + ontology.getDatatypesInSignature().size());
 			System.out.println("getAxioms " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
-			System.out
-					.println("DATA_PROPERTY_ASSERTION " + ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION).size());
+			System.out.println("DATA_PROPERTY_ASSERTION " + ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION).size());
 			System.out.println("DATA_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN).size());
 			System.out.println("DATA_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
 			System.out.println("DATATYPE_DEFINITION " + ontology.getAxioms(AxiomType.DATATYPE_DEFINITION).size());
-			System.out.println(
-					"ANNOTATION_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_DOMAIN).size());
-			System.out.println(
-					"ANNOTATION_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_RANGE).size());
+			System.out.println("ANNOTATION_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_DOMAIN).size());
+			System.out.println("ANNOTATION_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_RANGE).size());
 			System.out.println("ANNOTATION_ASSERTION " + ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION).size());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -123,19 +120,19 @@ public class OWLAPITest {
 
 	@Test
 	public void ontologyAxioms() {
+		System.out.println("----------getAxiomsOfTypes----------");
 		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
 				System.out.println(a);
 		}
-
+		System.out.println("----------getAxiomsWithoutTypes----------");
 		for (OWLAxiom a : AxiomType.getAxiomsWithoutTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
 				System.out.println(a);
 		}
 	}
-
+	
 	@Test
 	public void ontologyAnnotations() {
 		for (OWLAnnotation a : ontology.getAnnotations()) {
-			//System.out.println(a);
 			System.out.println(a.getProperty().getIRI());
 			System.out.println(((OWLLiteral) a.getValue()).getLiteral());
 		}
@@ -143,11 +140,9 @@ public class OWLAPITest {
 
 	@Test
 	public void ontologyClassDeclarations() {
-		System.out.println("ontology.getAxioms()");
-	
 		//en este for tambien da los names individuals y los object properties y las anotations
 		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-			a.getClassesInSignature().stream().forEach(f->System.out.println(f.getIRI().getFragment()));
+			//a.getClassesInSignature().stream().forEach(f->System.out.println(f.getIRI().getFragment()));
 			
 	}
 
@@ -155,8 +150,9 @@ public class OWLAPITest {
 	@Test
 	public void listInstances() {
 		//get instances without using a reasoner
+		System.out.println("----------getIndividualsInSignature----------");
 		for (OWLNamedIndividual individual: this.ontology.getIndividualsInSignature()) {
-			System.out.println("individual "+individual.getIRI().getFragment());
+			System.out.println(individual.getIRI().getFragment());
 		}
 
 
@@ -170,17 +166,17 @@ public class OWLAPITest {
 
 	@Test
 	public void getDataPropertiesTest() {
-
+		System.out.println("------DATA_PROPERTY_DOMAIN------");
 		for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
-			System.out.println("DATA_PROPERTY_DOMAIN "+item);
+			System.out.println(item);
 		}
-		System.out.println("------");
+		System.out.println("------DATA_PROPERTY_ASSERTION------");
 		for (OWLDataPropertyAssertionAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION)) {
-			System.out.println("DATA_PROPERTY_ASSERTION "+item);
+			System.out.println(item);
 		}
-		System.out.println("------");
+		System.out.println("------DATA_PROPERTY_RANGE------");
 		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
-			System.out.println("DATA_PROPERTY_RANGE "+item);
+			System.out.println(item);
 		}
 
 
