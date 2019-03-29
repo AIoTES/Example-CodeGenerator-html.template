@@ -77,6 +77,7 @@ public class IntegratedTest {
 		this.context.put("Date", new Date());
 		this.template = engine.getTemplate(velociMacro);
 		this.template.merge(context, writer);
+		//TODO add project variable
 		this.writer.close();
 	}
 
@@ -86,7 +87,6 @@ public class IntegratedTest {
 	}
 
 	protected void runClass(String velociMacro) throws IOException {
-		this.context.put("ontology", this.ontology);
 		OWLDataFactory manager = ontManager.getOWLDataFactory();
 		OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"));
 		this.context.put("class", cls);
