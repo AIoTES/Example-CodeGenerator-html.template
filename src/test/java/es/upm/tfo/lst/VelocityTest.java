@@ -17,8 +17,12 @@ package es.upm.tfo.lst;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.io.Writer;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 
 import org.apache.velocity.Template;
@@ -44,20 +48,23 @@ public class VelocityTest {
 	VelocityEngine engine = null;
 	Properties props = null;
 	Writer writer = null;
-
+	StringWriter sw = null;
     @Rule public TestName name = new TestName();
 
 	@Before
 	public void init() {
 		try {
+			 this.sw = new StringWriter();
 			this.context = new VelocityContext();
 			this.engine = new VelocityEngine();
 			this.props = new Properties();
-			props.put("file.resource.loader.path", "src/test/resources/");
+			props.put("file.resource.loader.path", "src/main/resources/");
 			this.engine.init(this.props);
 //			this.writer = new FileWriter(new File("target/output.txt"));
-			this.writer = new PrintWriter(System.out);;
-			String [] arrayOfMonths = {"January","February","March","April","May"};
+			this.writer = new PrintWriter(System.out);
+
+			List <String>arrayOfMonths = Arrays.asList("January","February","March","April","May");
+			
 			context.put("key1", "code generator");
 			context.put("key2", "velocity test");
 			context.put("key3", "universidad politecnica de maidrid");
@@ -79,31 +86,39 @@ public class VelocityTest {
 	@After
 	public void end() throws IOException {
 		writer.flush();
+		sw.close();
 		System.err.flush();
 		System.err.println("================= End of " + name.getMethodName() + " =================");
 	}
 
 	@Test
 	public void ifStatementTest() throws IOException {
-		this.template = engine.getTemplate("ifStatementTemplate.vm");
-		this.template.merge(context, writer);
+		
+		this.template = engine.getTemplate("ifStatementTest.vm");
+		this.template.merge(context, sw);
+		System.out.println(sw.toString());
 	}
 
 	@Test
 	public void macroTest() throws IOException{
 		this.template = engine.getTemplate("macroTest.vm");
-		this.template.merge(context, writer);
+		this.template.merge(context, sw);
+		System.out.println(sw.toString());
+
 	}
 
 	@Test
 	public void importExistentTemplate() {
-
+		this.template = engine.getTemplate("importsTest.vm");
+		this.template.merge(context, sw);
+		System.out.println(sw.toString());
 	}
 
 	@Test
 	public void usingContextContentTest() throws IOException{
-		this.template = engine.getTemplate("contextContent.vm");
-		this.template.merge(context, writer);
+		this.template = engine.getTemplate("contextTest.vm");
+		this.template.merge(context, sw);
+		System.out.println(sw.toString());
 	}
 
 }

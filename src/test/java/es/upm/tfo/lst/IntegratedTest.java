@@ -28,13 +28,16 @@ import java.util.Properties;
 
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
+import org.apache.velocity.anakia.Escape;
 import org.apache.velocity.app.FieldMethodizer;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.app.event.implement.EscapeHtmlReference;
 import org.junit.Before;
 import org.junit.Test;
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.AxiomType;
 import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -42,13 +45,16 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 
+
 /**
  * @author amedrano
  *
  */
 public class IntegratedTest {
 
-	private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	//private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
+
 	OWLOntology ontology=null;
 	OWLReasonerFactory reasonerFactory = null;
 	OWLOntologyManager ontManager=null;
@@ -81,6 +87,16 @@ public class IntegratedTest {
 		//TODO add project variable
 		this.writer.close();
 	}
+	
+	protected void runProject(String velociMacro, String output) throws IOException{
+		// templateReader = new BufferedReader(new InputStreamReader(this.getClass().getClassLoader().getResource(velociMacro).openStream()));
+		this.context.put("Date", new Date());
+		this.template = engine.getTemplate(velociMacro);
+		this.writer = new FileWriter(new File(output));
+		this.template.merge(context, writer);
+		//TODO add project variable
+		this.writer.close();
+	}
 
 	protected void runOntology(String velociMacro) throws IOException {
 		this.context.put("ontology", this.ontology);
@@ -102,22 +118,40 @@ public class IntegratedTest {
 		this.writer = new FileWriter(new File("target/class_Pizza.html"));
 		runClass("class_html");
 	}
-
-	@Test
-	public void ontologyTest() throws IOException {
-			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
-			this.writer = new FileWriter(new File("target/ontology_Pizza.html"));
-			runOntology("Ontology.java.vm");
-	}
+//
+//	@Test
+//	public void ontologyTest() throws IOException {
+//			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
+//			this.writer = new FileWriter(new File("target/ontology_Pizza.html"));
+//			runOntology("Ontology.java.vm");
+//	}
 
 	@Test
 	public void webpage() throws IOException {
 			this.context.put("PackageBase","lst.tfo.upm.es");
 			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
-			this.writer = new FileWriter(new File("target/template.html"));
-			runProject("WebsiteTemplate.vm");
+			this.context.put("ontology", this.ontology);
+			this.context.put("esc", Escape.class);
+			//this.writer = new FileWriter(new File("target/template.html"));
+			runProject("index.html.vm","target/index.html");
+			String ontName=null;
+			for (OWLOntology element : this.ontology.getImportsClosure()) {
+				ontName=this.ontology.getOntologyID().getOntologyIRI().get().getFragment();
+				this.context.put("ontology", element);
+				new File("target/"+ontName).mkdir();
+				runProject("index_ont_html.vm","target/"+ontName+"/index.html");
+				this.context.put("declarations", AxiomType.getAxiomsOfTypes(element.getAxioms(), AxiomType.DECLARATION));
+				runProject("class_.html.vm","target/"+ontName+"/class.html");
+				//obj props
+				runProject("objectProperty_.html.vm","target/"+ontName+"/objectProperty.html");
+				//data props	
+				runProject("dataProperty_.html.vm","target/"+ontName+"/dataProperty.html");
+				}
+			}
+		
+			
 	}
 	//TODO: the same for the other velociMacros..
 
-}
+
 

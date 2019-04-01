@@ -1,22 +1,9 @@
-##listar las anotaciones de cada ontologia
-#macro(axiomas $ontology)
-#foreach($anotation in $ontology.getAxioms())
-	#if($anotation.isOfType($AxiomType.ANNOTATION_ASSERTION))
-	<p>$esc.getText("${anotation}")</p>	
-	#end
-#end
-#end
 
 ## listar todas las ontologias con sus respectivas anotaciones
 #macro(ontologias $ont)
 #foreach($o in $ont.getImportsClosure())
-<h2>$esc.getText(${o.getOntologyID().getOntologyIRI().get().getFragment()})</h2>
-##<p>Click to see all annotations in this otology</p>
-<button class="collapsible">Click to see all annotations in this otology</button>
-<div class="content">
-  #axiomas($o)
-</div>
-
+#set($ontName = $o.getOntologyID().getOntologyIRI().get().getFragment())
+<h1><a href="./${ontName}/index.html">${ontName}</a></body></h1>
 #end
 #end
 

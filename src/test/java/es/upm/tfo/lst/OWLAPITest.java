@@ -60,7 +60,8 @@ import uk.ac.manchester.cs.jfact.JFactFactory;
  */
 public class OWLAPITest {
 
-	private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	//private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
 
 	static OWLOntology ontology, localOntology;
 	static OWLReasonerFactory reasonerFactory = null;
@@ -99,32 +100,18 @@ public class OWLAPITest {
 	public void ontologyStats() {
 
 		try {
-//			System.out.println(ontology.getOntologyID().getOntologyIRI().get());
-//			System.out.println("getClassesInSignature() " + ontology.getClassesInSignature().size());
-//			System.out.println("getDataPropertiesInSignature() " + ontology.getDataPropertiesInSignature().size());
-//			System.out.println("getDatatypesInSignature() " + ontology.getDatatypesInSignature().size());
-//			System.out.println("getAxioms " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
-//			System.out
-//					.println("DATA_PROPERTY_ASSERTION " + ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION).size());
-//			System.out.println("DATA_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN).size());
-//			System.out.println("DATA_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
-//			System.out.println("DATATYPE_DEFINITION " + ontology.getAxioms(AxiomType.DATATYPE_DEFINITION).size());
-//			System.out.println(
-//					"ANNOTATION_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_DOMAIN).size());
-//			System.out.println(
-//					"ANNOTATION_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_RANGE).size());
-//			System.out.println("ANNOTATION_ASSERTION " + ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION).size());
-			System.out.println(this.ontology.getOntologyID().getOntologyIRI().get().getFragment());
-//			for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.ANNOTATION_ASSERTION)) {
-//				System.out.println(a);
-//			}
-			
-			for (OWLAxiom a : ontology.getAxioms()) {
-				if(a.isOfType( AxiomType.ANNOTATION_ASSERTION)) {
-					System.out.println(a);
-	
-				}
-			}
+			System.out.println(ontology.getOntologyID().getOntologyIRI().get());
+			System.out.println("getClassesInSignature() " + ontology.getClassesInSignature().size());
+			System.out.println("getDataPropertiesInSignature() " + ontology.getDataPropertiesInSignature().size());
+			System.out.println("getDatatypesInSignature() " + ontology.getDatatypesInSignature().size());
+			System.out.println("getAxioms " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
+			System.out.println("DATA_PROPERTY_ASSERTION " + ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION).size());
+			System.out.println("DATA_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN).size());
+			System.out.println("DATA_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
+			System.out.println("DATATYPE_DEFINITION " + ontology.getAxioms(AxiomType.DATATYPE_DEFINITION).size());
+			System.out.println("ANNOTATION_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_DOMAIN).size());
+			System.out.println("ANNOTATION_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_RANGE).size());
+			System.out.println("ANNOTATION_ASSERTION " + ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION).size());
 		} catch (Exception e) {
 			e.printStackTrace();
 
@@ -135,20 +122,37 @@ public class OWLAPITest {
 	@Test
 	public void ontologyAxioms() {
 		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-				System.out.println(a);
+				//System.out.println(a.getSignature().iterator().next().getClassesInSignature());
+			if(a.getSignature().iterator().next().isOWLClass()) {
+				//System.out.println(a.getSignature().iterator().next().getClassesInSignature().iterator().next());
+				for (OWLObjectPropertyDomainAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
+					OWLClass p = a.getSignature().iterator().next().getClassesInSignature().iterator().next();
+					
+					if(item.containsEntityInSignature(p)) {
+						System.out.println(p.getIRI().getFragment());
+						System.out.println("OBJECT_PROPERTY_DOMAIN "+item);
+						System.out.println("domain "+item.getDomain());
+						//getDataPropertiesInSignature getDataPropertiesInSignature
+						System.out.println("getDataPropertiesInSignature "+item.getProperty());
+					}
+			
+				}
+			}
 		}
 
-		for (OWLAxiom a : AxiomType.getAxiomsWithoutTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-				System.out.println(a);
-		}
+//		for (OWLAxiom a : AxiomType.getAxiomsWithoutTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
+//				System.out.println(a);
+//		}
 	}
 
 	@Test
 	public void ontologyAnnotations() {
+		
+		
 		for (OWLAnnotation a : ontology.getAnnotations()) {
 			//System.out.println(a);
 			System.out.println(a.getProperty().getIRI());
-			System.out.println(((OWLLiteral) a.getValue()).getLiteral());
+			//System.out.println(((OWLLiteral) a.getValue()).getLiteral());
 		}
 	}
 
@@ -158,9 +162,9 @@ public class OWLAPITest {
 	
 		//en este for tambien da los names individuals y los object properties y las anotations
 		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-			//a.getClassesInSignature().stream().forEach(f->System.out.println(f.getIRI().getFragment()));
-			
-	}
+				System.out.println(a.getSignature().iterator().next().isOWLClass());
+				
+		}
 
 	}
 	@Test
@@ -254,3 +258,4 @@ public class OWLAPITest {
 	}
 
 }
+
