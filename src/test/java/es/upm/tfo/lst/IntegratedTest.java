@@ -15,11 +15,9 @@
  ******************************************************************************/
 package es.upm.tfo.lst;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.util.Date;
@@ -29,7 +27,6 @@ import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.FieldMethodizer;
 import org.apache.velocity.app.VelocityEngine;
-import org.apache.velocity.app.event.implement.EscapeHtmlReference;
 import org.junit.Before;
 import org.junit.Test;
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -99,14 +96,7 @@ public class IntegratedTest {
 		this.context.put("PackageBase","lst.tfo.upm.es");
 		this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
 		this.writer = new FileWriter(new File("target/class_Pizza.html"));
-		runClass("class_html");
-	}
-
-	@Test
-	public void ontologyTest() throws IOException {
-			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
-			this.writer = new FileWriter(new File("target/ontology_Pizza.html"));
-			runOntology("Ontology.java.vm");
+		runClass("class_.html.vm");
 	}
 
 	@Test
