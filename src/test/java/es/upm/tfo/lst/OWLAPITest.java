@@ -64,7 +64,7 @@ public class OWLAPITest {
 	//private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
 	private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
 
-	static OWLOntology ontology, localOntology;
+	static OWLOntology ontology;
 	static OWLReasonerFactory reasonerFactory = null;
 	static OWLReasoner reasoner = null;
 	static OWLOntologyManager ontManager;
@@ -84,7 +84,7 @@ public class OWLAPITest {
 
 	@Before
 	public void start() throws Exception, IOException {
-		localOntology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("GamesOntology.owl").openStream());
+		
 		System.err.flush();
 		System.out.flush();
 		System.err.println("");
@@ -161,7 +161,7 @@ public class OWLAPITest {
 	
 		//en este for tambien da los names individuals y los object properties y las anotations
 		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-				System.out.println(a.getSignature().iterator().next().isOWLClass());
+				System.out.println(a);
 				
 		}
 
@@ -183,7 +183,7 @@ public class OWLAPITest {
 	@Test
 	public void getDataPropertiesTest() {
 
-		for (OWLDataPropertyDomainAxiom item : localOntology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
+		for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
 			System.out.println(item);
 		}
 		System.out.println("------");
@@ -191,7 +191,7 @@ public class OWLAPITest {
 			System.out.println("DATA_PROPERTY_ASSERTION "+item);
 		}
 		System.out.println("------");
-		for (OWLDataPropertyRangeAxiom item : localOntology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
+		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
 			System.out.println("DATA_PROPERTY_RANGE "+item.getProperty().asOWLDataProperty());
 			System.out.println("DATA_PROPERTY_RANGE item.getRange() "+item.getRange());
 		}

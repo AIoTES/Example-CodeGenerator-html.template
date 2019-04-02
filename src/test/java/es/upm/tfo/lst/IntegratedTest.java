@@ -95,7 +95,7 @@ public class IntegratedTest {
 		//TODO add project variable
 		this.writer.close();
 	}
-
+	
 	protected void runOntology(String velociMacro) throws IOException {
 		this.context.put("ontology", this.ontology);
 		runProject(velociMacro);
