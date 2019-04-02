@@ -24,6 +24,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.experimental.theories.Theories;
 import org.junit.rules.TestName;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AxiomType;
@@ -74,6 +75,7 @@ public class OWLAPITest {
 	static public void init() throws OWLOntologyCreationException, IOException {
 		ontManager = OWLManager.createOWLOntologyManager();
 		ontology = ontManager.loadOntologyFromOntologyDocument(new URL(ONT_URL).openStream());
+		
 		// localOntology=
 		// ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
 		reasonerFactory = new JFactFactory();
@@ -81,7 +83,8 @@ public class OWLAPITest {
 	}
 
 	@Before
-	public void start() {
+	public void start() throws Exception, IOException {
+		localOntology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("GamesOntology.owl").openStream());
 		System.err.flush();
 		System.out.flush();
 		System.err.println("");
@@ -121,28 +124,24 @@ public class OWLAPITest {
 
 	@Test
 	public void ontologyAxioms() {
-		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-				//System.out.println(a.getSignature().iterator().next().getClassesInSignature());
-			if(a.getSignature().iterator().next().isOWLClass()) {
-				//System.out.println(a.getSignature().iterator().next().getClassesInSignature().iterator().next());
-				for (OWLObjectPropertyDomainAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
-					OWLClass p = a.getSignature().iterator().next().getClassesInSignature().iterator().next();
-					
-					if(item.containsEntityInSignature(p)) {
-						System.out.println(p.getIRI().getFragment());
-						System.out.println("OBJECT_PROPERTY_DOMAIN "+item);
-						System.out.println("domain "+item.getDomain());
-						//getDataPropertiesInSignature getDataPropertiesInSignature
-						System.out.println("getDataPropertiesInSignature "+item.getProperty());
-					}
-			
+
+	
+	for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
+			//System.out.println(a.getSignature().iterator().next().getClassesInSignature());
+		if(a.getSignature().iterator().next().isOWLClass()) {
+			for (OWLObjectPropertyDomainAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
+				OWLClass p = a.getSignature().iterator().next().getClassesInSignature().iterator().next();				
+				if(item.containsEntityInSignature(p)) {
+					System.out.println("getDataPropertiesInSignature "+item.getProperty());
+				}
+		
 				}
 			}
 		}
 
-//		for (OWLAxiom a : AxiomType.getAxiomsWithoutTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-//				System.out.println(a);
-//		}
+		for (OWLAxiom a : AxiomType.getAxiomsWithoutTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
+				System.out.println(a);
+		}
 	}
 
 	@Test
@@ -173,8 +172,6 @@ public class OWLAPITest {
 		for (OWLNamedIndividual individual: this.ontology.getIndividualsInSignature()) {
 			System.out.println("individual "+individual.getIRI().getFragment());
 		}
-
-
 	}
 	@Test
 	public void listClasses() {
@@ -186,16 +183,17 @@ public class OWLAPITest {
 	@Test
 	public void getDataPropertiesTest() {
 
-		for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
-			System.out.println("DATA_PROPERTY_DOMAIN "+item);
+		for (OWLDataPropertyDomainAxiom item : localOntology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
+			System.out.println(item);
 		}
 		System.out.println("------");
 		for (OWLDataPropertyAssertionAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION)) {
 			System.out.println("DATA_PROPERTY_ASSERTION "+item);
 		}
 		System.out.println("------");
-		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
-			System.out.println("DATA_PROPERTY_RANGE "+item);
+		for (OWLDataPropertyRangeAxiom item : localOntology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
+			System.out.println("DATA_PROPERTY_RANGE "+item.getProperty().asOWLDataProperty());
+			System.out.println("DATA_PROPERTY_RANGE item.getRange() "+item.getRange());
 		}
 
 
