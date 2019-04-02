@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://brain_games.activage.lst.tfo.upm.es#"
+     xml:base="http://brain_games.activage.lst.tfo.upm.es"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://brain_games.activage.lst.tfo.upm.es">
+        <owl:versionIRI rdf:resource="urn:absolute:1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#name -->
+
+    <owl:ObjectProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#name">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Game"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#difficulty -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#difficulty">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Game"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#errors_on_time -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#errors_on_time">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Error"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#errors_out_of_time -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#errors_out_of_time">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Error"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#hits_on_time -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#hits_on_time">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Hits"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#hits_out_of_time -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#hits_out_of_time">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Hits"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#max -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#max">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Rt"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#media -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#media">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Rt"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#min -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#min">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Rt"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#moves -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#moves">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Performance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#role -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#role">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#solved -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#solved">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Performance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#standard -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#standard">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Rt"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#timeout -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#timeout">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Error"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#uid -->
+
+    <owl:DatatypeProperty rdf:about="http://brain_games.activage.lst.tfo.upm.es#uid">
+        <rdfs:domain rdf:resource="http://brain_games.activage.lst.tfo.upm.es#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#Error -->
+
+    <owl:Class rdf:about="http://brain_games.activage.lst.tfo.upm.es#Error">
+        <rdfs:subClassOf rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Game"/>
+    </owl:Class>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#Game -->
+
+    <owl:Class rdf:about="http://brain_games.activage.lst.tfo.upm.es#Game"/>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#GameLevel -->
+
+    <owl:Class rdf:about="http://brain_games.activage.lst.tfo.upm.es#GameLevel"/>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#Hits -->
+
+    <owl:Class rdf:about="http://brain_games.activage.lst.tfo.upm.es#Hits">
+        <rdfs:subClassOf rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Game"/>
+    </owl:Class>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#Performance -->
+
+    <owl:Class rdf:about="http://brain_games.activage.lst.tfo.upm.es#Performance">
+        <rdfs:subClassOf rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Game"/>
+    </owl:Class>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#Rt -->
+
+    <owl:Class rdf:about="http://brain_games.activage.lst.tfo.upm.es#Rt">
+        <rdfs:subClassOf rdf:resource="http://brain_games.activage.lst.tfo.upm.es#Game"/>
+    </owl:Class>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#TimedSession -->
+
+    <owl:Class rdf:about="http://brain_games.activage.lst.tfo.upm.es#TimedSession">
+        <rdfs:subClassOf rdf:resource="http://brain_games.activage.lst.tfo.upm.es#GameLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://brain_games.activage.lst.tfo.upm.es#User -->
+
+    <owl:Class rdf:about="http://brain_games.activage.lst.tfo.upm.es#User">
+        <rdfs:subClassOf rdf:resource="http://brain_games.activage.lst.tfo.upm.es#GameLevel"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
