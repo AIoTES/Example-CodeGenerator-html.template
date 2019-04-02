@@ -19,6 +19,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
+import java.io.StringWriter;
 import java.net.URL;
 import java.util.Date;
 import java.util.Properties;
@@ -51,7 +52,7 @@ public class IntegratedTest {
 	//private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
 	private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
 
-	OWLOntology ontology=null;
+	OWLOntology ontology=null,localOntology=null;
 	OWLReasonerFactory reasonerFactory = null;
 	OWLOntologyManager ontManager=null;
 	VelocityContext context=null;
@@ -66,6 +67,7 @@ public class IntegratedTest {
 		ontManager = OWLManager.createOWLOntologyManager();
 		//this.ontology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
 		this.ontology = ontManager.loadOntologyFromOntologyDocument(new URL(ONT_URL).openStream());
+		localOntology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("GamesOntology.owl").openStream());
 		this.engine = new VelocityEngine();
 		this.props = new Properties();
 		props.put("file.resource.loader.path", "src/main/resources/");
@@ -121,33 +123,19 @@ public class IntegratedTest {
 //			this.writer = new FileWriter(new File("target/ontology_Pizza.html"));
 //			runOntology("Ontology.java.vm");
 //	}
-
-	@Test
-	public void webpage() throws IOException {
-			this.context.put("PackageBase","lst.tfo.upm.es");
-			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
-			this.context.put("ontology", this.ontology);
-			this.context.put("esc", Escape.class);
-			//this.writer = new FileWriter(new File("target/template.html"));
-			runProject("index.html.vm","target/index.html");
-			String ontName=null;
-			for (OWLOntology element : this.ontology.getImportsClosure()) {
-				ontName=this.ontology.getOntologyID().getOntologyIRI().get().getFragment();
-				this.context.put("ontology", element);
-				new File("target/"+ontName).mkdir();
-				runProject("index_ont_html.vm","target/"+ontName+"/index.html");
-				this.context.put("declarations", AxiomType.getAxiomsOfTypes(element.getAxioms(), AxiomType.DECLARATION));
-				runProject("class_.html.vm","target/"+ontName+"/class.html");
-				//obj props
-				runProject("objectProperty_.html.vm","target/"+ontName+"/objectProperty.html");
-				//data props	
-				runProject("dataProperty_.html.vm","target/"+ontName+"/dataProperty.html");
-				}
-			}
-		
-			
+//
+//	@Test
+//	public void contextJSON() throws IOException {
+//		this.context.put("ontology", this.localOntology);
+//		this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
+//		StringWriter stringwriter = new StringWriter();
+//		this.template = engine.getTemplate("jsoncontext.vm");
+//		this.template.merge(context,stringwriter);
+//		System.out.println(stringwriter.toString());
+//        }
+//		
+//			
 	}
-	//TODO: the same for the other velociMacros..
 
 
 
