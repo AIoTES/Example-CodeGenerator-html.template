@@ -7,6 +7,7 @@ $k.getRange()
 #end
 #end
 #end
+
 #macro(datatypes $class)
 #foreach($data in $props_axioms)
 #if($data.getDomain().asOWLClass().equals($class))
@@ -27,6 +28,7 @@ $k.getRange()
 #end
 {
   "@context": {
+  "data":"http://brain_games.activage.lst.tfo.upm.es#data",
 	#class()
   }
 }

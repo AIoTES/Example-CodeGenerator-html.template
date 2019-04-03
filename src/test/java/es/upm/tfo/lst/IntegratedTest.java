@@ -124,15 +124,15 @@ public class IntegratedTest {
 //			runOntology("Ontology.java.vm");
 //	}
 //
-//	@Test
-//	public void contextJSON() throws IOException {
-//		this.context.put("ontology", this.localOntology);
-//		this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
-//		StringWriter stringwriter = new StringWriter();
-//		this.template = engine.getTemplate("jsoncontext.vm");
-//		this.template.merge(context,stringwriter);
-//		System.out.println(stringwriter.toString());
-//        }
+	@Test
+	public void contextJSON() throws IOException {
+		this.context.put("ontology", this.localOntology);
+		this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
+		StringWriter stringwriter = new StringWriter();
+		this.template = engine.getTemplate("jsoncontext.vm");
+		this.template.merge(context,stringwriter);
+		System.out.println(stringwriter.toString());
+        }
 //		
 //			
 	}
