@@ -67,7 +67,7 @@ public class IntegratedTest {
 		ontManager = OWLManager.createOWLOntologyManager();
 		//this.ontology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("games.owl").openStream());
 		this.ontology = ontManager.loadOntologyFromOntologyDocument(new URL(ONT_URL).openStream());
-		localOntology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("GamesOntology.owl").openStream());
+
 		this.engine = new VelocityEngine();
 		this.props = new Properties();
 		props.put("file.resource.loader.path", "src/main/resources/");
@@ -116,14 +116,7 @@ public class IntegratedTest {
 		this.writer = new FileWriter(new File("target/class_Pizza.html"));
 		runClass("class_.html.vm");
 	}
-//
-//	@Test
-//	public void ontologyTest() throws IOException {
-//			this.context.put("AxiomType",new FieldMethodizer("org.semanticweb.owlapi.model.AxiomType"));
-//			this.writer = new FileWriter(new File("target/ontology_Pizza.html"));
-//			runOntology("Ontology.java.vm");
-//	}
-//
+
 	@Test
 	public void contextJSON() throws IOException {
 		this.context.put("ontology", this.localOntology);
