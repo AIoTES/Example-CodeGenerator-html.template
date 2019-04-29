@@ -1,0 +1,34 @@
+#set($ontName = $o.getOntologyID().getOntologyIRI().get().getFragment())
+
+## listar todas las ontologias con sus respectivas anotaciones
+#macro(internalClass $ont)
+#foreach($o in $ont.getClassesInSignature())
+<p>$esc.getText("${o}")</p>
+#end
+#end
+
+
+## listar todas las ontologias con sus respectivas anotaciones
+#macro(axiomas $ont)
+#foreach($o in $ont.getAxioms())
+<p>$esc.getText("${o}")</p>
+#end
+#end
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+<script type="text/javascript" src="./js/script.js"></script>
+<h1>CLASES PARA LA ONTOLOGIA ${ontology.getOntologyID().getOntologyIRI().get().getFragment()} </h1>
+<h1><a href="./class.html">${ontName} classes</a></body></h1>   
+<h1>LISTA DE AXIOMAS DE LA ONTOLOGIA ${ontology.getOntologyID().getOntologyIRI().get().getFragment()} </h1>
+#axiomas($ontology)
+</body>
+</html>

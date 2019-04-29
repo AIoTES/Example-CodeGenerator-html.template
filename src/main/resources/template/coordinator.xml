@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Template
+		xmlns="http://www.example.org/prueba2"
+		xmlns:x="http://www.w3.org/2001/XMLSchema-instance"
+		x:schemaLocation="http://www.example.org/prueba2 xsd.xsd">
+		<template-name>Example set on velocity macros</template-name>
+		<template-version>1.0</template-version>
+
+
+		<variables>
+			<variable>
+				<name>package</name>
+				<default>lst.tfo.upm.es</default>
+				<required>true</required>
+				<description>"variable to set the base package"</description>
+			</variable>
+
+		</variables>
+		<macros>
+			<macro>
+				<template>implementationGenerator.vm</template>
+				<for>Class</for>
+				<output>implementation/${class.getIRI().getFragment()}</output>  		
+					<imports>     
+					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName> 
+				</imports>  
+			</macro>
+		</macros>
+</Template>
+
