@@ -1,9 +1,0 @@
-#if($key1 == "code generator")
-	the variable #[[$key1]]# value is "code generator"
-#end
-
-#if($key2 == "code generator")
-	the variable #[[$key1]]# value is "code generator"
-#else
-	the variable #[[$key2]]# value is not "code generator", it value is "$key2"
-#end
