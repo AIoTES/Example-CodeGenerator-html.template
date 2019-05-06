@@ -1,30 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Template
-		xmlns="http://www.example.org/prueba2"
-		xmlns:x="http://www.w3.org/2001/XMLSchema-instance"
-		x:schemaLocation="http://www.example.org/prueba2 xsd.xsd">
-		<template-name>Example set on velocity macros</template-name>
+		xmlns="http://www.example.org/exampleTemplate " 
+		xmlns:x="http://www.w3.org/2001/XMLSchema-instance" 
+		x:schemaLocation="http://www.example.org/exampleTemplate schema.xsd">
+		<template-name>XMLExample</template-name>
 		<template-version>1.0</template-version>
+		<template-description>this template is an example of structure of xml coordinator file</template-description>
 
-
+		
 		<variables>
 			<variable>
-				<name>package</name>
-				<default>lst.tfo.upm.es</default>
-				<required>true</required>
-				<description>"variable to set the base package"</description>
+				<!-- this variable is for put into project a name of package-->
+				<name>packageName</name>
+				<default></default>
+				<!-- if required content is empty or is "false", the program interpret it to false.Otherwise, the program will interpret the containing text (true or false)-->
+				<required></required>
+				<!-- provide a description to the purpose of this variable, is not obligatory-->
+				<description>"variable to set package name"</description>					
 			</variable>
-
+				
+			
 		</variables>
 		<macros>
+			
 			<macro>
-				<template>implementationGenerator.vm</template>
-				<for>Class</for>
-				<output>implementation/${class.getIRI().getFragment()}</output>  		
-					<imports>     
-					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName> 
-				</imports>  
+				<template>index.html.vm</template>
+				<for>project</for>
+				<output>webindex.html</output>
+				<imports>
+					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+				</imports>
 			</macro>
+					
+			<macro>
+				<template>index_ont_html.vm</template>
+				<for>ontology</for>
+<!-- 				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}/${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}.html</output> -->
+				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}/${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}.html</output>
+				<imports>
+					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+				</imports>
+			</macro>		
+					
+					
+			<macro>
+				<template>class_.html.vm</template>
+				<for>class</for>
+				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}/classes/${class.getIRI().getFragment()}/${class.getIRI().getFragment()}.html</output>
+				<imports>
+					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+				</imports>
+			</macro>
+			
+			<macro>
+				<template>objectProperty_.html.vm</template>
+				<for>objectProperty</for>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}/classes/${class.getIRI().getFragment()}/obj_properties.html</output>
+				<imports>
+					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+				</imports>
+			</macro>
+			
+			<macro>
+				<template>dataProperty_.html.vm</template>
+				<for>dataProperty</for>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}/classes/${class.getIRI().getFragment()}/data_properties.html</output>
+				<imports>
+					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+				</imports>
+			</macro>
+
+			  			
 		</macros>
 </Template>
 
