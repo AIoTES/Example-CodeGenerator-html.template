@@ -32,7 +32,11 @@
 	    <version>1.7</version>
 	    <scope>test</scope>
 	</dependency>
-
+		<dependency>
+		  <groupId>es.upm.tfo.lst</groupId>
+		  <artifactId>codegenerator.core</artifactId>
+		  <version>${project.version}</version>
+		</dependency>
 	<dependency>
 		<groupId>net.sourceforge.owlapi</groupId>
 		<artifactId>owlapi-distribution</artifactId>
@@ -45,11 +49,5 @@
 	    <version>4.0.4</version>
 	    <scope>test</scope>
 	</dependency>
-	
-		<dependency>
-		  <groupId>es.upm.tfo.lst</groupId>
-		  <artifactId>codegenerator.core</artifactId>
-		  <version>${project.version}</version>
-		</dependency>
   </dependencies>
 </project>
