@@ -1,16 +1,19 @@
 #set( $ontName = $ontology.getOntologyID().getOntologyIRI().get().getFragment() )
 
-## listar todas las ontologias con sus respectivas anotaciones
+
 #macro(internalClass)
 #foreach($o in $ontology.getClassesInSignature())
-<a href="./classes/${o.getIRI().getFragment()}/${o.getIRI().getFragment()}.html">${o.getIRI().getFragment()}</a><br>
+        <tr>
+            <td><a href="./classes/${o.getIRI().getFragment()}/${o.getIRI().getFragment()}.html">${o.getIRI().getFragment()}</a><br></td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+
 #end
 #end
 
-
-## listar todas las ontologias con sus respectivas anotaciones
 #macro(axiomas)
-#foreach($o in $ont.getAxioms())
+#foreach($o in $ontology.getAxioms())
 <p>$esc.getText("${o}")</p>
 #end
 #end
@@ -23,12 +26,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CodeGenerator tool Tutorial</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 5px;
+              text-align: left;    
+            }
+    </style>
 </head>
 <body>
 <script type="text/javascript" src="./js/script.js"></script>
     <h1>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}</h1>
     <h2>List of class for this ontology</h2>
     <p>The following list details all the classes contained in the current ontology. By clicking on the name of the class, you can see all the elements related to the class.</p>
+        <table>
+        <tr>
+            <th>ClassName</th>
+            <th>NamedIndividualCount</th>
+            <th>ClassPropertiesCount</th>
+        </tr>
     #internalClass()
+    </table>
+    
 </body>
 </html>

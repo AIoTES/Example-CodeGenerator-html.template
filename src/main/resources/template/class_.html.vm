@@ -1,6 +1,6 @@
 
 ## listar todas las ontologias con sus respectivas anotaciones
-#macro(clases $dec)
+#macro(clases)
 #foreach($o in $dec)
 <p>$esc.getText("${o}")  <a href="./dataProperty.html">Data properties</a>  <a href="./objectProperty.html#$esc.getText("${o.getSignature().iterator().next()}")">Object properties</a></p>
 #end
@@ -15,8 +15,13 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-<script type="text/javascript" src="./js/script.js"></script>
-<h1>CLASES</h1>
-#clases($declarations)    
+    <h1>${class.getIRI().getFragment()}</h1>
+    <h2>In the following list you can see al related elements to this class, like instances, properties,etc.</h2>
+    <p>Class NamedIndividuals count: 0</p>
+    <p>class DataProperty cunt: 0</p>
+    <p>class ObjectProperty count: 0</p>
+    <a href="./NamedIndividual/NamedIndividual.html">click to see details of each NamedIndividual related to this class</a><br>
+    <a href="./DataProperty/DataProperty.html">click to see details of each DataProperties related to this class</a><br>
+    <a href="./ObjectProperty/ObjectProperty.html">click to see details of each objectProperties related to this class</1a><br>#clases()    
 </body>
 </html>
