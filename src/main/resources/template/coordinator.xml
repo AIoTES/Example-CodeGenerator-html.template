@@ -52,9 +52,18 @@
 			</macro>
 			
 			<macro>
+				<template>namedIndividual.html.vm</template>
+				<for>namedIndividual</for>
+				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/NamedIndividual/namedIndividuals.html</output>
+				<imports>
+					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+				</imports>
+			</macro>
+
+			<macro>
 				<template>objectProperty_.html.vm</template>
 				<for>objectProperty</for>
-				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/obj_properties.html</output>
+				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/ObjectProperty/obj_properties.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
@@ -63,11 +72,13 @@
 			<macro>
 				<template>dataProperty_.html.vm</template>
 				<for>dataProperty</for>
-				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/data_properties.html</output>
+				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/DataProperty/data_properties.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
 			</macro>
+
+
 
 			  			
 		</macros>
