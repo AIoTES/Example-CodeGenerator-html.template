@@ -1,4 +1,4 @@
-#set($objProps = $ontology.getAxioms($AxiomType.OBJECT_PROPERTY_DOMAIN))
+#set($objProps = $ontologies.getAxioms($AxiomType.OBJECT_PROPERTY_DOMAIN))
 ## listar todas las ontologias con sus respectivas anotaciones
 
 #macro(objprops $dec)

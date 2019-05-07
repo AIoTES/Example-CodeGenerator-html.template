@@ -1,4 +1,4 @@
-#set($dtprops = $ontology.getAxioms($AxiomType.DATA_PROPERTY_DOMAIN))
+#set($dtprops = $ontologies.getAxioms($AxiomType.DATA_PROPERTY_DOMAIN))
 ## listar todas las ontologias con sus respectivas anotaciones
 
 #macro(dataprops $dec)
