@@ -35,8 +35,7 @@
 			<macro>
 				<template>index_ont_html.vm</template>
 				<for>ontology</for>
-<!-- 				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}/${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}.html</output> -->
-				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}/${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}.html</output>
+				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
@@ -46,7 +45,7 @@
 			<macro>
 				<template>class_.html.vm</template>
 				<for>class</for>
-				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}/classes/${class.getIRI().getFragment()}/${class.getIRI().getFragment()}.html</output>
+				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/${class.getIRI().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
@@ -55,7 +54,7 @@
 			<macro>
 				<template>objectProperty_.html.vm</template>
 				<for>objectProperty</for>
-				<output>${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}/classes/${class.getIRI().getFragment()}/obj_properties.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/obj_properties.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
@@ -64,7 +63,7 @@
 			<macro>
 				<template>dataProperty_.html.vm</template>
 				<for>dataProperty</for>
-				<output>${ontology.getOntologyID().getOntologyIRI().get().getShortForm()}/classes/${class.getIRI().getFragment()}/data_properties.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/data_properties.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
