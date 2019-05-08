@@ -5,18 +5,13 @@
 #foreach($o in $ontology.getClassesInSignature())
         <tr>
             <td><a href="./classes/${o.getIRI().getFragment()}/${o.getIRI().getFragment()}.html">${o.getIRI().getFragment()}</a><br></td>
-            <td>0</td>
-            <td>0</td>
+            <td>$esc.getText("${o.getIRI()}")</td>
+            <td>${ontName}</td>
         </tr>
 
 #end
 #end
 
-#macro(axiomas)
-#foreach($o in $ontology.getAxioms())
-<p>$esc.getText("${o}")</p>
-#end
-#end
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,8 +40,8 @@
         <table>
         <tr>
             <th>ClassName</th>
-            <th>NamedIndividualCount</th>
-            <th>ClassPropertiesCount</th>
+            <th>ClasIRI</th>
+            <th>Ontoogy</th>
         </tr>
     #internalClass()
     </table>
