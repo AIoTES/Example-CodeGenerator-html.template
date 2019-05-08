@@ -1,0 +1,28 @@
+##utilities for NamedIndividual
+#macro(individuals_by_class $cls)
+#foreach($axiom in $ontology.getAxioms())
+#if( ${axiom.isOfType($AxiomType.DECLARATION)} && ${axiom.getSignature().iterator().next().isOWLClass()} )
+#set($auxiliar = ${axiom.getSignature().iterator().next().asOWLClass()})
+#foreach($t in $ontology.getAxioms($AxiomType.OBJECT_PROPERTY_DOMAIN))
+#if(${t.getDomain().equals(cls)})
+name of ${t.getProperty().asOWLObjectProperty().getIRI().getFragment()}
+#end
+#end
+#end
+#end
+#end
+
+#macro(individuals_count_for_class $cls)
+#set($i=0)
+#foreach($axiom in $ontology.getAxioms())
+#if( ${axiom.isOfType($AxiomType.DECLARATION)} && ${axiom.getSignature().iterator().next().isOWLClass()} )
+#set($auxiliar = ${axiom.getSignature().iterator().next().asOWLClass()})
+#foreach($t in $ontology.getAxioms($AxiomType.OBJECT_PROPERTY_DOMAIN))
+#if(${t.getDomain().equals(cls)})
+#set($i=$i+1)
+#end
+#end
+#end
+#end
+$i
+#end
