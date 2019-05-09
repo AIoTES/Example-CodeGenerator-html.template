@@ -1,17 +1,11 @@
-#set( $ontName = $ontology.getOntologyID().getOntologyIRI().get().getFragment() )
-
-
-#macro(internalClass)
-#foreach($o in $ontology.getClassesInSignature())
-        <tr>
-            <td><a href="./classes/${o.getIRI().getFragment()}/${o.getIRI().getFragment()}.html">${o.getIRI().getFragment()}</a><br></td>
-            <td>$esc.getText("${o.getIRI()}")</td>
-            <td>${ontName}</td>
+#macro(annotations)
+#foreach($ann in $ontology.getAnnotations())
+       <tr>
+            <td>$esc.getText("${ann.getValue()}")</td> 
         </tr>
-
 #end
 #end
-
+#set($ontName = $ontology.getOntologyID().getOntologyIRI().get().getFragment() )
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,14 +30,12 @@
 
     <h1>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}</h1>
     <h2>List of class for this ontology</h2>
-    <p>The following list details all the classes contained in the current ontology. By clicking on the name of the class, you can see all the elements related to the class.</p>
+    <p>The following list details all the annotations for the ${ontName} ontology</p>
     <table>
         <tr>
-            <th>ClassName</th>
-            <th>ClasIRI</th>
-            <th>Ontoogy</th>
+            <th>Annotations</th>
         </tr>
-    #internalClass()
+#annotations()
     </table>
     
 </body>

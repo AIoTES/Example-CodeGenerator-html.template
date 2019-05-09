@@ -1,8 +1,13 @@
 #macro(ontologies)
 ## using $project.getOntogies2Bprocessed()  can acces a compelte list of ontologies
+
 #foreach($o in $project.getOntologies2BProcesed())
 #set($ontName = $o.getOntologyID().getOntologyIRI().get().getFragment() )
-<a href="./ontology/${ontName}/${ontName}.html">${ontName}</a><br>
+        <tr>
+            <td><a href="./ontology/${ontName}/${ontName}.html">${ontName}</a></td>
+            <td><a href="./ontology/${ontName}/annotations/annotations.html">${ontName} annotations</a></td>
+            <td><a href="./ontology/${ontName}/axioms/axioms.html">${ontName} Axioms</a></td>
+        </tr>
 #end
 #end
 
@@ -13,11 +18,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CodeGenerator tool Tutorial</title>
-
+<style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 5px;
+              text-align: left;    
+            }
+    </style>
 </head>
 <body>
-<script type="text/javascript" src="./js/script.js"></script>
+
 <h1>List of Ontologies loaded recursively from main ontologies</h1>
-#ontologies()    
+<table>
+        <tr>
+            <th>Ontology Name</th>
+            <th>Annotations</th>
+            <th>Axioms</th>
+        </tr>
+#ontologies()        
+</table>
+<h1>Variables given into XML file</h1>
+<p>variable name: $targetOperatingSystem variable value:$targetOperatingSystem.getValue() </p>
+<p>variable name: $date_expire variable value: $date_expire.getValue()</p>
+<p>Variable name:$timezone -- variable value: $timezone.getValue()</p>
+<p>$packageName: $packageName.getValue()</p>
 </body>
 </html>

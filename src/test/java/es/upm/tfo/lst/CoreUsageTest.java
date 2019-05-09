@@ -13,7 +13,7 @@ import es.upm.tfo.lst.CodeGenerator.model.TemplateDataModel;
 import es.upm.tfo.lst.CodeGenerator.owl.OntologyLoader;
 import es.upm.tfo.lst.CodeGenerator.xmlparser.XmlParser;
 
-public class CodeGeneartorTest {
+public class CoreUsageTest {
 	
 	private XmlParser parser=null;
 	private TemplateDataModel model=null;
@@ -21,8 +21,8 @@ public class CodeGeneartorTest {
 	private OntologyLoader ontologyLoader=null;
 	//----constants
 	private final String ontologyBasePath="src/test/resources/ontologies/";
-	private final String webOntology ="https://protege.stanford.edu/ontologies/pizza/pizza.owl";
-	//private final String webOntology ="https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
+	//private final String webOntology ="https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	private final String webOntology ="https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
 	private final String baseOutput="target/generated/";
 
 	@Before
@@ -34,7 +34,7 @@ public class CodeGeneartorTest {
 	}
 
 	@Test
-	public void example1() {
+	public void test1() {
 
 		 try {
 		 	
@@ -45,10 +45,9 @@ public class CodeGeneartorTest {
 				//set output directory
 				this.genPro.setOutputFolder(this.baseOutput);
 				//optional: add value to variables. You can add extra variable plus the variables provided into XML file
-//				this.genPro.setVariable("targetOperatingSystem","Linux");
-//				this.genPro.setVariable( "cardinality", "2");
-//				this.genPro.setVariable( "templateCount", "2");
-//				this.genPro.setVariable( "ontologyCount", "88");
+				this.genPro.setVariable("targetOperatingSystem","Linux");
+				this.genPro.setVariable( "date_expire", "9-5-2019");				
+				this.genPro.setVariable( "timezone", "(GMT+01:00)");
 				File f = new File(baseOutput);
 				f.mkdirs();
 				genPro.process();

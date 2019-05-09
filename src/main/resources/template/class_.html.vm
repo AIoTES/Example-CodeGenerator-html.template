@@ -14,9 +14,9 @@
     <p>Class NamedIndividuals count: #individuals_count_for_class($class)</p>
     <p>class DataProperty cunt: 0</p>
     <p>class ObjectProperty count: 0</p>
-    <a href="./NamedIndividual/NamedIndividual.html">click to see details of each NamedIndividual related to this class</a><br>
-    <a href="./DataProperty/DataProperty.html">click to see details of each DataProperties related to this class</a><br>
-    <a href="./ObjectProperty/ObjectProperty.html">click to see details of each objectProperties related to this class</a><br>
+    <p>click to see details of each NamedIndividual related to this <a href="./NamedIndividual/NamedIndividual.html">class</a></p><br>
+    <p>click to see details of each DataProperties related to this <a href="./DataProperty/DataProperty.html">class</a><br></p>
+    <p>click to see details of each objectProperties related to this <a href="./ObjectProperty/ObjectProperty.html">class</a><br></p>
     
 </body>
 </html>

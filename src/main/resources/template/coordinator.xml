@@ -12,7 +12,7 @@
 			<variable>
 				<!-- this variable is for put into project a name of package-->
 				<name>packageName</name>
-				<default></default>
+				<default>es.upm.tfo.lst.CodeGeneratorCoreUsageExample</default>
 				<!-- if required content is empty or is "false", the program interpret it to false.Otherwise, the program will interpret the containing text (true or false)-->
 				<required></required>
 				<!-- provide a description to the purpose of this variable, is not obligatory-->
@@ -40,8 +40,26 @@
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
 			</macro>		
-					
-					
+
+			<macro>
+				<template>Annotations_html.vm</template>
+				<for>ontology</for>
+				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/annotations/annotations.html</output>
+				<imports>
+					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+				</imports>
+			</macro>
+
+
+			<macro>
+				<template>axioms_html.vm</template>
+				<for>ontology</for>
+				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/axioms/axioms.html</output>
+				<imports>
+					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+				</imports>
+			</macro>
+
 			<macro>
 				<template>class_.html.vm</template>
 				<for>class</for>
