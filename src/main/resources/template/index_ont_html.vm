@@ -3,11 +3,27 @@
 
 #macro(internalClass)
 #foreach($o in $ontology.getClassesInSignature())
+    
         <tr>
             <td><a href="./classes/${o.getIRI().getFragment()}/${o.getIRI().getFragment()}.html">${o.getIRI().getFragment()}</a><br></td>
             <td>$esc.getText("${o.getIRI()}")</td>
-            <td>${ontName}</td>
         </tr>
+
+#end
+#end
+
+
+#macro(individuals)
+#foreach($axiom in $ontology.getAxioms($AxiomType.DIFFERENT_INDIVIDUALS))
+
+#foreach($aux in $axiom)
+$aux
+        <tr>
+        <td>${aux.getIRI().getFragment()}</td>
+        <td>$esc.getText("${aux.getIRI()}")</td>
+        <td>$ontology.getOntologyID().getOntologyIRI().get().getFragment()</td>
+        </tr>
+#end
 
 #end
 #end
@@ -41,9 +57,18 @@
         <tr>
             <th>ClassName</th>
             <th>ClasIRI</th>
-            <th>Ontoogy</th>
         </tr>
     #internalClass()
+    </table>
+
+    <h2>List of NamedIndividuals for this ontology</h2>
+
+    <table>
+        <tr>
+            <th>individual</th>
+            <th>individual IRI</th>
+        </tr>
+    #individuals()
     </table>
     
 </body>

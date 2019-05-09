@@ -5,8 +5,8 @@
 #set($ontName = $o.getOntologyID().getOntologyIRI().get().getFragment() )
         <tr>
             <td><a href="./ontology/${ontName}/${ontName}.html">${ontName}</a></td>
-            <td><a href="./ontology/${ontName}/annotations/annotations.html">${ontName} annotations</a></td>
-            <td><a href="./ontology/${ontName}/axioms/axioms.html">${ontName} Axioms</a></td>
+            <td> ${o.getOntologyID().getOntologyIRI().get()}</a></td>
+            <td>#foreach($ann in $o.getAnnotations()) #if($ann.getValue()) $ann.getValue() #end #end</a></td>
         </tr>
 #end
 #end
@@ -35,8 +35,8 @@
 <table>
         <tr>
             <th>Ontology Name</th>
+            <th>Ontology IRI</th>
             <th>Annotations</th>
-            <th>Axioms</th>
         </tr>
 #ontologies()        
 </table>
