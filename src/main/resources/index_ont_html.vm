@@ -1,4 +1,7 @@
 #set( $ontName = $ontology.getOntologyID().getOntologyIRI().get().getFragment() )
+##
+## Table for classes
+##
 #macro(internalClass)
 #foreach($o in $ontology.getClassesInSignature())
         <tr>
@@ -7,8 +10,9 @@
         </tr>
 #end
 #end
-
-
+##
+## Table for individuals
+##
 #macro(individuals)
 		#foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
         #foreach($r in $declaration.getIndividualsInSignature())
@@ -19,8 +23,9 @@
         #end
 		#end
 #end
-
-
+##
+## Table for Data Properties
+##
 #macro(dataprops)
 		#foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
         #foreach($r in $declaration.getDataPropertiesInSignature())
@@ -31,7 +36,9 @@
         #end
 		#end
 #end
-
+##
+## Table for Object Properties
+##
 #macro(objprops)
 #foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
         #foreach($r in $declaration.getObjectPropertiesInSignature())
