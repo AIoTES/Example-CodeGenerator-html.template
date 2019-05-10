@@ -41,24 +41,6 @@
 				</imports>
 			</macro>		
 
-			<macro>
-				<template>Annotations_html.vm</template>
-				<for>ontology</for>
-				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/annotations/annotations.html</output>
-				<imports>
-					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
-				</imports>
-			</macro>
-
-
-			<macro>
-				<template>axioms_html.vm</template>
-				<for>ontology</for>
-				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/axioms/axioms.html</output>
-				<imports>
-					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
-				</imports>
-			</macro>
 
 			<macro>
 				<template>class_.html.vm</template>
@@ -66,6 +48,7 @@
 				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/${class.getIRI().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+					<FullyQualifiedName>org.semanticweb.owlapi.search.EntitySearcher</FullyQualifiedName>
 				</imports>
 			</macro>
 			

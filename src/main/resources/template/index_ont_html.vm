@@ -1,33 +1,49 @@
 #set( $ontName = $ontology.getOntologyID().getOntologyIRI().get().getFragment() )
-
-
 #macro(internalClass)
 #foreach($o in $ontology.getClassesInSignature())
-    
         <tr>
             <td><a href="./classes/${o.getIRI().getFragment()}/${o.getIRI().getFragment()}.html">${o.getIRI().getFragment()}</a><br></td>
             <td>$esc.getText("${o.getIRI()}")</td>
         </tr>
-
 #end
 #end
 
 
 #macro(individuals)
-#foreach($axiom in $ontology.getAxioms($AxiomType.DIFFERENT_INDIVIDUALS))
-
-#foreach($aux in $axiom)
-$aux
-        <tr>
-        <td>${aux.getIRI().getFragment()}</td>
-        <td>$esc.getText("${aux.getIRI()}")</td>
-        <td>$ontology.getOntologyID().getOntologyIRI().get().getFragment()</td>
-        </tr>
+		#foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
+        #foreach($r in $declaration.getIndividualsInSignature())
+            <tr>
+                <td>$esc.getText("$r.getIRI().getFragment()")</td>
+                <td>$esc.getText("$r.getIRI()")</td>
+            </tr>			    
+        #end
+		#end
 #end
 
-#end
+
+#macro(dataprops)
+		#foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
+        #foreach($r in $declaration.getDataPropertiesInSignature())
+            <tr>
+                <td>$esc.getText("$r.getIRI().getFragment()")</td>
+                <td>$esc.getText("$r.getIRI()")</td>
+            </tr>			    
+        #end
+		#end
 #end
 
+#macro(objprops)
+#foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
+        #foreach($r in $declaration.getObjectPropertiesInSignature())
+            <tr>
+                <td>$esc.getText("$r.getIRI().getFragment()")</td>
+                <td>$esc.getText("$r.getIRI()")</td>
+            </tr>			    
+        #end
+		#end
+
+
+#end
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,5 +87,25 @@ $aux
     #individuals()
     </table>
     
+    <h2>List of Data Properties for this ontology</h2>
+
+        <table>
+        <tr>
+            <th>DataProperty</th>
+            <th>DataProperty IRI</th>
+        </tr>
+    #dataprops()
+    </table>
+
+
+    <h2>List of Object Properties for this ontology</h2>
+
+        <table>
+        <tr>
+            <th>ObjectProperty</th>
+            <th>ObjectProperty IRI</th>
+        </tr>
+    #objprops()
+    </table>
 </body>
 </html>

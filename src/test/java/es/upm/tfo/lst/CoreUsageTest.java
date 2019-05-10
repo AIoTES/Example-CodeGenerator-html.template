@@ -21,8 +21,8 @@ public class CoreUsageTest {
 	private OntologyLoader ontologyLoader=null;
 	//----constants
 	private final String ontologyBasePath="src/test/resources/ontologies/";
-	private final String webOntology ="https://protege.stanford.edu/ontologies/pizza/pizza.owl";
-	//private final String webOntology ="https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
+	//private final String webOntology ="https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	private final String webOntology ="https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
 	private final String baseOutput="target/generated/";
 
 	@Before
@@ -34,7 +34,7 @@ public class CoreUsageTest {
 	}
 
 	@Test
-	public void test1() {
+	public void CodeGeneratorTest() {
 
 		 try {
 		 	
