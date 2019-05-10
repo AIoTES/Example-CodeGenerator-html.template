@@ -289,18 +289,7 @@ public class OWLAPITest {
 		}
 	}
 	
-	@Test
-	public void individualsPerClass() {
-//		for (OWLAxiom iterable_element : ontology.getAxioms()) {
-//			if(iterable_element.isOfType(AxiomType.DECLARATION) && iterable_element.getSignature().iterator().next().isOWLNamedIndividual()) {
-//				System.out.println(iterable_element);
-//			}
-//		}
-		
-		for (OWLAxiom iterable_element : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.OBJECT_PROPERTY_RANGE)) {
-		System.out.println(iterable_element);
-		}
-	}
+	
 	
 	@Test
 	public void EntitySearchClassTest() throws OWLOntologyCreationException, IOException {

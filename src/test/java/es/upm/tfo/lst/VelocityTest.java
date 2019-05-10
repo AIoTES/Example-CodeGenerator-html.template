@@ -114,11 +114,6 @@ public class VelocityTest {
 		System.out.println(sw.toString());
 	}
 
-	@Test
-	public void usingContextContentTest() throws IOException{
-		this.template = engine.getTemplate("contextTest.vm");
-		this.template.merge(context, sw);
-		System.out.println(sw.toString());
-	}
+	
 
 }

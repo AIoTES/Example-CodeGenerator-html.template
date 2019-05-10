@@ -23,9 +23,9 @@ public class CoreUsageTest {
 	private OntologyLoader ontologyLoader=null;
 	//----constants
 	private final String ontologyBasePath="src/test/resources/ontologies/";
-	private final String webOntology ="https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	//private final String webOntology ="https://protege.stanford.edu/ontologies/pizza/pizza.owl";
 	//private final String webOntology ="https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
-	//private final String webOntology ="https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
+	private final String webOntology ="https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
 	
 	private final String baseOutput="target/generated/";
 	private OWLOntologyManager ontManager;
