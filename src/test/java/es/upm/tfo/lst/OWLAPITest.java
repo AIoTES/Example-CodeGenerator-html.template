@@ -240,8 +240,6 @@ public class OWLAPITest {
 	@Test
 	public void getObjectPropertiesTest() {
 		
-		OWLDataFactory manager = ontManager.getOWLDataFactory();
-		OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
 		for (OWLObjectPropertyDomainAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
 			System.out.println("OBJECT_PROPERTY_DOMAIN "+item);
 	
