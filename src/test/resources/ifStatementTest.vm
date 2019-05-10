@@ -5,5 +5,5 @@
 #if($key2 == "code generator")
 	the variable #[[$key1]]# value is "code generator"
 #else
-	the variable #[[$key2]]# value is not "code generator", it value is "$key2"
+	the variable #[[$key2]]# value is not "code generator", its value is "$key2"
 #end
