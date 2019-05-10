@@ -115,7 +115,7 @@ public class OWLAPITest {
 			System.out.println("getClassesInSignature() " + ontology.getClassesInSignature().size());
 			System.out.println("getDataPropertiesInSignature() " + ontology.getDataPropertiesInSignature().size());
 			System.out.println("getDatatypesInSignature() " + ontology.getDatatypesInSignature().size());
-			System.out.println("getAxioms " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE,Imports.EXCLUDED).size());
+			System.out.println("getAxioms " + ontology.getAxioms(Imports.EXCLUDED).size());
 			System.out.println("DATA_PROPERTY_ASSERTION " + ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION,Imports.EXCLUDED).size());
 			System.out.println("DATA_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN,Imports.EXCLUDED).size());
 			System.out.println("DATA_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE,Imports.EXCLUDED).size());
