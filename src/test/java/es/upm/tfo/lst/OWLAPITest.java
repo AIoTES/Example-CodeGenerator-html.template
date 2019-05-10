@@ -297,9 +297,10 @@ public class OWLAPITest {
 		for (OWLAxiom iterable_element : ontology.getAxioms(Imports.EXCLUDED)) {
 			if(iterable_element.isOfType(AxiomType.DECLARATION) && iterable_element.getSignature().iterator().next().isOWLClass()) {
 				OWLClass aux = iterable_element.getSignature().iterator().next().asOWLClass();
-				System.out.println("EntitySearcher.getAnnotationObjects "+EntitySearcher.getAnnotationObjects(aux, ontology).size());
-				System.out.println("EntitySearcher.getInstances "+EntitySearcher.getInstances(aux, ontology).size());
-				System.out.println("EntitySearcher.getIndividuals "+EntitySearcher.getIndividuals(aux, ontology).size());
+				System.out.println(aux.getIRI());
+				System.out.println("\tEntitySearcher.getAnnotationObjects "+EntitySearcher.getAnnotationObjects(aux, ontology).size());
+				System.out.println("\tEntitySearcher.getInstances "+EntitySearcher.getInstances(aux, ontology).size());
+				System.out.println("\tEntitySearcher.getIndividuals "+EntitySearcher.getIndividuals(aux, ontology).size());
 	
 			}
 		}
