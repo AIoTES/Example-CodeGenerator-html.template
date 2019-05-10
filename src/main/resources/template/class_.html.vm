@@ -1,22 +1,28 @@
-#macro(individuals $r)
+#set($axioms = $ontology.getAxioms())
+#set($props_axioms =$ontology.getAxioms($AxiomType.DATA_PROPERTY_DOMAIN))
 
-
-    #if($r.isOWLClass())
-    #foreach ( $element in $EntitySearcher.getInstances($r, $ontology) )
+#macro(individuals)
+    #foreach ( $element in $EntitySearcher.getInstances($class, $ontology) )
         <tr>
             <td>${element.getIRI().getFragment()}</a></td>
             <td>$esc.getText("${element.getIRI().getFragment()}")</td>
         </tr>  
-    #end
-    #end
-
-   
+    #end 
 #end
+
 
 
 #macro(dataprops)
-sdfsf
+
+    #foreach ( $item in $ontology.getAxioms($AxiomType.DATA_PROPERTY_RANGE) )
+        <tr>
+            <td>${item.getIRI().getFragment()}</a></td>
+            <td>$esc.getText("${item.getIRI()}")</td>
+            <td>$esc.getText("${item.getRange()}")</td>
+        </tr>  
+    #end     	
 #end
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,8 +51,19 @@ sdfsf
             <th>individuals</th>
             <th>individuals IRI</th>
         </tr>
-    #individuals($class)
+    #individuals()
     </table>
+    
+   <h2>DataProperties</h2>
+           <table>
+        <tr>
+            <th>Property</th>
+            <th>Property IRI</th>
+            <th>Property range</th>
+        </tr>
     #dataprops()
+       	    </table>
+   
+	
 </body>
 </html>

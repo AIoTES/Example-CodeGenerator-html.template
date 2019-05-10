@@ -31,6 +31,7 @@ import org.semanticweb.owlapi.model.AxiomType;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAnnotation;
 import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
+import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
@@ -58,6 +59,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.search.EntitySearcher;
 
 import uk.ac.manchester.cs.jfact.JFactFactory;
+import uk.ac.manchester.cs.jfact.kernel.dl.axioms.AxiomDeclaration;
 
 /**
  * @author amedrano
@@ -66,8 +68,10 @@ import uk.ac.manchester.cs.jfact.JFactFactory;
 public class OWLAPITest {
 
 	//private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
-	private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
+	//private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
 	//private static final String ONT_URL = "https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
+	private static final String ONT_URL = "https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
+	
 	
 	static OWLOntology ontology;
 	static OWLReasonerFactory reasonerFactory = null;
@@ -181,12 +185,14 @@ public class OWLAPITest {
 
 	@Test
 	public void ontologyClassDeclarations() {
-		System.out.println("ontology.getAxioms()");
 	
-		//en este for tambien da los names individuals y los object properties y las anotations
+
 		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
+			if(a.getSignature().iterator().next().isOWLNamedIndividual()) {
 				System.out.println(a);
-				
+			}
+			
+		
 		}
 
 	}
@@ -194,6 +200,7 @@ public class OWLAPITest {
 	public void listInstances() {
 		//get instances without using a reasoner
 		for (OWLNamedIndividual individual: this.ontology.getIndividualsInSignature()) {
+			
 			System.out.println("individual "+individual.getIRI().getFragment());
 		}
 	}
@@ -209,7 +216,9 @@ public class OWLAPITest {
 	public void getDataPropertiesTest() {
 
 		for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
-			System.out.println("DATA_PROPERTY_DOMAIN "+item);
+			for (OWLDataProperty iterable_element : item.getDataPropertiesInSignature()) {
+				System.out.println(iterable_element);
+			}
 		}
 		System.out.println("------");
 		for (OWLDataPropertyAssertionAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION)) {
@@ -217,7 +226,7 @@ public class OWLAPITest {
 		}
 		System.out.println("------");
 		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
-			System.out.println("DATA_PROPERTY_RANGE "+item.getProperty().asOWLDataProperty());
+			System.out.println("DATA_PROPERTY_RANGE "+item);
 			System.out.println("DATA_PROPERTY_RANGE item.getRange() "+item.getRange());
 		}
 
@@ -280,16 +289,26 @@ public class OWLAPITest {
 		}
 	}
 	
-
+	@Test
+	public void individualsPerClass() {
+//		for (OWLAxiom iterable_element : ontology.getAxioms()) {
+//			if(iterable_element.isOfType(AxiomType.DECLARATION) && iterable_element.getSignature().iterator().next().isOWLNamedIndividual()) {
+//				System.out.println(iterable_element);
+//			}
+//		}
+		
+		for (OWLAxiom iterable_element : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.OBJECT_PROPERTY_RANGE)) {
+		System.out.println(iterable_element);
+		}
+	}
 	
 	@Test
 	public void EntitySearchClassTest() throws OWLOntologyCreationException, IOException {
-		ontology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("OntologyMDS.owl").openStream());
+		
+	
 		for (OWLAxiom iterable_element : ontology.getAxioms()) {
 			if(iterable_element.isOfType(AxiomType.DECLARATION) && iterable_element.getSignature().iterator().next().isOWLClass()) {
 				OWLClass aux = iterable_element.getSignature().iterator().next().asOWLClass();
-
-				
 				System.out.println("EntitySearcher.getAnnotationObjects "+EntitySearcher.getAnnotationObjects(aux, ontology).size());
 				System.out.println("EntitySearcher.getInstances "+EntitySearcher.getInstances(aux, ontology).size());
 				System.out.println("EntitySearcher.getIndividuals "+EntitySearcher.getIndividuals(aux, ontology).size());

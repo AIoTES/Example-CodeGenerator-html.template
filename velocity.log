@@ -1,720 +1,693 @@
-2019-05-10 12:04:33,704 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:33,727 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:33,752 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:33,792 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:33,811 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:33,830 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:33,849 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:33,882 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:33,901 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:33,929 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:33,969 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,028 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,069 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,106 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,141 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,164 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,184 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,208 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,222 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,246 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,258 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,286 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,299 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,311 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,324 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,336 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,348 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,360 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,372 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,384 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,396 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,407 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,421 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,432 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,442 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,452 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,462 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,472 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,481 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,492 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,504 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,521 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,532 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,541 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,551 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,561 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,569 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,578 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,593 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,617 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,630 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,639 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,649 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,659 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,669 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,678 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,686 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,696 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,726 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,735 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,753 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,774 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,803 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,812 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,820 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,828 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,836 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,845 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,853 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,861 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,870 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,885 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,893 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,908 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,922 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,938 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,952 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,967 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,975 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:34,989 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:35,009 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:35,018 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:35,033 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:35,043 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:04:35,055 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:20,102 - Log4JLogChute initialized using file 'velocity.log'
-2019-05-10 12:05:20,102 - Initializing Velocity, Calling init()...
-2019-05-10 12:05:20,103 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-05-10 12:05:20,103 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-05-10 12:05:20,103 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-05-10 12:05:20,103 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-05-10 12:05:20,103 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-05-10 12:05:20,103 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-05-10 12:05:20,106 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2019-05-10 12:05:20,106 - Do unicode file recognition:  false
-2019-05-10 12:05:20,106 - FileResourceLoader : adding path '.'
-2019-05-10 12:05:20,106 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-05-10 12:05:20,108 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-05-10 12:05:20,108 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-05-10 12:05:20,109 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-05-10 12:05:20,109 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-05-10 12:05:20,109 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-05-10 12:05:20,109 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-05-10 12:05:20,109 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-05-10 12:05:20,110 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-05-10 12:05:20,110 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-05-10 12:05:20,112 - Created '20' parsers.
-2019-05-10 12:05:20,112 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-05-10 12:05:20,112 - Velocimacro : Default library not found.
-2019-05-10 12:05:20,112 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-05-10 12:05:20,112 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-05-10 12:05:20,112 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-05-10 12:05:20,112 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-05-10 12:05:20,589 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:20,684 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:20,757 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:20,798 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:20,820 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:20,855 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:20,890 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:20,925 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:20,974 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,023 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,045 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,088 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,118 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,134 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,147 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,164 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,177 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,200 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,216 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,231 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,276 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,328 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,344 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,358 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,375 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,389 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,404 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,424 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,441 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,463 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,480 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,496 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,521 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,534 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,558 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,583 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,610 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,625 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,633 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,643 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,653 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,667 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,684 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,695 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,711 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,720 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,730 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,742 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,754 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,764 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,777 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,787 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,798 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,808 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,818 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,837 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,878 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,912 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,923 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,936 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,946 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,956 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,972 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:21,990 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,003 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,012 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,022 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,029 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,037 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,045 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,054 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,071 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,082 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,092 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,120 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,140 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,159 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,176 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,202 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,219 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,237 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,255 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,273 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,315 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,348 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,366 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,373 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,390 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,414 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,435 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,446 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,466 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,483 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,496 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,524 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,549 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,565 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,579 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:05:22,589 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:25,131 - Log4JLogChute initialized using file 'velocity.log'
-2019-05-10 12:06:25,132 - Initializing Velocity, Calling init()...
-2019-05-10 12:06:25,132 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-05-10 12:06:25,132 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-05-10 12:06:25,132 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-05-10 12:06:25,132 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-05-10 12:06:25,132 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-05-10 12:06:25,132 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-05-10 12:06:25,136 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2019-05-10 12:06:25,136 - Do unicode file recognition:  false
-2019-05-10 12:06:25,136 - FileResourceLoader : adding path '.'
-2019-05-10 12:06:25,136 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-05-10 12:06:25,138 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-05-10 12:06:25,138 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-05-10 12:06:25,138 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-05-10 12:06:25,138 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-05-10 12:06:25,138 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-05-10 12:06:25,139 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-05-10 12:06:25,139 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-05-10 12:06:25,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-05-10 12:06:25,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-05-10 12:06:25,141 - Created '20' parsers.
-2019-05-10 12:06:25,142 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-05-10 12:06:25,142 - Velocimacro : Default library not found.
-2019-05-10 12:06:25,142 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-05-10 12:06:25,142 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-05-10 12:06:25,142 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-05-10 12:06:25,142 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-05-10 12:06:25,527 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:25,609 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:25,666 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:25,752 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:25,815 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:25,855 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:25,898 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:25,925 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:25,968 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:25,996 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,018 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,046 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,067 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,095 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,117 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,144 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,159 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,179 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,203 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,223 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,238 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,254 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,275 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,294 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,316 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,333 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,363 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,399 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,417 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,447 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,470 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,490 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,505 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,522 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,546 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,557 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,568 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,578 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,588 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,597 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,611 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,626 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,644 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,656 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,668 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,678 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,691 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,706 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,717 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,726 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,743 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,753 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,765 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,775 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,789 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,800 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,809 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,817 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,827 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,835 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,845 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,857 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,874 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,894 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,910 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,919 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,930 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,938 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,947 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,955 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,963 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,973 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,981 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:26,997 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,021 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,031 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,042 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,050 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,058 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,067 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,074 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,082 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,100 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,108 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,116 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,123 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,153 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,162 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,171 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,184 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,200 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,217 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,234 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,278 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,294 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,312 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,329 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,347 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:06:27,364 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:55,079 - Log4JLogChute initialized using file 'velocity.log'
-2019-05-10 12:08:55,080 - Initializing Velocity, Calling init()...
-2019-05-10 12:08:55,080 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-05-10 12:08:55,080 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-05-10 12:08:55,080 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-05-10 12:08:55,081 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-05-10 12:08:55,081 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-05-10 12:08:55,081 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-05-10 12:08:55,083 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2019-05-10 12:08:55,084 - Do unicode file recognition:  false
-2019-05-10 12:08:55,084 - FileResourceLoader : adding path '.'
-2019-05-10 12:08:55,084 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-05-10 12:08:55,090 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-05-10 12:08:55,091 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-05-10 12:08:55,091 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-05-10 12:08:55,091 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-05-10 12:08:55,091 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-05-10 12:08:55,091 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-05-10 12:08:55,091 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-05-10 12:08:55,091 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-05-10 12:08:55,091 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-05-10 12:08:55,093 - Created '20' parsers.
-2019-05-10 12:08:55,093 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-05-10 12:08:55,093 - Velocimacro : Default library not found.
-2019-05-10 12:08:55,093 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-05-10 12:08:55,093 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-05-10 12:08:55,093 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-05-10 12:08:55,093 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-05-10 12:08:55,586 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:55,620 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:55,650 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:55,700 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:55,766 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:55,824 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:55,856 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:55,897 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:55,949 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:55,987 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,017 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,062 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,094 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,127 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,148 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,175 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,204 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,232 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,258 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,274 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,297 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,319 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,357 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,377 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,412 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,461 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,479 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,505 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,529 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,559 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,600 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,626 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,641 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,687 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,712 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,730 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,754 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,765 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,781 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,793 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,809 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,823 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,845 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,858 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,874 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,885 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,902 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,924 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,933 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,946 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,962 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,985 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:56,995 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,014 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,028 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,040 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,050 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,059 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,069 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,078 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,086 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,095 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,110 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,134 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,144 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,153 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,162 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,171 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,180 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,188 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,195 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,202 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,210 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,217 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,226 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,237 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,244 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,254 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,261 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,269 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,277 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,284 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,293 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,309 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,323 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,338 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,365 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,376 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,387 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,417 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,429 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,448 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,462 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,478 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,492 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,499 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,514 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,528 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:08:57,544 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:31,487 - Log4JLogChute initialized using file 'velocity.log'
-2019-05-10 12:10:31,487 - Initializing Velocity, Calling init()...
-2019-05-10 12:10:31,488 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-05-10 12:10:31,488 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-05-10 12:10:31,488 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-05-10 12:10:31,488 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-05-10 12:10:31,488 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-05-10 12:10:31,488 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-05-10 12:10:31,488 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2019-05-10 12:10:31,488 - Do unicode file recognition:  false
-2019-05-10 12:10:31,488 - FileResourceLoader : adding path '.'
-2019-05-10 12:10:31,488 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-05-10 12:10:31,489 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-05-10 12:10:31,489 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-05-10 12:10:31,489 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-05-10 12:10:31,489 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-05-10 12:10:31,489 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-05-10 12:10:31,489 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-05-10 12:10:31,489 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-05-10 12:10:31,489 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-05-10 12:10:31,489 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-05-10 12:10:31,491 - Created '20' parsers.
-2019-05-10 12:10:31,491 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-05-10 12:10:31,491 - Velocimacro : Default library not found.
-2019-05-10 12:10:31,491 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-05-10 12:10:31,491 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-05-10 12:10:31,491 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-05-10 12:10:31,491 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-05-10 12:10:31,991 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,064 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,135 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,202 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,247 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,286 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,328 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,362 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,401 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,422 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,446 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,459 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,471 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,494 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,515 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,530 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,547 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,579 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,626 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,644 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,665 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,697 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,722 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,736 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,758 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,779 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,794 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,814 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,833 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,854 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,875 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,892 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,920 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,961 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:32,980 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,003 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,020 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,043 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,054 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,067 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,081 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,097 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,117 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,130 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,142 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,154 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,165 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,178 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,188 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,198 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,224 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,241 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,261 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,271 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,280 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,290 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,299 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,308 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,318 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,328 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,336 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,347 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,363 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,385 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,406 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,425 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,434 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,443 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,452 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,461 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,469 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,477 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,485 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,493 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,510 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,529 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,537 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,546 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,555 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,569 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,587 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,595 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,604 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,621 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,636 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,664 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,675 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,694 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,711 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,720 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,742 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,751 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,759 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,766 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,778 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,795 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,803 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,810 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:10:33,818 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:16,350 - Log4JLogChute initialized using file 'velocity.log'
-2019-05-10 12:13:16,353 - Initializing Velocity, Calling init()...
-2019-05-10 12:13:16,354 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
-2019-05-10 12:13:16,354 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-2019-05-10 12:13:16,354 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-2019-05-10 12:13:16,354 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
-2019-05-10 12:13:16,354 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-05-10 12:13:16,354 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
-2019-05-10 12:13:16,357 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-2019-05-10 12:13:16,358 - Do unicode file recognition:  false
-2019-05-10 12:13:16,358 - FileResourceLoader : adding path '.'
-2019-05-10 12:13:16,358 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
-2019-05-10 12:13:16,360 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
-2019-05-10 12:13:16,360 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
-2019-05-10 12:13:16,360 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
-2019-05-10 12:13:16,360 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
-2019-05-10 12:13:16,360 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-2019-05-10 12:13:16,360 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-2019-05-10 12:13:16,360 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-2019-05-10 12:13:16,362 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
-2019-05-10 12:13:16,362 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-2019-05-10 12:13:16,365 - Created '20' parsers.
-2019-05-10 12:13:16,365 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-2019-05-10 12:13:16,365 - Velocimacro : Default library not found.
-2019-05-10 12:13:16,365 - Velocimacro : allowInline = true : VMs can be defined inline in templates
-2019-05-10 12:13:16,365 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-2019-05-10 12:13:16,365 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-2019-05-10 12:13:16,365 - Velocimacro : autoload off : VM system will not automatically reload global library macros
-2019-05-10 12:13:16,629 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:16,701 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:16,756 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:16,804 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:16,851 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:16,889 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:16,931 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:16,967 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:16,991 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,016 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,034 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,063 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,101 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,122 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,140 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,163 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,188 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,212 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,235 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,257 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,279 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,299 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,322 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,341 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,364 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,387 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,406 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,429 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,449 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,486 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,558 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,644 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,705 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,744 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,785 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,822 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,879 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,944 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,966 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:17,993 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,025 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,056 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,089 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,110 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,137 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,164 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,202 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,229 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,252 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,272 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,306 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,329 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,349 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,371 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,397 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,414 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,452 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,475 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,510 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,538 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,560 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,584 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,619 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,657 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,679 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,694 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,721 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,734 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,747 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,757 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,770 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,782 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,792 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,819 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,854 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,891 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,921 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,933 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,951 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,970 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:18,991 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,035 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,059 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,090 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,114 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,128 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,137 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,159 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,175 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,186 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,223 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,236 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,251 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,266 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,288 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,296 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,303 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,310 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
-2019-05-10 12:13:19,317 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:29,607 - Do unicode file recognition:  false
+2019-05-10 12:26:29,607 - FileResourceLoader : adding path '.'
+2019-05-10 12:26:29,607 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 12:26:29,608 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 12:26:29,608 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 12:26:29,608 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 12:26:29,609 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 12:26:29,609 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 12:26:29,610 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 12:26:29,610 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 12:26:29,610 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 12:26:29,610 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 12:26:29,610 - Created '20' parsers.
+2019-05-10 12:26:29,610 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 12:26:29,610 - Velocimacro : Default library not found.
+2019-05-10 12:26:29,610 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 12:26:29,610 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 12:26:29,610 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 12:26:29,610 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 12:26:29,749 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:29,794 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:29,828 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:29,863 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:29,895 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:29,926 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:29,957 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:29,979 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,001 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,021 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,046 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,072 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,095 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,116 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,136 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,155 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,171 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,187 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,205 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,221 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,236 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,255 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,275 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,293 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,311 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,328 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,344 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,360 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,378 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,400 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,417 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,436 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,453 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,469 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,484 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,502 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,517 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,532 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,549 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,566 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,582 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,598 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,614 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,630 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,646 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,663 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,679 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,695 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,711 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,727 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,744 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,761 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,779 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,795 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,812 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,829 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,855 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,870 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,887 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,903 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,919 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,935 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,950 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,967 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,982 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:30,997 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,012 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,028 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,043 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,058 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,075 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,091 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,107 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,122 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,139 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,154 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,169 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,186 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,203 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,219 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,235 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,252 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,273 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,289 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,305 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,321 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,336 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,352 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,368 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,385 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,402 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,419 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,437 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,452 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,467 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,483 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,498 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,513 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:26:31,528 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,018 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 12:28:25,018 - Initializing Velocity, Calling init()...
+2019-05-10 12:28:25,018 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 12:28:25,018 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 12:28:25,018 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 12:28:25,018 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 12:28:25,018 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 12:28:25,018 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 12:28:25,018 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 12:28:25,018 - Do unicode file recognition:  false
+2019-05-10 12:28:25,018 - FileResourceLoader : adding path '.'
+2019-05-10 12:28:25,018 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 12:28:25,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 12:28:25,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 12:28:25,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 12:28:25,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 12:28:25,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 12:28:25,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 12:28:25,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 12:28:25,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 12:28:25,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 12:28:25,020 - Created '20' parsers.
+2019-05-10 12:28:25,020 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 12:28:25,020 - Velocimacro : Default library not found.
+2019-05-10 12:28:25,020 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 12:28:25,020 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 12:28:25,020 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 12:28:25,020 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 12:28:25,158 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,192 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,218 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,246 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,269 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,289 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,310 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,332 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,351 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,374 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,396 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,416 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,441 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,462 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,485 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,507 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,525 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,550 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,567 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,581 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,595 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,612 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,630 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,645 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,662 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,682 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,699 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,713 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,731 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,746 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,762 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,778 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,803 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,817 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,832 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,847 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,863 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,877 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,890 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,904 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,919 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,934 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,948 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,962 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,976 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:25,998 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,013 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,028 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,045 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,059 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,073 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,086 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,101 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,117 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,131 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,148 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,163 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,178 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,192 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,206 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,220 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,235 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,250 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,266 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,281 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,297 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,311 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,326 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,340 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,355 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,369 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,383 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,398 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,415 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,439 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,453 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,467 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,483 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,497 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,513 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,529 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,547 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,563 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,580 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,598 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,615 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,630 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,644 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,660 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,675 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,690 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,705 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,721 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,745 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,761 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,779 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,796 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,811 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:28:26,827 - Null reference [template 's', line 1, column 83] : ${class.getIRI().getFragment()} cannot be resolved.
+2019-05-10 12:32:54,351 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 12:32:54,351 - Initializing Velocity, Calling init()...
+2019-05-10 12:32:54,351 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 12:32:54,351 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 12:32:54,351 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 12:32:54,351 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 12:32:54,351 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 12:32:54,351 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 12:32:54,351 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 12:32:54,351 - Do unicode file recognition:  false
+2019-05-10 12:32:54,351 - FileResourceLoader : adding path '.'
+2019-05-10 12:32:54,352 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 12:32:54,352 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 12:32:54,352 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 12:32:54,352 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 12:32:54,352 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 12:32:54,352 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 12:32:54,352 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 12:32:54,352 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 12:32:54,352 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 12:32:54,352 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 12:32:54,353 - Created '20' parsers.
+2019-05-10 12:32:54,354 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 12:32:54,354 - Velocimacro : Default library not found.
+2019-05-10 12:32:54,354 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 12:32:54,354 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 12:32:54,354 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 12:32:54,354 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 12:36:50,686 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 12:36:50,686 - Initializing Velocity, Calling init()...
+2019-05-10 12:36:50,686 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 12:36:50,686 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 12:36:50,686 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 12:36:50,686 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 12:36:50,686 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 12:36:50,686 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 12:36:50,686 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 12:36:50,686 - Do unicode file recognition:  false
+2019-05-10 12:36:50,686 - FileResourceLoader : adding path '.'
+2019-05-10 12:36:50,686 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 12:36:50,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 12:36:50,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 12:36:50,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 12:36:50,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 12:36:50,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 12:36:50,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 12:36:50,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 12:36:50,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 12:36:50,687 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 12:36:50,688 - Created '20' parsers.
+2019-05-10 12:36:50,688 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 12:36:50,688 - Velocimacro : Default library not found.
+2019-05-10 12:36:50,688 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 12:36:50,688 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 12:36:50,688 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 12:36:50,688 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 12:41:37,135 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 12:41:37,135 - Initializing Velocity, Calling init()...
+2019-05-10 12:41:37,135 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 12:41:37,135 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 12:41:37,135 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 12:41:37,135 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 12:41:37,135 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 12:41:37,135 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 12:41:37,136 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 12:41:37,136 - Do unicode file recognition:  false
+2019-05-10 12:41:37,136 - FileResourceLoader : adding path '.'
+2019-05-10 12:41:37,136 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 12:41:37,136 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 12:41:37,136 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 12:41:37,136 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 12:41:37,136 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 12:41:37,136 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 12:41:37,136 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 12:41:37,136 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 12:41:37,136 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 12:41:37,136 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 12:41:37,137 - Created '20' parsers.
+2019-05-10 12:41:37,137 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 12:41:37,137 - Velocimacro : Default library not found.
+2019-05-10 12:41:37,137 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 12:41:37,137 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 12:41:37,137 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 12:41:37,138 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 13:03:56,003 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 13:03:56,003 - Initializing Velocity, Calling init()...
+2019-05-10 13:03:56,003 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 13:03:56,003 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 13:03:56,003 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 13:03:56,003 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 13:03:56,003 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:03:56,003 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:03:56,003 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 13:03:56,003 - Do unicode file recognition:  false
+2019-05-10 13:03:56,003 - FileResourceLoader : adding path '.'
+2019-05-10 13:03:56,003 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 13:03:56,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 13:03:56,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 13:03:56,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 13:03:56,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 13:03:56,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 13:03:56,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 13:03:56,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 13:03:56,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 13:03:56,004 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 13:03:56,005 - Created '20' parsers.
+2019-05-10 13:03:56,005 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 13:03:56,005 - Velocimacro : Default library not found.
+2019-05-10 13:03:56,005 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 13:03:56,005 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 13:03:56,005 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 13:03:56,005 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 13:05:41,619 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 13:05:41,619 - Initializing Velocity, Calling init()...
+2019-05-10 13:05:41,619 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 13:05:41,619 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 13:05:41,619 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 13:05:41,619 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 13:05:41,619 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:05:41,619 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:05:41,619 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 13:05:41,619 - Do unicode file recognition:  false
+2019-05-10 13:05:41,619 - FileResourceLoader : adding path '.'
+2019-05-10 13:05:41,619 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 13:05:41,620 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 13:05:41,620 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 13:05:41,620 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 13:05:41,620 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 13:05:41,620 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 13:05:41,620 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 13:05:41,620 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 13:05:41,620 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 13:05:41,620 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 13:05:41,620 - Created '20' parsers.
+2019-05-10 13:05:41,620 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 13:05:41,620 - Velocimacro : Default library not found.
+2019-05-10 13:05:41,620 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 13:05:41,620 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 13:05:41,621 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 13:05:41,621 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 13:13:33,055 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 13:13:33,055 - Initializing Velocity, Calling init()...
+2019-05-10 13:13:33,055 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 13:13:33,055 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 13:13:33,055 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 13:13:33,055 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 13:13:33,055 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:13:33,055 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:13:33,055 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 13:13:33,055 - Do unicode file recognition:  false
+2019-05-10 13:13:33,055 - FileResourceLoader : adding path '.'
+2019-05-10 13:13:33,055 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 13:13:33,056 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 13:13:33,056 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 13:13:33,056 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 13:13:33,056 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 13:13:33,056 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 13:13:33,056 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 13:13:33,056 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 13:13:33,056 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 13:13:33,056 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 13:13:33,057 - Created '20' parsers.
+2019-05-10 13:13:33,057 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 13:13:33,057 - Velocimacro : Default library not found.
+2019-05-10 13:13:33,057 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 13:13:33,057 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 13:13:33,057 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 13:13:33,057 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 13:18:42,969 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 13:18:42,970 - Initializing Velocity, Calling init()...
+2019-05-10 13:18:42,970 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 13:18:42,970 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 13:18:42,970 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 13:18:42,970 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 13:18:42,970 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:18:42,970 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:18:42,970 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 13:18:42,970 - Do unicode file recognition:  false
+2019-05-10 13:18:42,970 - FileResourceLoader : adding path '.'
+2019-05-10 13:18:42,970 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 13:18:42,970 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 13:18:42,971 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 13:18:42,971 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 13:18:42,971 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 13:18:42,971 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 13:18:42,971 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 13:18:42,971 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 13:18:42,971 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 13:18:42,971 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 13:18:42,972 - Created '20' parsers.
+2019-05-10 13:18:42,972 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 13:18:42,972 - Velocimacro : Default library not found.
+2019-05-10 13:18:42,972 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 13:18:42,972 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 13:18:42,972 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 13:18:42,972 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 13:20:32,768 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 13:20:32,768 - Initializing Velocity, Calling init()...
+2019-05-10 13:20:32,768 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 13:20:32,768 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 13:20:32,768 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 13:20:32,768 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 13:20:32,768 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:20:32,768 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:20:32,769 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 13:20:32,769 - Do unicode file recognition:  false
+2019-05-10 13:20:32,769 - FileResourceLoader : adding path '.'
+2019-05-10 13:20:32,769 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 13:20:32,769 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 13:20:32,769 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 13:20:32,769 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 13:20:32,769 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 13:20:32,769 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 13:20:32,769 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 13:20:32,769 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 13:20:32,769 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 13:20:32,769 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 13:20:32,770 - Created '20' parsers.
+2019-05-10 13:20:32,770 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 13:20:32,771 - Velocimacro : Default library not found.
+2019-05-10 13:20:32,771 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 13:20:32,771 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 13:20:32,771 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 13:20:32,771 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 13:21:39,666 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 13:21:39,666 - Initializing Velocity, Calling init()...
+2019-05-10 13:21:39,666 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 13:21:39,666 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 13:21:39,666 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 13:21:39,666 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 13:21:39,666 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:21:39,666 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:21:39,667 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 13:21:39,667 - Do unicode file recognition:  false
+2019-05-10 13:21:39,667 - FileResourceLoader : adding path '.'
+2019-05-10 13:21:39,667 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 13:21:39,667 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 13:21:39,667 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 13:21:39,667 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 13:21:39,667 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 13:21:39,667 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 13:21:39,667 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 13:21:39,667 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 13:21:39,667 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 13:21:39,667 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 13:21:39,668 - Created '20' parsers.
+2019-05-10 13:21:39,668 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 13:21:39,668 - Velocimacro : Default library not found.
+2019-05-10 13:21:39,668 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 13:21:39,668 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 13:21:39,668 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 13:21:39,668 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 13:50:44,342 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 13:50:44,342 - Initializing Velocity, Calling init()...
+2019-05-10 13:50:44,342 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 13:50:44,342 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 13:50:44,342 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 13:50:44,342 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 13:50:44,342 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:50:44,342 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 13:50:44,342 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 13:50:44,342 - Do unicode file recognition:  false
+2019-05-10 13:50:44,342 - FileResourceLoader : adding path '.'
+2019-05-10 13:50:44,342 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 13:50:44,342 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 13:50:44,342 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 13:50:44,342 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 13:50:44,342 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 13:50:44,342 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 13:50:44,343 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 13:50:44,343 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 13:50:44,343 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 13:50:44,343 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 13:50:44,343 - Created '20' parsers.
+2019-05-10 13:50:44,344 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 13:50:44,344 - Velocimacro : Default library not found.
+2019-05-10 13:50:44,344 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 13:50:44,344 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 13:50:44,344 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 13:50:44,344 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 14:08:47,878 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 14:08:47,878 - Initializing Velocity, Calling init()...
+2019-05-10 14:08:47,878 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 14:08:47,878 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 14:08:47,878 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 14:08:47,878 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 14:08:47,878 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:08:47,878 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:08:47,878 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 14:08:47,878 - Do unicode file recognition:  false
+2019-05-10 14:08:47,878 - FileResourceLoader : adding path '.'
+2019-05-10 14:08:47,878 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 14:08:47,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 14:08:47,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 14:08:47,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 14:08:47,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 14:08:47,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 14:08:47,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 14:08:47,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 14:08:47,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 14:08:47,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 14:08:47,880 - Created '20' parsers.
+2019-05-10 14:08:47,880 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 14:08:47,880 - Velocimacro : Default library not found.
+2019-05-10 14:08:47,880 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 14:08:47,880 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 14:08:47,880 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 14:08:47,880 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 14:17:59,508 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 14:17:59,508 - Initializing Velocity, Calling init()...
+2019-05-10 14:17:59,508 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 14:17:59,508 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 14:17:59,508 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 14:17:59,508 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 14:17:59,508 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:17:59,508 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:17:59,508 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 14:17:59,508 - Do unicode file recognition:  false
+2019-05-10 14:17:59,508 - FileResourceLoader : adding path '.'
+2019-05-10 14:17:59,508 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 14:17:59,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 14:17:59,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 14:17:59,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 14:17:59,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 14:17:59,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 14:17:59,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 14:17:59,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 14:17:59,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 14:17:59,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 14:17:59,509 - Created '20' parsers.
+2019-05-10 14:17:59,510 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 14:17:59,510 - Velocimacro : Default library not found.
+2019-05-10 14:17:59,510 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 14:17:59,510 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 14:17:59,510 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 14:17:59,510 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 14:30:27,599 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 14:30:27,599 - Initializing Velocity, Calling init()...
+2019-05-10 14:30:27,599 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 14:30:27,599 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 14:30:27,599 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 14:30:27,599 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 14:30:27,599 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:30:27,599 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:30:27,600 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 14:30:27,600 - Do unicode file recognition:  false
+2019-05-10 14:30:27,600 - FileResourceLoader : adding path '.'
+2019-05-10 14:30:27,600 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 14:30:27,600 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 14:30:27,600 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 14:30:27,600 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 14:30:27,600 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 14:30:27,600 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 14:30:27,600 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 14:30:27,600 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 14:30:27,600 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 14:30:27,600 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 14:30:27,601 - Created '20' parsers.
+2019-05-10 14:30:27,601 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 14:30:27,601 - Velocimacro : Default library not found.
+2019-05-10 14:30:27,601 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 14:30:27,602 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 14:30:27,602 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 14:30:27,602 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 14:33:22,596 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 14:33:22,596 - Initializing Velocity, Calling init()...
+2019-05-10 14:33:22,597 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 14:33:22,597 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 14:33:22,597 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 14:33:22,597 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 14:33:22,597 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:33:22,597 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:33:22,597 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 14:33:22,597 - Do unicode file recognition:  false
+2019-05-10 14:33:22,597 - FileResourceLoader : adding path '.'
+2019-05-10 14:33:22,597 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 14:33:22,597 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 14:33:22,597 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 14:33:22,597 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 14:33:22,597 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 14:33:22,597 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 14:33:22,598 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 14:33:22,598 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 14:33:22,598 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 14:33:22,598 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 14:33:22,600 - Created '20' parsers.
+2019-05-10 14:33:22,600 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 14:33:22,600 - Velocimacro : Default library not found.
+2019-05-10 14:33:22,600 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 14:33:22,600 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 14:33:22,600 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 14:33:22,600 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 14:42:45,681 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 14:42:45,681 - Initializing Velocity, Calling init()...
+2019-05-10 14:42:45,681 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 14:42:45,681 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 14:42:45,681 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 14:42:45,681 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 14:42:45,681 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:42:45,681 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:42:45,681 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 14:42:45,682 - Do unicode file recognition:  false
+2019-05-10 14:42:45,682 - FileResourceLoader : adding path '.'
+2019-05-10 14:42:45,682 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 14:42:45,682 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 14:42:45,682 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 14:42:45,682 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 14:42:45,682 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 14:42:45,682 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 14:42:45,682 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 14:42:45,682 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 14:42:45,682 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 14:42:45,682 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 14:42:45,683 - Created '20' parsers.
+2019-05-10 14:42:45,683 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 14:42:45,683 - Velocimacro : Default library not found.
+2019-05-10 14:42:45,683 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 14:42:45,683 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 14:42:45,683 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 14:42:45,683 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2019-05-10 14:43:17,053 - Log4JLogChute initialized using file 'velocity.log'
+2019-05-10 14:43:17,053 - Initializing Velocity, Calling init()...
+2019-05-10 14:43:17,053 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2019-05-10 14:43:17,053 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2019-05-10 14:43:17,053 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2019-05-10 14:43:17,053 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2019-05-10 14:43:17,053 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:43:17,053 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2019-05-10 14:43:17,053 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2019-05-10 14:43:17,053 - Do unicode file recognition:  false
+2019-05-10 14:43:17,053 - FileResourceLoader : adding path '.'
+2019-05-10 14:43:17,053 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2019-05-10 14:43:17,054 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2019-05-10 14:43:17,054 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2019-05-10 14:43:17,054 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2019-05-10 14:43:17,054 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2019-05-10 14:43:17,054 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2019-05-10 14:43:17,054 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2019-05-10 14:43:17,054 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2019-05-10 14:43:17,054 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2019-05-10 14:43:17,054 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2019-05-10 14:43:17,055 - Created '20' parsers.
+2019-05-10 14:43:17,055 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2019-05-10 14:43:17,055 - Velocimacro : Default library not found.
+2019-05-10 14:43:17,055 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2019-05-10 14:43:17,055 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2019-05-10 14:43:17,055 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2019-05-10 14:43:17,055 - Velocimacro : autoload off : VM system will not automatically reload global library macros

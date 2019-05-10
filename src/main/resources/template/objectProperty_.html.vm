@@ -1,19 +1,15 @@
 #set($objProps = $ontologies.getAxioms($AxiomType.OBJECT_PROPERTY_DOMAIN))
-## listar todas las ontologias con sus respectivas anotaciones
 
 #macro(objprops $dec)
-
 #foreach($o in $dec)
 #if($o.getSignature().iterator().next().isOWLClass()) 
 #set($classname = $o.getSignature().iterator().next().getClassesInSignature().iterator().next())
 #foreach($t in $objProps)
-<p><u>$esc.getText("${classname}")</u></p>
-###if($t.containsEntityInSignature($classname))
-<a href="$esc.getText("${classname}")"></a><br>
-#if($t.getDomain().containsEntityInSignature($classname))
-$esc.getText("${t}")
-#end
-
+        <tr>
+            <td>${t.getIRI().getFragment()}</a></td>
+            <td>$esc.getText("${element.getIRI()}")</td>
+        </tr> 
+  
 #end
 #end
 #end
@@ -27,10 +23,28 @@ $esc.getText("${t}")
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 5px;
+              text-align: left;    
+            }
+    </style>
 </head>
 <body>
 <script type="text/javascript" src="./js/script.js"></script>
-<h1>OBJECT_PROPERTY_DOMAIN</h1>
-#objprops($declarations)    
+<h1>Object Properties</h1>
+
+        <table>
+        <tr>
+            <th>Propertie</th>
+            <th>propertie IRI</th>
+        </tr>
+   #objprops($declarations) 
+    </table>
+
 </body>
 </html>
