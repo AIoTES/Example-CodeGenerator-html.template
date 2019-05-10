@@ -58,7 +58,7 @@ public class VelocityTest {
 			this.context = new VelocityContext();
 			this.engine = new VelocityEngine();
 			this.props = new Properties();
-			props.put("file.resource.loader.path", "src/main/resources/");
+			props.put("file.resource.loader.path", "src/test/resources/");
 			this.engine.init(this.props);
 //			this.writer = new FileWriter(new File("target/output.txt"));
 			this.writer = new PrintWriter(System.out);
