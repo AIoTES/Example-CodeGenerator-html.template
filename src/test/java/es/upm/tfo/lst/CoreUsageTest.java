@@ -7,6 +7,8 @@ import java.io.File;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.Before;
 import org.junit.Test;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 import es.upm.tfo.lst.CodeGenerator.GenerateProject;
 import es.upm.tfo.lst.CodeGenerator.model.TemplateDataModel;
@@ -21,12 +23,16 @@ public class CoreUsageTest {
 	private OntologyLoader ontologyLoader=null;
 	//----constants
 	private final String ontologyBasePath="src/test/resources/ontologies/";
-	//private final String webOntology ="https://protege.stanford.edu/ontologies/pizza/pizza.owl";
-	private final String webOntology ="https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
+	private final String webOntology ="https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	//private final String webOntology ="https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
+	//private final String webOntology ="https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
+	
 	private final String baseOutput="target/generated/";
+	private OWLOntologyManager ontManager;
 
 	@Before
 	public void init() {
+		ontManager = OWLManager.createOWLOntologyManager();
 		PropertyConfigurator.configure("src/main/resources/log4jConfigFile/log4j.properties");
 		this.parser = new XmlParser();
 		this.ontologyLoader = new OntologyLoader();
@@ -34,7 +40,7 @@ public class CoreUsageTest {
 	}
 
 	@Test
-	public void CodeGeneratorTest() {
+	public void CodeGeneratorCoreUsageTest() {
 
 		 try {
 		 	

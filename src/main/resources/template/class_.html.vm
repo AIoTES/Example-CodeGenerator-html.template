@@ -1,39 +1,22 @@
-#macro(individuals)
-    #set($r = $reasoner.getReasoner())
+#macro(individuals $r)
 
-    #foreach($y in $r.getInstances($class))
-    $y
-    #end
-    #foreach($item in $EntitySearcher.getInstances($class, $ontology))
+
+    #if($r.isOWLClass())
+    #foreach ( $element in $EntitySearcher.getInstances($r, $ontology) )
         <tr>
-            <td>${item.getIRI().getFragment()}</a></td>
-            <td>$esc.getText("${item.getIRI().getFragment()}")</td>
-        </tr>
-    
+            <td>${element.getIRI().getFragment()}</a></td>
+            <td>$esc.getText("${element.getIRI().getFragment()}")</td>
+        </tr>  
+    #end
     #end
 
+   
 #end
 
-#macro(data_props)
 
-        <tr>
-            <td> ${o.getOntologyID().getOntologyIRI().get()}</a></td>
-            <td>#foreach($ann in $o.getAnnotations()) #if($ann.getValue()) $ann.getValue() #end #end</a></td>
-        </tr>
-
+#macro(dataprops)
+sdfsf
 #end
-
-#macro(data_types)
-
-
-        <tr>
-            <td> ${o.getOntologyID().getOntologyIRI().get()}</a></td>
-            <td>#foreach($ann in $o.getAnnotations()) #if($ann.getValue()) $ann.getValue() #end #end</a></td>
-        </tr>
-
-
-#end
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,16 +37,16 @@
     </style>
 </head>
 <body>
-    <h1>${class.getIRI().getFragment()}</h1>
-    <h2>In the following list you can see al related elements to this class, like instances, properties,etc.</h2>
-   
-    <h2>individuals</h2>
+    <h1>Class Details: ${class.getIRI().getFragment()}</h1>
+    
+           <h2>individuals</h2>
         <table>
         <tr>
-            <th>individual</th>
-            <th>individual IRI</th>
+            <th>individuals</th>
+            <th>individuals IRI</th>
         </tr>
-    #individuals()
+    #individuals($class)
     </table>
+    #dataprops()
 </body>
 </html>

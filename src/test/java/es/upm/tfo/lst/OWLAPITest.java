@@ -66,8 +66,8 @@ import uk.ac.manchester.cs.jfact.JFactFactory;
 public class OWLAPITest {
 
 	//private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
-	//private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
-	private static final String ONT_URL = "https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
+	private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
+	//private static final String ONT_URL = "https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
 	
 	static OWLOntology ontology;
 	static OWLReasonerFactory reasonerFactory = null;
@@ -80,6 +80,7 @@ public class OWLAPITest {
 	static public void init() throws OWLOntologyCreationException, IOException {
 		ontManager = OWLManager.createOWLOntologyManager();
 		ontology = ontManager.loadOntologyFromOntologyDocument(new URL(ONT_URL).openStream());
+		
 		reasonerFactory = new JFactFactory();
 		reasoner = reasonerFactory.createReasoner(ontology);
 	}
@@ -134,16 +135,37 @@ public class OWLAPITest {
 			for (OWLObjectPropertyDomainAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
 				OWLClass p = a.getSignature().iterator().next().getClassesInSignature().iterator().next();				
 				if(item.containsEntityInSignature(p)) {
-					System.out.println("getDataPropertiesInSignature "+item.getProperty());
+					System.out.println("OBJECT_PROPERTY_DOMAIN "+item.getProperty());
+				}
+		
+				}
+			for (OWLObjectPropertyRangeAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_RANGE)) {
+				OWLClass p = a.getSignature().iterator().next().getClassesInSignature().iterator().next();				
+				if(item.containsEntityInSignature(p)) {
+					System.out.println("OBJECT_PROPERTY_RANGE property: "+item.getProperty()+" range:"+ item.getRange());
+				}
+		
+				}
+			
+			for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
+				OWLClass p = a.getSignature().iterator().next().getClassesInSignature().iterator().next();				
+				if(item.containsEntityInSignature(p)) {
+					System.out.println("DATA_PROPERTY_DOMAIN "+item.getProperty());
+				}
+		
+				}
+			
+			for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
+				OWLClass p = a.getSignature().iterator().next().getClassesInSignature().iterator().next();				
+				if(item.containsEntityInSignature(p)) {
+					System.out.println("DATA_PROPERTY_RANGE"+item.getProperty());
 				}
 		
 				}
 			}
 		}
 
-		for (OWLAxiom a : AxiomType.getAxiomsWithoutTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-				System.out.println(a);
-		}
+
 	}
 
 	@Test
@@ -175,6 +197,7 @@ public class OWLAPITest {
 			System.out.println("individual "+individual.getIRI().getFragment());
 		}
 	}
+	
 	@Test
 	public void listClasses() {
 		for (OWLClass cls : ontology.getClassesInSignature()) {
@@ -256,49 +279,25 @@ public class OWLAPITest {
 			System.out.println(a);
 		}
 	}
+	
+
+	
 	@Test
-	public void example() {
-		
+	public void EntitySearchClassTest() throws OWLOntologyCreationException, IOException {
+		ontology = ontManager.loadOntologyFromOntologyDocument(this.getClass().getClassLoader().getResource("OntologyMDS.owl").openStream());
+		for (OWLAxiom iterable_element : ontology.getAxioms()) {
+			if(iterable_element.isOfType(AxiomType.DECLARATION) && iterable_element.getSignature().iterator().next().isOWLClass()) {
+				OWLClass aux = iterable_element.getSignature().iterator().next().asOWLClass();
+
+				
+				System.out.println("EntitySearcher.getAnnotationObjects "+EntitySearcher.getAnnotationObjects(aux, ontology).size());
+				System.out.println("EntitySearcher.getInstances "+EntitySearcher.getInstances(aux, ontology).size());
+				System.out.println("EntitySearcher.getIndividuals "+EntitySearcher.getIndividuals(aux, ontology).size());
 	
-
-		for (OWLDeclarationAxiom string : ontology.getAxioms(AxiomType.DECLARATION)) {
-			System.out.println(string);
-		}
-		System.out.println("**********************************");
-		
-		for (OWLClass cls : ontology.getClassesInSignature()) {
-			for (OWLIndividual item : EntitySearcher.getInstances(cls, ontology)) {
-				System.out.println("Instances "+item);
-
 			}
-	
+		}
 
-		}
-		System.out.println("**********************************");
-		for (OWLDataProperty string : ontology.getDataPropertiesInSignature()) {
-			System.out.println("getDataPropertiesInSignature() "+string);
-		}
-		System.out.println("**********************************");
-		for (OWLDatatype string : ontology.getDatatypesInSignature()) {
-			System.out.println("getDatatypesInSignature() "+string);
-		}
-		System.out.println("**********************************");
-		for (OWLDataProperty string : ontology.getDataPropertiesInSignature()) {
-			System.out.println("getDataPropertiesInSignature "+string);
-		}
-		System.out.println("**********************************");
-		for (OWLObjectProperty string : ontology.getObjectPropertiesInSignature()) {
-			System.out.println("getObjectPropertiesInSignature() "+string);
-		}
-		System.out.println("**********************************");
-		for (OWLDataPropertyDomainAxiom string : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
-			System.out.println(string);
-			
-			for (OWLDataProperty iterable_element : string.getDataPropertiesInSignature()) {
-				System.out.println("DATA_PROPERTY_DOMAIN "+iterable_element);	
-			}
-			
-		}
+
 	}
 }
 
