@@ -3,20 +3,19 @@
 		xmlns="http://www.example.org/exampleTemplate " 
 		xmlns:x="http://www.w3.org/2001/XMLSchema-instance" 
 		x:schemaLocation="http://www.example.org/exampleTemplate schema.xsd">
-		<template-name>XMLExample</template-name>
+		<template-name>HTMLExample</template-name>
 		<template-version>1.0</template-version>
-		<template-description>this template is an example of structure of xml coordinator file</template-description>
+		<template-description>Generates a static HTML web page</template-description>
 
 		
 		<variables>
 			<variable>
-				<!-- this variable is for put into project a name of package-->
-				<name>packageName</name>
-				<default>es.upm.tfo.lst.CodeGeneratorCoreUsageExample</default>
+				<name>pageName</name>
+				<default>Ontologies Documentation</default>
 				<!-- if required content is empty or is "false", the program interpret it to false.Otherwise, the program will interpret the containing text (true or false)-->
 				<required></required>
 				<!-- provide a description to the purpose of this variable, is not obligatory-->
-				<description>"variable to set package name"</description>					
+				<description>"variable to set the page name"</description>					
 			</variable>
 				
 			
@@ -26,7 +25,7 @@
 			<macro>
 				<template>index.html.vm</template>
 				<for>project</for>
-				<output>webindex.html</output>
+				<output>index.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
@@ -35,7 +34,7 @@
 			<macro>
 				<template>index_ont_html.vm</template>
 				<for>ontology</for>
-				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
@@ -45,7 +44,7 @@
 			<macro>
 				<template>class_.html.vm</template>
 				<for>class</for>
-				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/${class.getIRI().getFragment()}.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/${class.getIRI().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 					<FullyQualifiedName>org.semanticweb.owlapi.search.EntitySearcher</FullyQualifiedName>
@@ -55,7 +54,7 @@
 			<macro>
 				<template>namedIndividual.html.vm</template>
 				<for>NamedIndividual</for>
-				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/NamedIndividual.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/NamedIndividual.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
@@ -64,7 +63,7 @@
 			<macro>
 				<template>objectProperty_.html.vm</template>
 				<for>ObjectProperty</for>
-				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/ObjectProperty.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/ObjectProperty.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
@@ -73,7 +72,7 @@
 			<macro>
 				<template>dataProperty_.html.vm</template>
 				<for>dataProperty</for>
-				<output>ontology/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/DataProperty.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/DataProperty.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>

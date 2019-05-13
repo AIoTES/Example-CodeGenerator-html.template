@@ -54,6 +54,7 @@ import org.semanticweb.owlapi.model.OWLObjectPropertyRangeAxiom;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.model.parameters.Imports;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.search.EntitySearcher;
@@ -114,14 +115,14 @@ public class OWLAPITest {
 			System.out.println("getClassesInSignature() " + ontology.getClassesInSignature().size());
 			System.out.println("getDataPropertiesInSignature() " + ontology.getDataPropertiesInSignature().size());
 			System.out.println("getDatatypesInSignature() " + ontology.getDatatypesInSignature().size());
-			System.out.println("getAxioms " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
-			System.out.println("DATA_PROPERTY_ASSERTION " + ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION).size());
-			System.out.println("DATA_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN).size());
-			System.out.println("DATA_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE).size());
-			System.out.println("DATATYPE_DEFINITION " + ontology.getAxioms(AxiomType.DATATYPE_DEFINITION).size());
-			System.out.println("ANNOTATION_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_DOMAIN).size());
-			System.out.println("ANNOTATION_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_RANGE).size());
-			System.out.println("ANNOTATION_ASSERTION " + ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION).size());
+			System.out.println("getAxioms " + ontology.getAxioms(Imports.EXCLUDED).size());
+			System.out.println("DATA_PROPERTY_ASSERTION " + ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION,Imports.EXCLUDED).size());
+			System.out.println("DATA_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN,Imports.EXCLUDED).size());
+			System.out.println("DATA_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE,Imports.EXCLUDED).size());
+			System.out.println("DATATYPE_DEFINITION " + ontology.getAxioms(AxiomType.DATATYPE_DEFINITION,Imports.EXCLUDED).size());
+			System.out.println("ANNOTATION_PROPERTY_DOMAIN " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_DOMAIN,Imports.EXCLUDED).size());
+			System.out.println("ANNOTATION_PROPERTY_RANGE " + ontology.getAxioms(AxiomType.ANNOTATION_PROPERTY_RANGE,Imports.EXCLUDED).size());
+			System.out.println("ANNOTATION_ASSERTION " + ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION,Imports.EXCLUDED).size());
 		} catch (Exception e) {
 			e.printStackTrace();
 
@@ -188,7 +189,7 @@ public class OWLAPITest {
 	
 
 		for (OWLAxiom a : AxiomType.getAxiomsOfTypes(ontology.getAxioms(), AxiomType.DECLARATION)) {
-			if(a.getSignature().iterator().next().isOWLNamedIndividual()) {
+			if(a.getSignature().iterator().next().isOWLClass()) {
 				System.out.println(a);
 			}
 			
@@ -282,7 +283,7 @@ public class OWLAPITest {
 	@Test
 	public void listAxioms4Classe() {
 		OWLClass cls = (OWLClass) ontology.getClassesInSignature().toArray()[3];
-		for (OWLAxiom a : ontology.getAxioms(cls)) {
+		for (OWLAxiom a : ontology.getAxioms(cls,Imports.EXCLUDED)) {
 			System.out.println(a);
 		}
 	}
@@ -293,7 +294,7 @@ public class OWLAPITest {
 	public void EntitySearchClassTest() throws OWLOntologyCreationException, IOException {
 		
 	
-		for (OWLAxiom iterable_element : ontology.getAxioms()) {
+		for (OWLAxiom iterable_element : ontology.getAxioms(Imports.EXCLUDED)) {
 			if(iterable_element.isOfType(AxiomType.DECLARATION) && iterable_element.getSignature().iterator().next().isOWLClass()) {
 				OWLClass aux = iterable_element.getSignature().iterator().next().asOWLClass();
 				System.out.println("EntitySearcher.getAnnotationObjects "+EntitySearcher.getAnnotationObjects(aux, ontology).size());
