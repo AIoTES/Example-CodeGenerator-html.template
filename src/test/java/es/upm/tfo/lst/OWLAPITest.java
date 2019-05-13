@@ -198,7 +198,7 @@ public class OWLAPITest {
 	}
 	@Test
 	public void listInstances() {
-		//get instances without using a reasoner
+
 		for (OWLNamedIndividual individual: this.ontology.getIndividualsInSignature()) {
 			
 			System.out.println("individual "+individual.getIRI().getFragment());
@@ -239,8 +239,7 @@ public class OWLAPITest {
 	@Test
 	public void getObjectPropertiesTest() {
 		
-		OWLDataFactory manager = ontManager.getOWLDataFactory();
-		OWLClass cls = manager.getOWLClass(IRI.create("http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"));
+		
 		for (OWLObjectPropertyDomainAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
 			System.out.println("OBJECT_PROPERTY_DOMAIN "+item);
 	
@@ -262,7 +261,6 @@ public class OWLAPITest {
 			if (a.isOfType(AxiomType.EQUIVALENT_CLASSES))
 				for (OWLClassExpression ce : ((OWLEquivalentClassesAxiom) a).getClassExpressions()) {
 					if (ce instanceof OWLObjectOneOf) {
-						// https://stackoverflow.com/questions/3087083/velocity-test-instanceof
 						Set<OWLIndividual> ind = ((OWLObjectOneOf) ce).getIndividuals();
 						System.out.println(a);
 						for (OWLIndividual i : ind) {
@@ -301,6 +299,7 @@ public class OWLAPITest {
 				System.out.println("EntitySearcher.getAnnotationObjects "+EntitySearcher.getAnnotationObjects(aux, ontology).size());
 				System.out.println("EntitySearcher.getInstances "+EntitySearcher.getInstances(aux, ontology).size());
 				System.out.println("EntitySearcher.getIndividuals "+EntitySearcher.getIndividuals(aux, ontology).size());
+					
 	
 			}
 		}
