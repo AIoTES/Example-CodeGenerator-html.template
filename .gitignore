@@ -11,3 +11,4 @@
 **/.project
 **.log
 **.log.*
+/bin/
