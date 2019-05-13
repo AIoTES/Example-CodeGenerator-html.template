@@ -1,14 +1,14 @@
-# CodeGenerator Template guide
+# CodeGenerator Template Guide
 
-The objective of project is show how to use the Code Generator tool. This project has several test cases to show how te CodeGenerator tool works and how to setup all parameters to make it work
+The objective of project is show how to use the Code Generator Tool. This project has several test cases to show how the Code Generator Tool works and how to setup all parameters to make it work
 
 ## Project Content
 
-* test classes to view OWLAPI workflow
+* Test classes to view [OWL API](https://github.com/owlcs/owlapi/wiki/Documentation) workflow
 
-* test classes to view Velocity workflow
+* Test classes to view [Velocity](http://velocity.apache.org/) workflow
 
-* test classes to view CodeGenerator core workflow
+* Test classes to view CodeGenerator core workflow
 
 * Velocity Template files to view how velocity works
 
