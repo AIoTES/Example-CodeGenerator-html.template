@@ -2,16 +2,21 @@ stages:
   - prerequisites
   - test
   - deploy
+variables:
+  MAVEN_CLI_OPTS: "--batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository"
+cache:
+  key: "$CI_COMMIT_REF_SLUG"
+  untracked: true
+  paths:
+    - $CI_PROJECT_DIR/.m2/repository/
 
-equimetrix:
+code.generator:
   artifacts:
     paths:
       - $CI_PROJECT_DIR/.m2/repository/es/upm/tfo/lst/
     expire_in: 1 hour
   image: maven:3.5.3-jdk-8
-  variables:
-    MAVEN_CLI_OPTS: "--batch-mode"
-    MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
   stage: prerequisites
   before_script:
     - eval $(ssh-agent -s)
@@ -30,14 +35,6 @@ equimetrix:
 test:
   image: maven:3.5.3-jdk-8
   stage: test
-  variables:
-    MAVEN_CLI_OPTS: "--batch-mode"
-    MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-  cache:
-    key: "$CI_COMMIT_REF_SLUG"
-    untracked: true
-    paths:
-      - .m2/repository/
   script:
     - mvn $MAVEN_CLI_OPTS test
 
