@@ -3,31 +3,61 @@
 ## Table for classes
 ##
 #macro(internalClass)
-#foreach($o in $ontology.getClassesInSignature())
+ <h2>List of class for this ontology</h2>
+    <p>The following list details all the classes contained in the current ontology. By clicking on the name of the class, you can see all the elements related to the class.</p>
+    <table>
+        <tr>
+            <th>ClassName</th>
+            <th>ClasIRI</th>
+        </tr>
+    #foreach($o in $ontology.getClassesInSignature())
         <tr>
             <td><a href="./classes/${o.getIRI().getFragment()}/${o.getIRI().getFragment()}.html">${o.getIRI().getFragment()}</a><br></td>
             <td>$esc.getText("${o.getIRI()}")</td>
         </tr>
-#end
+	#end
+   </table>
 #end
 ##
 ## Table for individuals
 ##
 #macro(individuals)
-		#foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
-        #foreach($r in $declaration.getIndividualsInSignature())
-            <tr>
-                <td>$esc.getText("$r.getIRI().getFragment()")</td>
-                <td>$esc.getText("$r.getIRI()")</td>
-            </tr>			    
-        #end
+
+    <h2>List of NamedIndividuals for this ontology</h2>
+#set($dec = $ontology.getAxioms($AxiomType.DECLARATION))
+    <table>
+        <tr>
+            <th>individual</th>
+            <th>individual IRI</th>
+        </tr>
+    		#foreach ($declaration in $dec) 
+    		#if($declaration.getIndividualsInSignature())
+		        #foreach($r in $declaration.getIndividualsInSignature())
+		            <tr>
+		                <td>$esc.getText("$r.getIRI().getFragment()")</td>
+		                <td>$esc.getText("$r.getIRI()")</td>
+		            </tr>			    
+		        #end
+		    #end    
 		#end
+    </table>
+
+
+
 #end
 ##
 ## Table for Data Properties
 ##
 #macro(dataprops)
-		#foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
+
+    <h2>List of Data Properties for this ontology</h2>
+
+        <table>
+        <tr>
+            <th>DataProperty</th>
+            <th>DataProperty IRI</th>
+        </tr>
+    		#foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
         #foreach($r in $declaration.getDataPropertiesInSignature())
             <tr>
                 <td>$esc.getText("$r.getIRI().getFragment()")</td>
@@ -35,19 +65,31 @@
             </tr>			    
         #end
 		#end
+    </table>
+
 #end
 ##
 ## Table for Object Properties
 ##
 #macro(objprops)
-#foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
-        #foreach($r in $declaration.getObjectPropertiesInSignature())
-            <tr>
-                <td>$esc.getText("$r.getIRI().getFragment()")</td>
-                <td>$esc.getText("$r.getIRI()")</td>
-            </tr>			    
-        #end
+
+
+    <h2>List of Object Properties for this ontology</h2>
+
+        <table>
+        <tr>
+            <th>ObjectProperty</th>
+            <th>ObjectProperty IRI</th>
+        </tr>
+        #foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
+            #foreach($r in $declaration.getObjectPropertiesInSignature())
+                <tr>
+                    <td>$esc.getText("$r.getIRI().getFragment()")</td>
+                    <td>$esc.getText("$r.getIRI()")</td>
+                </tr>			    
+            #end
 		#end
+    </table>
 
 
 #end
@@ -74,45 +116,14 @@
 <body>
 
     <h1>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}</h1>
-    <h2>List of class for this ontology</h2>
-    <p>The following list details all the classes contained in the current ontology. By clicking on the name of the class, you can see all the elements related to the class.</p>
-    <table>
-        <tr>
-            <th>ClassName</th>
-            <th>ClasIRI</th>
-        </tr>
+   
     #internalClass()
-    </table>
 
-    <h2>List of NamedIndividuals for this ontology</h2>
-
-    <table>
-        <tr>
-            <th>individual</th>
-            <th>individual IRI</th>
-        </tr>
-    #individuals()
-    </table>
+    #individuals()   
     
-    <h2>List of Data Properties for this ontology</h2>
-
-        <table>
-        <tr>
-            <th>DataProperty</th>
-            <th>DataProperty IRI</th>
-        </tr>
     #dataprops()
-    </table>
 
-
-    <h2>List of Object Properties for this ontology</h2>
-
-        <table>
-        <tr>
-            <th>ObjectProperty</th>
-            <th>ObjectProperty IRI</th>
-        </tr>
     #objprops()
-    </table>
+    
 </body>
 </html>

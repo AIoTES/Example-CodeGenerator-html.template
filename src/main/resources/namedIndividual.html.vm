@@ -1,3 +1,1 @@
-#parse("NamedIndividual.vm")
-#individuals_by_class($class)
-$NamedIndividual
+${NamedIndividual.getIRI().getFragment()}

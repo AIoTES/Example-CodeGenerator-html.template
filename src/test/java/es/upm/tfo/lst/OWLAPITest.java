@@ -17,7 +17,8 @@ package es.upm.tfo.lst;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Set;
+import java.util.Set;import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import org.junit.After;
 import org.junit.Before;
@@ -42,6 +43,7 @@ import org.semanticweb.owlapi.model.OWLDataPropertyDomainAxiom;
 import org.semanticweb.owlapi.model.OWLDataPropertyRangeAxiom;
 import org.semanticweb.owlapi.model.OWLDatatype;
 import org.semanticweb.owlapi.model.OWLDeclarationAxiom;
+import org.semanticweb.owlapi.model.OWLDifferentIndividualsAxiom;
 import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
 import org.semanticweb.owlapi.model.OWLLiteral;
@@ -70,8 +72,8 @@ public class OWLAPITest {
 
 	//private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
 	//private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
-	//private static final String ONT_URL = "https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
-	private static final String ONT_URL = "https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
+	private static final String ONT_URL = "https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
+	//private static final String ONT_URL = "https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
 	
 	
 	static OWLOntology ontology;
@@ -198,14 +200,29 @@ public class OWLAPITest {
 
 	}
 	@Test
-	public void listInstances() {
+	public void NamedIndividuals() {
 
 		for (OWLNamedIndividual individual: this.ontology.getIndividualsInSignature()) {
 			
 			System.out.println("individual "+individual.getIRI().getFragment());
 		}
 	}
+
 	
+	@Test
+	public void NamedIndividualsByAxioms() {
+
+//		for (OWLDeclarationAxiom individual : ontology.getAxioms(AxiomType.DECLARATION)) {
+//			for (OWLNamedIndividual iterable_element : individual.getIndividualsInSignature()) {
+//				System.out.println(iterable_element );	
+//			}
+//			
+//		}
+//		
+		for (OWLDeclarationAxiom iterable_element : ontology.getAxioms(AxiomType.DECLARATION).stream().filter(u->!u.getIndividualsInSignature().isEmpty()).collect(Collectors.toList())) {
+			System.out.println(iterable_element.getIndividualsInSignature().iterator().next().getIRI().getFragment());
+		}
+	}
 	@Test
 	public void listClasses() {
 		for (OWLClass cls : ontology.getClassesInSignature()) {

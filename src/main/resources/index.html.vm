@@ -4,7 +4,7 @@
 #foreach($o in $project.getOntologies2BProcesed())
 #set($ontName = $o.getOntologyID().getOntologyIRI().get().getFragment() )
         <tr>
-            <td><a href="./ontology/${ontName}/${ontName}.html">${ontName}</a></td>
+            <td><a href="./${ontName}/${ontName}.html">${ontName}</a></td>
             <td> ${o.getOntologyID().getOntologyIRI().get()}</a></td>
             <td>#foreach($ann in $o.getAnnotations()) #if($ann.getValue()) $ann.getValue() #end #end</a></td>
         </tr>

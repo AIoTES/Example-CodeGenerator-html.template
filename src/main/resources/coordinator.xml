@@ -54,7 +54,7 @@
 			<macro>
 				<template>namedIndividual.html.vm</template>
 				<for>NamedIndividual</for>
-				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/NamedIndividual.html</output>
+				<output>./${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/individuals/${NamedIndividual.getIRI().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
