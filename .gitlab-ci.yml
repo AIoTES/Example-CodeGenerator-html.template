@@ -1,0 +1,52 @@
+stages:
+  - prerequisites
+  - test
+  - deploy
+variables:
+  MAVEN_CLI_OPTS: "--batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository"
+cache:
+  key: "$CI_COMMIT_REF_SLUG"
+  untracked: true
+  paths:
+    - $CI_PROJECT_DIR/.m2/repository/
+
+code.generator:
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/.m2/repository/es/upm/tfo/lst/
+    expire_in: 1 hour
+  image: maven:3.5.3-jdk-8
+  stage: prerequisites
+  before_script:
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_KEY")
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan gitlab.lst.tfo.upm.es > ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - mkdir -p $CI_PROJECT_DIR/.m2/
+    - wget -O $CI_PROJECT_DIR/.m2/settings.xml https://raw.githubusercontent.com/universAAL/maven/master/maven-repo-settings/settings.xml 
+  script:
+    - git clone git@gitlab.lst.tfo.upm.es:Activage-madrid-ds/code.generator.git
+    - cd $CI_PROJECT_DIR/code.generator && mvn $MAVEN_CLI_OPTS install -DskipTests
+
+
+test:
+  image: maven:3.5.3-jdk-8
+  stage: test
+  script:
+    - mvn $MAVEN_CLI_OPTS test
+
+mirror-git:
+  stage: deploy
+  image: alpine
+  cache: {}
+  before_script:
+    - apk update
+    - apk add git
+  script:
+    - git clone --mirror ${CI_REPOSITORY_URL} project
+    - cd project
+    - git remote add activage ${ACTIVAGE_PROJECT_URL}.git
+    - git push --mirror activage
