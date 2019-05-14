@@ -1,1 +1,28 @@
 ${NamedIndividual.getIRI().getFragment()}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodeGenerator tool Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 5px;
+              text-align: left;    
+            }
+    </style>
+</head>
+<body>
+
+    <h1>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}</h1>
+
+    
+</body>
+</html>
