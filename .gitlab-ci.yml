@@ -1,0 +1,30 @@
+stages:
+  - test
+  - deploy
+
+test:
+  image: maven:3.5.3-jdk-8
+  stage: test
+  variables:
+    MAVEN_CLI_OPTS: "--batch-mode"
+    MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+  cache:
+    key: "$CI_COMMIT_REF_SLUG"
+    untracked: true
+    paths:
+      - .m2/repository/
+  script:
+    - mvn $MAVEN_CLI_OPTS test
+
+mirror-git:
+  stage: deploy
+  image: alpine
+  cache: {}
+  before_script:
+    - apk update
+    - apk add git
+  script:
+    - git clone --mirror ${CI_REPOSITORY_URL} project
+    - cd project
+    - git remote add activage ${ACTIVAGE_PROJECT_URL}.git
+    - git push --mirror activage
