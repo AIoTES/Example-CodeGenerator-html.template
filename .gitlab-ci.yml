@@ -48,5 +48,5 @@ mirror-git:
   script:
     - git clone --mirror ${CI_REPOSITORY_URL} project
     - cd project
-    - git remote add activage ${ACTIVAGE_PROJECT_URL}.git
+    - git remote add activage ${ACTIVAGE_PROJECT_URL}
     - git push --mirror activage
