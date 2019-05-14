@@ -212,16 +212,14 @@ public class OWLAPITest {
 	@Test
 	public void NamedIndividualsByAxioms() {
 
-//		for (OWLDeclarationAxiom individual : ontology.getAxioms(AxiomType.DECLARATION)) {
-//			for (OWLNamedIndividual iterable_element : individual.getIndividualsInSignature()) {
-//				System.out.println(iterable_element );	
-//			}
-//			
-//		}
-//		
-		for (OWLDeclarationAxiom iterable_element : ontology.getAxioms(AxiomType.DECLARATION).stream().filter(u->!u.getIndividualsInSignature().isEmpty()).collect(Collectors.toList())) {
-			System.out.println(iterable_element.getIndividualsInSignature().iterator().next().getIRI().getFragment());
+		for (OWLDeclarationAxiom individual : ontology.getAxioms(AxiomType.DECLARATION)) {
+			for (OWLNamedIndividual iterable_element : individual.getIndividualsInSignature()) {
+				System.out.println(iterable_element );	
+			}
+			
 		}
+		
+		
 	}
 	@Test
 	public void listClasses() {
