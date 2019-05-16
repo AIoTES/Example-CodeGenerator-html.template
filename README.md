@@ -2,7 +2,7 @@
 This is a template system that generates an HTML static website ready to browse the ontologies (and all their respective definitions and annotations) added to the transformation project.
 
 ## Getting stated / Use
-To use just reffer the codegenerator tool to the main xml file in src/resources, wether locally (after clone) or remotely (using the raw access URL of this repository)
+To use just reffer the codegenerator tool to the main xml file in *src/main/resources*, wether locally (after clone) or remotely (using the raw access URL of this repository)
 
 ## How to build, install, or deploy it
 We recommend the use of Eclipse IDE to edit this project. 
@@ -31,7 +31,7 @@ This project contains the following tests:
 ## Tutorial
 This is a sample template system, it is meant for remix. To use it:
 1. Clone it, fork it, or copy the files, into your local file system.
-2. Edit your project, following the [wiki](https://gitlab.lst.tfo.upm.es/Activage-madrid-ds/code.generator/wikis/home) or the [course](https://poliformat.upv.es/portal/directtool/4136ab45-e867-4287-ac8e-d5eed63f8307/)
+2. Edit your project, following the [wiki](https://gitlab.lst.tfo.upm.es/Activage-madrid-ds/code.generator/wikis/home) or the [course](https://poliformat.upv.es/portal/directtool/4136ab45-e867-4287-ac8e-d5eed63f8307/)(must be signed in).
 3. Edit the README file, remember:
    1. edit the title and description
    2. edit/update _getting started_ section
