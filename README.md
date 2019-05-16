@@ -10,10 +10,10 @@ Eclipse has has some plugins to make it easier the Velocity Templates developmen
 
 To start to work with this project, the first step is clone this repository.
 Import the project with Eclipse:
-1. file->import
-2. them select "existing maven project"
-3. select "browse" button and navigate to root directory where you  was clone this repository
-4. after that you wll see a checked file called "/pom.xml"
+1. File->import
+2. then select "existing maven project"
+3. select "browse" button and navigate to root directory where you cloned this repository
+4. after that you will see a checked file called "/pom.xml"
 5. now, just click "finish" button and wait to Eclipse import all necessary files to start  
 
 ## Testing
@@ -21,6 +21,9 @@ To run the tests, use maven:
 ```
 mvn clean test
 ```
+
+or in Eclipse right click the test clases (in *src/test/java/...*, or individual testcases, then run as.. -> jUnit Test.
+
 This project contains the following tests:
 * Test cases to view [OWL API](https://github.com/owlcs/owlapi/wiki/Documentation) workflow
 * Test cases to view [Velocity](http://velocity.apache.org/) workflow
@@ -44,10 +47,8 @@ This is a sample template system, it is meant for remix. To use it:
 
 ## Credits
 This template is been created by:
-
-Eduardo Buhid <ebuhid@lst.tfo.upm.es>
-Alejandro Medrano <amedrano@lst.tfo.upm.es>
-
+* Eduardo Buhid <ebuhid@lst.tfo.upm.es>
+* Alejandro Medrano <amedrano@lst.tfo.upm.es>
 
 ## Contributing
 Pull requests are always appreciated.
