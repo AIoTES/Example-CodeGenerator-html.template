@@ -6,7 +6,7 @@ To use just reffer the codegenerator tool to the main xml file in *src/main/reso
 
 ## How to build, install, or deploy it
 We recommend the use of Eclipse IDE to edit this project. 
-Eclipse has has some plugins to make it easier the Velocity Templates development (VeloEdit), XML files and more!
+Eclipse has has some plugins to make it easier the Velocity Templates development ([VeloEdit](https://github.com/vaulttec/veloedit)), XML files and more!
 
 To start to work with this project, the first step is clone this repository.
 Import the project with Eclipse:
