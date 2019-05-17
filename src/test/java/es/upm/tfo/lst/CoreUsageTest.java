@@ -33,7 +33,7 @@ public class CoreUsageTest {
 	@Before
 	public void init() {
 		ontManager = OWLManager.createOWLOntologyManager();
-		PropertyConfigurator.configure("src/test/resources/log4jConfigFile/log4j.properties");
+		PropertyConfigurator.configure("src/main/resources/log4jConfigFile/log4j.properties");
 		this.parser = new XmlParser();
 		this.ontologyLoader = new OntologyLoader();
 		this.genPro = new GenerateProject();
