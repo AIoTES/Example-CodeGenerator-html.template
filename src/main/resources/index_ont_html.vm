@@ -63,7 +63,7 @@
                 #foreach ($declaration in $declaration_axioms) 
                     #foreach($r in $declaration.getDataPropertiesInSignature())
                     <tr>
-                        <td>$esc.getText("$r.getIRI().getFragment()")</td>
+                        <td><a href="./DataProperty/${r.getIRI().getFragment()}.html">${r.getIRI().getFragment()}</a></td>
                         <td>$esc.getText("$r.getIRI()")</td>
                     </tr>			    
                 #end
