@@ -303,7 +303,10 @@ public class OWLAPITest {
 		}
 	}
 	
-	
+	@Test
+	public void nameTest() {
+		System.out.println(this.ontology.getOntologyID().getOntologyIRI().get().getFragment().substring(0,this.ontology.getOntologyID().getOntologyIRI().get().getFragment().lastIndexOf(".") )); 
+	} 
 	
 	@Test
 	public void EntitySearchClassTest() throws OWLOntologyCreationException, IOException {
