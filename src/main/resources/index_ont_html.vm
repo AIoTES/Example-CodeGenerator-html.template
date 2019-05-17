@@ -56,9 +56,7 @@
 ##
 #macro(dataprops)
     <h2>List of Data Properties for this ontology</h2>
-    #if( ${declaration_axioms.getDataPropertiesInSignature().isEmpty()} )
-        <h1>This ontology hasn't any  DataProperty</h1>
-    #else
+    
         <table>
             <tr>
                 <th>DataProperty</th>
@@ -74,9 +72,6 @@
             #end
         </table>
     #end
-    
-
-#end
 ##
 ## Table for Object Properties
 ##

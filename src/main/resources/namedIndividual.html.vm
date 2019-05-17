@@ -1,11 +1,11 @@
-#macro(individuals)
-#foreach($declaration in $ontology.getAxioms($AxiomType.DECLARATIONS))
-    #foreach($ind in $declaration.getIndividualsInSignature())
-      $ind.getIRI().gerFragment()
-    #end
-#end
+#macro(individual_details)
+
+<h1>Details of this individual</h1>
+#foreach($a in $EntitySearcher.getDataPropertyValues($NamedIndividual,$ontology))
+$esc.getText("$a")
 #end
 
+#end
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,8 +28,8 @@
 <body>
 
     <h1>${NamedIndividual.getIRI().getFragment()} -- ${ontology.getOntologyID().getOntologyIRI().get().getFragment()}</h1>
-
-    ${NamedIndividual.getIRI().getFragment()}
+    #individual_details()
+    
     
 </body>
 </html>
