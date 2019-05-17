@@ -63,7 +63,7 @@
 			<macro>
 				<template>objectProperty_.html.vm</template>
 				<for>ObjectProperty</for>
-				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/ObjectProperty.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/ObjectProperty/ObjectProperty.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
@@ -72,7 +72,7 @@
 			<macro>
 				<template>dataProperty_.html.vm</template>
 				<for>dataProperty</for>
-				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/DataProperty.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/dataProperty/DataProperty.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>

@@ -1,4 +1,10 @@
-${NamedIndividual.getIRI().getFragment()}
+#macro(individuals)
+#foreach($declaration in $ontology.getAxioms($AxiomType.DECLARATIONS))
+    #foreach($ind in $declaration.getIndividualsInSignature())
+      $ind.getIRI().gerFragment()
+    #end
+#end
+#end
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,8 +27,9 @@ ${NamedIndividual.getIRI().getFragment()}
 </head>
 <body>
 
-    <h1>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}</h1>
+    <h1>${NamedIndividual.getIRI().getFragment()} -- ${ontology.getOntologyID().getOntologyIRI().get().getFragment()}</h1>
 
+    ${NamedIndividual.getIRI().getFragment()}
     
 </body>
 </html>
