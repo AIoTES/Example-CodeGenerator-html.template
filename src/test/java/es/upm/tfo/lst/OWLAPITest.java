@@ -72,10 +72,10 @@ import uk.ac.manchester.cs.jfact.kernel.dl.axioms.AxiomDeclaration;
  */
 public class OWLAPITest {
 
-	private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	//private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
 	//private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
 	//private static final String ONT_URL = "https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
-	//private static final String ONT_URL = "https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
+	private static final String ONT_URL = "https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
 	
 	
 	static OWLOntology ontology;
@@ -237,22 +237,24 @@ public class OWLAPITest {
 	@Test
 	public void getDataPropertiesTest() {
 
-//		for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
-//			for (OWLDataProperty iterable_element : item.getDataPropertiesInSignature()) {
-//				System.out.println(iterable_element);
-//			}
-//		}
+		for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
+//			System.out.println("DATA_PROPERTY_DOMAIN "+item);
+			for (OWLDataProperty iterable_element : item.getDataPropertiesInSignature()) {
+				System.out.println("DATA_PROPERTY_DOMAIN "+iterable_element);
+			}
+		}
 //		System.out.println("------");
 //		for (OWLDataPropertyAssertionAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION)) {
 //			System.out.println("DATA_PROPERTY_ASSERTION "+item);
 //		}
-		System.out.println("------");
-		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
-			System.out.println("DATA_PROPERTY_RANGE "+item.getProperty());
-			System.out.println("DATA_PROPERTY_RANGE item.getRange() "+item.getRange());
-		}
+//		System.out.println("------");
+//		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
+//			System.out.println("DATA_PROPERTY_RANGE item.getProperty() "+item.getProperty());
+//			System.out.println("DATA_PROPERTY_RANGE item.getRange() "+item.getRange());
+//			System.out.println("DATA_PROPERTY_RANGE item.getRange()");
+//		}
 		
-
+		
 
 
 
