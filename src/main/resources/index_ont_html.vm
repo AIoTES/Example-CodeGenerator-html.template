@@ -34,7 +34,7 @@
     		#if($declaration.getIndividualsInSignature())
 		        #foreach($r in $declaration.getIndividualsInSignature())
 		            <tr>
-		                <td>$esc.getText("$r.getIRI().getFragment()")</td>
+		                <td><a href="./individuals/${r.getIRI().getFragment()}.html">${r.getIRI().getFragment()}</a><br></td>
 		                <td>$esc.getText("$r.getIRI()")</td>
 		            </tr>			    
 		        #end

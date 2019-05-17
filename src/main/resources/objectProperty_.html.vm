@@ -1,6 +1,6 @@
 #set($objProps = $ontologies.getAxioms($AxiomType.OBJECT_PROPERTY_DOMAIN))
 
-#macro(objprops $dec)
+#macro(objprops)
 #foreach($o in $dec)
 #if($o.getSignature().iterator().next().isOWLClass()) 
 #set($classname = $o.getSignature().iterator().next().getClassesInSignature().iterator().next())
@@ -14,7 +14,7 @@
 #end
 #end
 #end
-###end
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +43,7 @@
             <th>Propertie</th>
             <th>propertie IRI</th>
         </tr>
-   #objprops($declarations) 
+   #objprops() 
     </table>
 
 </body>

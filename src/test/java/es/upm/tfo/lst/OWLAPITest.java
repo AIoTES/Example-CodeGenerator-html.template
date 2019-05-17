@@ -62,6 +62,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.search.EntitySearcher;
 
 import uk.ac.manchester.cs.jfact.JFactFactory;
+import uk.ac.manchester.cs.jfact.kernel.Axiom;
 import uk.ac.manchester.cs.jfact.kernel.dl.axioms.AxiomDeclaration;
 
 /**
@@ -213,8 +214,9 @@ public class OWLAPITest {
 	public void NamedIndividualsByAxioms() {
 
 		for (OWLDeclarationAxiom individual : ontology.getAxioms(AxiomType.DECLARATION)) {
+
 			for (OWLNamedIndividual iterable_element : individual.getIndividualsInSignature()) {
-				System.out.println(iterable_element );	
+				System.out.println(iterable_element.getIRI().getFragment());
 			}
 			
 		}
@@ -304,9 +306,14 @@ public class OWLAPITest {
 	}
 	
 	@Test
-	public void nameTest() {
-		System.out.println(this.ontology.getOntologyID().getOntologyIRI().get().getFragment().substring(0,this.ontology.getOntologyID().getOntologyIRI().get().getFragment().lastIndexOf(".") )); 
-	} 
+	public void declarationsTest() {
+		for (OWLDeclarationAxiom iterable_element : ontology.getAxioms(AxiomType.DECLARATION)) {
+			
+			for (OWLObjectProperty iterable_element2 : iterable_element.getObjectPropertiesInSignature()) {
+				System.out.println(iterable_element2);
+			}
+		}
+	}
 	
 	@Test
 	public void EntitySearchClassTest() throws OWLOntologyCreationException, IOException {
