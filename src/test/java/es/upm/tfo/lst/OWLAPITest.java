@@ -181,9 +181,12 @@ public class OWLAPITest {
 	public void ontologyAnnotations() {
 		
 		
-		for (OWLAnnotation a : ontology.getAnnotations()) {
-			//System.out.println(a);
-			System.out.println(a.getProperty().getIRI());
+		for (OWLAnnotationAssertionAxiom a : ontology.getAxioms(AxiomType.ANNOTATION_ASSERTION)) {
+			System.out.println(a);
+			System.out.println("a.getAnnotation().getProperty()="+a.getAnnotation().getProperty());
+			System.out.println("a.getAnnotation().getSignature()="+a.getAnnotation().getSignature());
+			System.out.println("a.getAnnotation().getValue()="+a.getAnnotation().getValue());
+			System.out.println("a.getAnnotation().getSubject()="+a.getSubject());
 			//System.out.println(((OWLLiteral) a.getValue()).getLiteral());
 		}
 	}
