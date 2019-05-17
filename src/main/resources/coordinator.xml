@@ -44,7 +44,7 @@
 			<macro>
 				<template>class_.html.vm</template>
 				<for>class</for>
-				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}/${class.getIRI().getFragment()}.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/classes/${class.getIRI().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 					<FullyQualifiedName>org.semanticweb.owlapi.search.EntitySearcher</FullyQualifiedName>
@@ -63,7 +63,7 @@
 			<macro>
 				<template>objectProperty_.html.vm</template>
 				<for>ObjectProperty</for>
-				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/ObjectProperty/ObjectProperty.html</output>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/ObjectProperty/${ObjectProperty.getIRI().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>

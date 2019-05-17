@@ -41,9 +41,8 @@
 #ontologies()        
 </table>
 <h1>Variables given into XML file</h1>
-<p>variable name: $targetOperatingSystem variable value:$targetOperatingSystem.getValue() </p>
-<p>variable name: $date_expire variable value: $date_expire.getValue()</p>
-<p>Variable name:$timezone -- variable value: $timezone.getValue()</p>
-<p>$packageName: $packageName.getValue()</p>
+<p>variable name: targetOperatingSystem variable value:$targetOperatingSystem.getValue() </p>
+<p>variable name: date_expire variable value: $date_expire</p>
+<p>Variable name: timezone -- variable value: $timezone</p>
 </body>
 </html>

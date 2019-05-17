@@ -1,23 +1,33 @@
-#macro(DataProperties $cls)
-#foreach($axiom in $ontology.getAxioms() )
-#if( ${axiom.isOfType($AxiomType.DECLARATION)} && ${axiom.getSignature().iterator().next().isOWLClass()} )
-#foreach($ax : $ontology.getAxioms($AxiomType.DATA_PROPERTY_RANGE))
-#if($ax.getDomain().asOWLClass().equals($cls))
-${cls.getIRI().getFragment()}
-#end
-#end
-#end
-#end
-#end
 
-				for () {
-					if(owlDataPropertyDomainAxiom.getDomain().asOWLClass().equals(cls)) {
-						System.out.println("clase "+cls.getIRI().getFragment());
-						System.out.println("prop name: "+owlDataPropertyDomainAxiom.getProperty().asOWLDataProperty().getIRI());
-						for (OWLDataPropertyRangeAxiom owlDataPropertyRangeAxiom : rng) {
-								System.out.println("range of prop "+owlDataPropertyRangeAxiom.getRange());
-						}
-						
-					}
-					
-				}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 5px;
+              text-align: left;    
+            }
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="./js/script.js"></script>
+<h1>Object Properties</h1>
+
+        <table>
+        <tr>
+            <th>Propertie</th>
+            <th>propertie IRI</th>
+        </tr>
+    </table>
+
+</body>
+</html>

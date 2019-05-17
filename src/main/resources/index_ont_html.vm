@@ -1,4 +1,6 @@
 #set( $ontName = $ontology.getOntologyID().getOntologyIRI().get().getFragment() )
+#set($declaration_axioms = $ontology.getAxioms($AxiomType.DECLARATION))
+
 ##
 ## Table for classes
 ##
@@ -12,7 +14,7 @@
         </tr>
     #foreach($o in $ontology.getClassesInSignature())
         <tr>
-            <td><a href="./classes/${o.getIRI().getFragment()}/${o.getIRI().getFragment()}.html">${o.getIRI().getFragment()}</a><br></td>
+            <td><a href="./classes/${o.getIRI().getFragment()}.html">${o.getIRI().getFragment()}</a><br></td>
             <td>$esc.getText("${o.getIRI()}")</td>
         </tr>
 	#end
@@ -24,13 +26,13 @@
 #macro(individuals)
 
     <h2>List of NamedIndividuals for this ontology</h2>
-#set($dec = $ontology.getAxioms($AxiomType.DECLARATION))
+
     <table>
         <tr>
             <th>individual</th>
             <th>individual IRI</th>
         </tr>
-    		#foreach ($declaration in $dec) 
+    		#foreach ($declaration in $declaration_axioms) 
     		#if($declaration.getIndividualsInSignature())
 		        #foreach($r in $declaration.getIndividualsInSignature())
 		            <tr>
@@ -49,23 +51,26 @@
 ## Table for Data Properties
 ##
 #macro(dataprops)
-
     <h2>List of Data Properties for this ontology</h2>
-
+    #if( ${declaration_axioms.getDataPropertiesInSignature().isEmpty()} )
+        <h1>This ontology hasn't any  DataProperty</h1>
+    #else
         <table>
-        <tr>
-            <th>DataProperty</th>
-            <th>DataProperty IRI</th>
-        </tr>
-    		#foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
-        #foreach($r in $declaration.getDataPropertiesInSignature())
             <tr>
-                <td>$esc.getText("$r.getIRI().getFragment()")</td>
-                <td>$esc.getText("$r.getIRI()")</td>
-            </tr>			    
-        #end
-		#end
-    </table>
+                <th>DataProperty</th>
+                <th>DataProperty IRI</th>
+            </tr>
+                #foreach ($declaration in $declaration_axioms) 
+                    #foreach($r in $declaration.getDataPropertiesInSignature())
+                    <tr>
+                        <td>$esc.getText("$r.getIRI().getFragment()")</td>
+                        <td>$esc.getText("$r.getIRI()")</td>
+                    </tr>			    
+                #end
+            #end
+        </table>
+    #end
+    
 
 #end
 ##
@@ -73,24 +78,26 @@
 ##
 #macro(objprops)
 
+    #if(!${$declaration_axioms.isEmpty()})
 
-    <h2>List of Object Properties for this ontology</h2>
+        <h2>List of Object Properties for this ontology</h2>
 
         <table>
-        <tr>
-            <th>ObjectProperty</th>
-            <th>ObjectProperty IRI</th>
-        </tr>
-        #foreach ($declaration in $ontology.getAxioms($AxiomType.DECLARATION)) 
-            #foreach($r in $declaration.getObjectPropertiesInSignature())
-                <tr>
-                    <td>$esc.getText("$r.getIRI().getFragment()")</td>
-                    <td>$esc.getText("$r.getIRI()")</td>
-                </tr>			    
+            <tr>
+                <th>ObjectProperty</th>
+                <th>ObjectProperty IRI</th>
+            </tr>
+            #foreach ($declaration in $declaration_axioms) 
+                #foreach($r in $declaration.getObjectPropertiesInSignature())
+                    <tr>
+                        <td>$esc.getText("$r.getIRI().getFragment()")</td>
+                        <td>$esc.getText("$r.getIRI()")</td>
+                    </tr>			    
+                #end
             #end
-		#end
     </table>
 
+    #end
 
 #end
 

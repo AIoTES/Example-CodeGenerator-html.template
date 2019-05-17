@@ -1,28 +1,70 @@
-#set($axioms = $ontology.getAxioms())
+#set($axioms = ${ontology.getAxioms()})
+#set($declarations =$ontology.getAxioms($AxiomType.DECLARATIONS))
 #set($props_axioms =$ontology.getAxioms($AxiomType.DATA_PROPERTY_DOMAIN))
-
-#macro(individuals)
-    #foreach ( $element in $EntitySearcher.getInstances($class, $ontology) )
+#macro(ind)
+<h2>individuals</h2>
+        <table>
         <tr>
-            <td>${element.getIRI().getFragment()}</a></td>
-            <td>$esc.getText("${element.getIRI().getFragment()}")</td>
-        </tr>  
-    #end 
+            <th>individuals</th>
+            <th>individuals IRI</th>
+        </tr>
+        #foreach ( $element in $EntitySearcher.getInstances($class, $ontology) )
+            <tr>
+                <td>${element.getIRI().getFragment()}</a></td>
+                <td>$esc.getText("${element.getIRI().getFragment()}")</td>
+            </tr>  
+        #end 
+</table>    
 #end
-
-
-
-#macro(dataprops)
-
-    #foreach ( $item in $ontology.getAxioms($AxiomType.DATA_PROPERTY_RANGE) )
+#macro(dt_props)
+<h2>DataProperties</h2>
+    <table>
         <tr>
-            <td>${item.getIRI().getFragment()}</a></td>
-            <td>$esc.getText("${item.getIRI()}")</td>
+            <th>Property</th>
+            <th>Property IRI</th>
+            <th>Property range</th>
+        </tr>
+        #foreach ( $item in $ontology.getAxioms($AxiomType.DATA_PROPERTY_RANGE) )
+        <tr>
+            <td>${item.getProperty().getIRI().getFragment()}</a></td>
+            <td>$esc.getText("${item.getProperty().getIRI()}")</td>
             <td>$esc.getText("${item.getRange()}")</td>
         </tr>  
-    #end     	
+        #end  
+    </table>  	
 #end
 
+#macro(class_annotatiions)
+
+
+<h2>Class Annotations</h2>
+
+        <table>
+        <tr>
+            <th>Property</th>
+            <th>IRI</th>
+            <th>Value</th>
+        </tr>
+    #foreach($ann in $axioms)
+        #if($ann.isOfType($AxiomType.DECLARATION) && $ann.getSignature().iterator().next().isOWLClass() )
+            #set( $aux = $ann.getSignature().iterator().next().asOWLClass() )
+            
+                    #foreach($iterable_element2 in $EntitySearcher.getAnnotationObjects($aux,$ontology)) 
+                        <tr>
+                            <td>${iterable_element2.getSignature().iterator().next().getIRI().getFragment()}</a></td>
+                            <td>$esc.getText("${iterable_element2.getSignature().iterator().next().getIRI().getFragment()}")</td>
+                            <td>${iterable_element2.getValue()}</td>
+                        </tr>  
+                    #end
+        #end
+    #end
+    </table>
+#end
+
+					
+	
+			}
+		}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,26 +85,11 @@
     </style>
 </head>
 <body>
-    <h1>Class Details: ${class.getIRI().getFragment()}</h1>
+    <h1>Details for class  ${class.getIRI().getFragment()}</h1>
     
-           <h2>individuals</h2>
-        <table>
-        <tr>
-            <th>individuals</th>
-            <th>individuals IRI</th>
-        </tr>
-    #individuals()
-    </table>
-    
-   <h2>DataProperties</h2>
-           <table>
-        <tr>
-            <th>Property</th>
-            <th>Property IRI</th>
-            <th>Property range</th>
-        </tr>
-    #dataprops()
-       	    </table>
+    #ind()
+    #dt_props()
+    #class_annotatiions()
    
 	
 </body>
