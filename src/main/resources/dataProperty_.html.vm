@@ -9,7 +9,7 @@
 #foreach($t in $dtprops)
 
 #if($t.containsEntityInSignature($classname))
-<a href="$esc.getText("${classname}")"></a><br>
+<a href="$esc.getText(${classname})"></a><br>
 $esc.getText("${t}")
 #end
 #end
