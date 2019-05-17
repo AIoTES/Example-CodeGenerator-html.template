@@ -62,6 +62,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.search.EntitySearcher;
 
 import es.upm.tfo.lst.CodeGenerator.owl.OntologyLoader;
+import uk.ac.manchester.cs.jfact.DeclarationVisitorEx;
 import uk.ac.manchester.cs.jfact.JFactFactory;
 import uk.ac.manchester.cs.jfact.kernel.Axiom;
 import uk.ac.manchester.cs.jfact.kernel.dl.axioms.AxiomDeclaration;
@@ -243,16 +244,16 @@ public class OWLAPITest {
 				System.out.println("DATA_PROPERTY_DOMAIN "+iterable_element);
 			}
 		}
-//		System.out.println("------");
-//		for (OWLDataPropertyAssertionAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION)) {
-//			System.out.println("DATA_PROPERTY_ASSERTION "+item);
-//		}
-//		System.out.println("------");
-//		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
-//			System.out.println("DATA_PROPERTY_RANGE item.getProperty() "+item.getProperty());
-//			System.out.println("DATA_PROPERTY_RANGE item.getRange() "+item.getRange());
-//			System.out.println("DATA_PROPERTY_RANGE item.getRange()");
-//		}
+		System.out.println("------");
+		for (OWLDataPropertyAssertionAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION)) {
+			System.out.println("DATA_PROPERTY_ASSERTION "+item);
+		}
+		System.out.println("------");
+		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
+			System.out.println("DATA_PROPERTY_RANGE item.getProperty() "+item.getProperty());
+			System.out.println("DATA_PROPERTY_RANGE item.getRange() "+item.getRange());
+			System.out.println("DATA_PROPERTY_RANGE item.getRange()");
+		}
 		
 		
 
@@ -352,10 +353,23 @@ public class OWLAPITest {
 			}
 		
 		}
-		
-		
-
-
 	}
+
+	@Test
+	public void DataPropsViaEntitySearchTest() throws Exception {
+		
+		for (OWLAxiom iterable_element : ontology.getAxioms(AxiomType.DECLARATION)) {
+			
+				if(iterable_element.getDataPropertiesInSignature().size()!=0) {
+					System.out.println(iterable_element);
+				}
+		}
+		
+
+		
+		
+	}
+
+
 }
 
