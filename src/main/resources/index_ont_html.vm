@@ -1,5 +1,6 @@
 #set( $ontName = $ontology.getOntologyID().getOntologyIRI().get().getFragment() )
 #set($declaration_axioms = $ontology.getAxioms($AxiomType.DECLARATION))
+#set($all_axioms = $ontology.getAxioms())
 
 ##
 ## Table for classes
@@ -12,11 +13,14 @@
             <th>ClassName</th>
             <th>ClasIRI</th>
         </tr>
-    #foreach($o in $ontology.getClassesInSignature())
+
+    #foreach($o in $all_axioms)
+        #if(${o.getSignature().iterator().next().isOWLClass()} && ${o.isOfType($AxiomType.DECLARATION)}) 
         <tr>
-            <td><a href="./classes/${o.getIRI().getFragment()}.html">${o.getIRI().getFragment()}</a><br></td>
-            <td>$esc.getText("${o.getIRI()}")</td>
+            <td><a href="./classes/${o.getSignature().iterator().next().asOWLClass().getIRI().getFragment()}.html">${o.getSignature().iterator().next().asOWLClass().getIRI().getFragment()}</a><br></td>
+            <td>$esc.getText("${o.getSignature().iterator().next().asOWLClass().getIRI()}")</td>
         </tr>
+        #end
 	#end
    </table>
 #end
@@ -78,7 +82,7 @@
 ##
 #macro(objprops)
 
-    #if(!${$declaration_axioms.isEmpty()})
+
 
         <h2>List of Object Properties for this ontology</h2>
 
@@ -98,7 +102,7 @@
             #end
     </table>
 
-    #end
+  
 
 #end
 
