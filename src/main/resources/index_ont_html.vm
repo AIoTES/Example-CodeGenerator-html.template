@@ -90,7 +90,8 @@
             #foreach ($declaration in $declaration_axioms) 
                 #foreach($r in $declaration.getObjectPropertiesInSignature())
                     <tr>
-                        <td>$esc.getText("$r.getIRI().getFragment()")</td>
+                    
+                        <td><a href="./ObjectProperty/${r.getIRI().getFragment()}.html">${r.getIRI().getFragment()}</td>
                         <td>$esc.getText("$r.getIRI()")</td>
                     </tr>			    
                 #end
