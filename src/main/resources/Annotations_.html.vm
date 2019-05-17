@@ -1,0 +1,42 @@
+#macro(annotations_for_ontology)
+<h1>Annotations Details</h1>
+    <table>
+            <tr>
+                <th>Annotation property</th>
+                <th>Annotation Subject IRI</th>
+                <th>Annotation Value</th>
+            </tr>
+            #foreach($r in $ontology.getAxioms($AxiomType.ANNOTATION_ASSERTION))
+                <tr>
+                    <td>${r.getAnnotation().getProperty()}</td>
+                    <td>$esc.getText("${r.getSubject()}")</td>
+                    <td>${r.getValue()}</td>
+                </tr>
+            #end
+
+    </table>
+#end
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <style>
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 5px;
+              text-align: left;    
+            }
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="./js/script.js"></script>
+#annotations_for_ontology()
+</body>
+</html>
