@@ -238,7 +238,7 @@ public class OWLAPITest {
 	public void getDataPropertiesTest() {
 
 		for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
-//			System.out.println("DATA_PROPERTY_DOMAIN "+item);
+				System.out.println("DATA_PROPERTY_DOMAIN item="+item);
 			for (OWLDataProperty iterable_element : item.getDataPropertiesInSignature()) {
 				System.out.println("DATA_PROPERTY_DOMAIN "+iterable_element);
 			}
