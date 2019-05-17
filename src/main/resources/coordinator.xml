@@ -70,16 +70,13 @@
 			</macro>
 			
 			<macro>
-				<template>dataProperty_.html.vm</template>
-				<for>dataProperty</for>
-				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/dataProperty/DataProperty.html</output>
+				<template>annotations_.html.vm</template>
+				<for>annotations</for>
+				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/Annotations.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
 				</imports>
 			</macro>
-
-
-
 			  			
 		</macros>
 </Template>
