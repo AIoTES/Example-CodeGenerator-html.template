@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Template
-		xmlns="http://www.example.org/exampleTemplate " 
-		xmlns:x="http://www.w3.org/2001/XMLSchema-instance" 
-		x:schemaLocation="http://www.example.org/exampleTemplate schema.xsd">
+	xmlns="http://www.example.org/CodeGeneratorTool" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"	
+  	xs:schemaLocation="http://www.example.org/CodeGeneratorTool schema.xsd">
 		<template-name>HTMLExample</template-name>
 		<template-version>1.0</template-version>
-		<template-description>Generates a static HTML web page</template-description>
-
+		<template-description>Generate a static HTML web page</template-description>
+		<template-author>
+			  	<name>Eduardo Buhid</name>
+			  	<email>ebuhid@lst.tfo.upm.es</email>
+			  	<roles>developer</roles>
+			  	<organization>LifesTech</organization>
+			  	<organizationUrl>https://www.lst.tfo.upm.es/</organizationUrl>
+			  	<timezone>(GMT+01:00)</timezone>
+		 </template-author>
 		
 		<variables>
 			<variable>
