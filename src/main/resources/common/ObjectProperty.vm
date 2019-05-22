@@ -1,0 +1,17 @@
+##get a table with all object propterties declarations
+#macro(ObjectProperty_table $ontology)
+#if($ontology.getAxioms($AxiomType.OBJECT_PROPERTY_DOMAIN).size()>0)
+<table>
+<tr>
+<th>ObjectProperty</th>
+<th>ObjectProperty IRI</th>
+</tr>
+#foreach ($r in $ontology.getAxioms($AxiomType.OBJECT_PROPERTY_DOMAIN)) 
+<tr>
+<td><a href="./ObjectProperty/${r.getProperty().getSignature().iterator().next().getIRI().getFragment()}.html">${r.getProperty().getSignature().iterator().next().getIRI().getFragment()}</td>
+<td>$esc.getText("$r.getProperty().getSignature().iterator().next().getIRI()")</td>
+</tr>			    
+#end
+</table>
+#end
+#end

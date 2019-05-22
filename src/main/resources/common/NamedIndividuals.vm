@@ -1,0 +1,17 @@
+#macro(NamedIndividuals_table $ontology)
+#if($ontology.getAxioms($AxiomType.DIFFERENT_INDIVIDUALS).size()>0)
+<table>
+<tr>
+<th>individual</th>
+<th>individual IRI</th>
+</tr>
+#foreach($a in $ontology.getAxioms($AxiomType.DIFFERENT_INDIVIDUALS))
+#foreach($b in ${a.getIndividuals()})
+<tr>
+<td><a href="./individuals/${b.getSignature().iterator().next().getIRI().getFragment()}.html">${b.getSignature().iterator().next().getIRI().getFragment()}</a><br></td>
+<td>$esc.getText("${b.getSignature().iterator().next().getIRI()}")</td>
+</tr>	
+#end
+#end
+#end
+#end

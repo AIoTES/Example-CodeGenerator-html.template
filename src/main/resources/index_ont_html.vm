@@ -1,106 +1,7 @@
-#set( $ontName = $ontology.getOntologyID().getOntologyIRI().get().getFragment() )
-#set($declaration_axioms = $ontology.getAxioms($AxiomType.DECLARATION))
-#set($all_axioms = $ontology.getAxioms())
-
-##
-## Table for classes
-##
-#macro(internalClass)
- <h2>List of class for this ontology</h2>
-    <p>The following list details all the classes contained in the current ontology. By clicking on the name of the class, you can see all the elements related to the class.</p>
-    <table>
-        <tr>
-            <th>ClassName</th>
-            <th>ClasIRI</th>
-        </tr>
-
-    #foreach($o in $all_axioms)
-        #if(${o.getSignature().iterator().next().isOWLClass()} && ${o.isOfType($AxiomType.DECLARATION)}) 
-        <tr>
-            <td><a href="./classes/${o.getSignature().iterator().next().asOWLClass().getIRI().getFragment()}.html">${o.getSignature().iterator().next().asOWLClass().getIRI().getFragment()}</a><br></td>
-            <td>$esc.getText("${o.getSignature().iterator().next().asOWLClass().getIRI()}")</td>
-        </tr>
-        #end
-	#end
-   </table>
-#end
-##
-## Table for individuals
-##
-#macro(individuals)
-
-    <h2>List of NamedIndividuals for this ontology</h2>
-
-    <table>
-        <tr>
-            <th>individual</th>
-            <th>individual IRI</th>
-        </tr>
-    		#foreach ($declaration in $declaration_axioms) 
-    		#if($declaration.getIndividualsInSignature())
-		        #foreach($r in $declaration.getIndividualsInSignature())
-		            <tr>
-		                <td><a href="./individuals/${r.getIRI().getFragment()}.html">${r.getIRI().getFragment()}</a><br></td>
-		                <td>$esc.getText("$r.getIRI()")</td>
-		            </tr>			    
-		        #end
-		    #end    
-		#end
-    </table>
-
-
-
-#end
-##
-## Table for Data Properties
-##
-#macro(dataprops)
-    <h2>List of Data Properties for this ontology</h2>
-    
-        <table>
-            <tr>
-                <th>DataProperty</th>
-                <th>DataProperty IRI</th>
-            </tr>
-                #foreach ($declaration in $declaration_axioms) 
-                    #foreach($r in $declaration.getDataPropertiesInSignature())
-                    <tr>
-                        <td><a href="./DataProperty/${r.getIRI().getFragment()}.html">${r.getIRI().getFragment()}</a></td>
-                        <td>$esc.getText("$r.getIRI()")</td>
-                    </tr>			    
-                #end
-            #end
-        </table>
-    #end
-##
-## Table for Object Properties
-##
-#macro(objprops)
-
-
-
-        <h2>List of Object Properties for this ontology</h2>
-
-        <table>
-            <tr>
-                <th>ObjectProperty</th>
-                <th>ObjectProperty IRI</th>
-            </tr>
-            #foreach ($declaration in $declaration_axioms) 
-                #foreach($r in $declaration.getObjectPropertiesInSignature())
-                    <tr>
-                    
-                        <td><a href="./ObjectProperty/${r.getIRI().getFragment()}.html">${r.getIRI().getFragment()}</td>
-                        <td>$esc.getText("$r.getIRI()")</td>
-                    </tr>			    
-                #end
-            #end
-    </table>
-
-  
-
-#end
-
+#parse("/common/DataProperty.vm")
+#parse("/common/ObjectProperty.vm")
+#parse("/common/NamedIndividuals.vm")
+#parse("/common/Class.vm")
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,14 +24,21 @@
 <body>
 
     <h1>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}</h1>
-   
-    #internalClass()
-
-    #individuals()   
+   <h2>List of class for this ontology</h2>
+    <p>The following list details all the classes contained in the current ontology. By clicking on the name of the class, you can see all the elements related to the class.</p>
+    #Class_table($ontology)
     
-    #dataprops()
+    <h2>List of NamedIndividuals for this Ontology</h2>
 
-    #objprops()
+    #NamedIndividuals_table($ontology)   
+   
+    <h2>List of Data Properties for this ontology</h2>
+
+    #DataProperty_table($ontology)
+
+    <h2>List of Object Properties for this ontology</h2>
+
+    #ObjectProperty_table($ontology)
     
 </body>
 </html>

@@ -1,0 +1,17 @@
+#macro(Class_table $ontology)
+    <table>
+        <tr>
+            <th>ClassName</th>
+            <th>ClasIRI</th>
+        </tr>
+
+    #foreach($o in ${ontology.getAxioms()})
+        #if(${o.getSignature().iterator().next().isOWLClass()} && ${o.isOfType($AxiomType.DECLARATION)}) 
+        <tr>
+            <td><a href="./classes/${o.getSignature().iterator().next().asOWLClass().getIRI().getFragment()}.html">${o.getSignature().iterator().next().asOWLClass().getIRI().getFragment()}</a><br></td>
+            <td>$esc.getText("${o.getSignature().iterator().next().asOWLClass().getIRI()}")</td>
+        </tr>
+        #end
+	#end
+   </table>
+#end
