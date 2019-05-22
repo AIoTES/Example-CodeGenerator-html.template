@@ -17,40 +17,31 @@ package es.upm.tfo.lst;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Set;import java.util.stream.Collector;
-import java.util.stream.Collectors;
+import java.util.Map;
+import java.util.Set;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.experimental.theories.Theories;
 import org.junit.rules.TestName;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AxiomType;
-import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAnnotation;
 import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
-import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
-import org.semanticweb.owlapi.model.OWLDataFactory;
-import org.semanticweb.owlapi.model.OWLDataProperty;
-import org.semanticweb.owlapi.model.OWLDataPropertyAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLDataPropertyDomainAxiom;
 import org.semanticweb.owlapi.model.OWLDataPropertyRangeAxiom;
-import org.semanticweb.owlapi.model.OWLDatatype;
 import org.semanticweb.owlapi.model.OWLDeclarationAxiom;
-import org.semanticweb.owlapi.model.OWLDifferentIndividualsAxiom;
+import org.semanticweb.owlapi.model.OWLDocumentFormat;
 import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
 import org.semanticweb.owlapi.model.OWLIndividual;
-import org.semanticweb.owlapi.model.OWLLiteral;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLObjectOneOf;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
-import org.semanticweb.owlapi.model.OWLObjectPropertyAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLObjectPropertyDomainAxiom;
 import org.semanticweb.owlapi.model.OWLObjectPropertyRangeAxiom;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -60,12 +51,9 @@ import org.semanticweb.owlapi.model.parameters.Imports;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.search.EntitySearcher;
+import org.semanticweb.owlapi.vocab.PrefixOWLOntologyFormat;
 
-import es.upm.tfo.lst.CodeGenerator.owl.OntologyLoader;
-import uk.ac.manchester.cs.jfact.DeclarationVisitorEx;
 import uk.ac.manchester.cs.jfact.JFactFactory;
-import uk.ac.manchester.cs.jfact.kernel.Axiom;
-import uk.ac.manchester.cs.jfact.kernel.dl.axioms.AxiomDeclaration;
 
 /**
  * @author amedrano
@@ -73,9 +61,9 @@ import uk.ac.manchester.cs.jfact.kernel.dl.axioms.AxiomDeclaration;
  */
 public class OWLAPITest {
 
-	private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	//private static final String ONT_URL = "https://protege.stanford.edu/ontologies/pizza/pizza.owl";
 	//private static final String ONT_URL = "	http://svn.code.sf.net/p/oae/code/trunk/src/ontology/CTCAE-OAEview.owl";
-	//private static final String ONT_URL = "https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
+	private static final String ONT_URL = "https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
 	//private static final String ONT_URL = "https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
 	
 	
@@ -396,14 +384,26 @@ public class OWLAPITest {
 	@Test
 	public void hasMemberOfTypeTest() {
 		
-
-		for (OWLDifferentIndividualsAxiom iterable_element : this.ontology.getAxioms(AxiomType.DIFFERENT_INDIVIDUALS)) {
-			
-			for (OWLIndividual element : iterable_element.getIndividuals()) {
-				System.out.println(element.getSignature().iterator().next().getIRI());
+		
+		for (OWLDeclarationAxiom iterable_element : this.ontology.getAxioms(AxiomType.DECLARATION)) {
+			if(iterable_element.getSignature().iterator().next().isOWLClass()) {
+				OWLClass cls =iterable_element.getSignature().iterator().next().asOWLClass();
+				for (OWLClassExpression iterable: EntitySearcher.getSuperClasses(cls, ontology)) {
+					System.out.println(iterable.isClassExpressionLiteral()+"  "+iterable);
+				}
 			}
 		}
 	}
 
+
+	
+	@Test
+	public void OntologyPrefixes() {
+		
+		OWLDocumentFormat format = ontManager.getOntologyFormat(ontology);
+		for (String iterable_element : format.asPrefixOWLOntologyFormat().getPrefixNames()) {
+			System.out.println("prefix="+iterable_element+" value="+format.asPrefixOWLOntologyFormat().getPrefix(iterable_element));
+		}
+	}
 }
 
