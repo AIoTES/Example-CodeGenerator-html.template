@@ -223,6 +223,7 @@ public class OWLAPITest {
 			for (OWLNamedIndividual iterable_element : individual.getIndividualsInSignature()) {
 				System.out.println(iterable_element.getIRI().getFragment());
 			}
+
 			
 		}
 		
@@ -239,21 +240,30 @@ public class OWLAPITest {
 	public void getDataPropertiesTest() {
 
 		for (OWLDataPropertyDomainAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_DOMAIN)) {
-				System.out.println("DATA_PROPERTY_DOMAIN item="+item);
-			for (OWLDataProperty iterable_element : item.getDataPropertiesInSignature()) {
-				System.out.println("DATA_PROPERTY_DOMAIN "+iterable_element);
-			}
+				System.out.println("DATA_PROPERTY_DOMAIN item.getDomain()="+item.getDomain());
+				System.out.println("DATA_PROPERTY_DOMAIN item.getProperty()="+item.getProperty());
+			
+				for (OWLDataPropertyRangeAxiom item2 : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
+					
+					if(item.getProperty().equals(item2.getProperty())) {
+						System.out.println("OUTPUT = "+item.getProperty().getSignature().iterator().next().getIRI().getFragment());
+						System.out.println("OUTPUT RANGE= "+item2.getRange().getSignature().iterator().next().getIRI());
+					}
+//					System.out.println("DATA_PROPERTY_RANGE item.getProperty() "+item2.getProperty());
+//					System.out.println("DATA_PROPERTY_RANGE item.getRange() "+item2.getRange());
+//					
+				}
 		}
-		System.out.println("------");
-		for (OWLDataPropertyAssertionAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION)) {
-			System.out.println("DATA_PROPERTY_ASSERTION "+item);
-		}
-		System.out.println("------");
-		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
-			System.out.println("DATA_PROPERTY_RANGE item.getProperty() "+item.getProperty());
-			System.out.println("DATA_PROPERTY_RANGE item.getRange() "+item.getRange());
-			System.out.println("DATA_PROPERTY_RANGE item.getRange()");
-		}
+//		System.out.println("------");
+//		for (OWLDataPropertyAssertionAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_ASSERTION)) {
+//			System.out.println("DATA_PROPERTY_ASSERTION "+item);
+//		}
+//		System.out.println("------");
+//		for (OWLDataPropertyRangeAxiom item : ontology.getAxioms(AxiomType.DATA_PROPERTY_RANGE)) {
+//			System.out.println("DATA_PROPERTY_RANGE item.getProperty() "+item.getProperty());
+//			System.out.println("DATA_PROPERTY_RANGE item.getRange() "+item.getRange());
+//			
+//		}
 		
 		
 
@@ -266,17 +276,30 @@ public class OWLAPITest {
 		
 		
 		for (OWLObjectPropertyDomainAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_DOMAIN)) {
-			System.out.println("OBJECT_PROPERTY_DOMAIN "+item);
-	
+//			System.out.println("OBJECT_PROPERTY_DOMAIN "+item);
+//			System.out.println("item.getDomain() "+item.getDomain());
+//			System.out.println("item.getProperty() "+item.getProperty());
+			for (OWLObjectPropertyRangeAxiom item2 : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_RANGE)) {
+				if(item.getProperty().equals(item2.getProperty())) {
+					System.out.println("prop="+item2.getProperty().getSignature().iterator().next().getIRI().getFragment());
+					System.out.println("range="+item2.getRange().getSignature().iterator().next().getIRI().getFragment());
+				}
+				
+//				System.out.println("OBJECT_PROPERTY_RANGE "+item2);
+//				System.out.println("item.getRange() "+item2.getRange());
+//				System.out.println("item.getProperty() "+item2.getProperty());
+			}
 		}
-		System.out.println("------");
-		for (OWLObjectPropertyAssertionAxiom item: ontology.getAxioms(AxiomType.OBJECT_PROPERTY_ASSERTION)) {
-			System.out.println("OBJECT_PROPERTY_ASSERTION "+item);
-		}
-		System.out.println("------");
-		for (OWLObjectPropertyRangeAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_RANGE)) {
-			System.out.println("OBJECT_PROPERTY_RANGE "+item);
-		}
+//		System.out.println("------");
+//		for (OWLObjectPropertyAssertionAxiom item: ontology.getAxioms(AxiomType.OBJECT_PROPERTY_ASSERTION)) {
+//			System.out.println("OBJECT_PROPERTY_ASSERTION "+item);
+//		}
+//		System.out.println("------");
+//		for (OWLObjectPropertyRangeAxiom item : ontology.getAxioms(AxiomType.OBJECT_PROPERTY_RANGE)) {
+//			System.out.println("OBJECT_PROPERTY_RANGE "+item);
+//			System.out.println("item.getRange() "+item.getRange());
+//			System.out.println("item.getProperty() "+item.getProperty());
+//		}
 
 	}
 
@@ -370,6 +393,14 @@ public class OWLAPITest {
 		
 	}
 
+	@Test
+	public void hasMemberOfTypeTest() {
+		
+		for (OWLDeclarationAxiom iterable_element : this.ontology.getAxioms(AxiomType.DECLARATION)) {
+			
+			System.out.println(iterable_element); 
+		}
+	}
 
 }
 
