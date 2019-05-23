@@ -23,9 +23,9 @@ public class CoreUsageTest {
 	private OntologyLoader ontologyLoader=null;
 	//----constants
 	private final String ontologyBasePath="src/test/resources/ontologies/";
-	//private final String webOntology ="https://protege.stanford.edu/ontologies/pizza/pizza.owl";
+	private final String webOntology ="https://protege.stanford.edu/ontologies/pizza/pizza.owl";
 	//private final String webOntology ="https://raw.githubusercontent.com/monarch-initiative/GENO-ontology/develop/src/ontology/geno.owl";
-	private final String webOntology ="https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
+	//private final String webOntology ="https://raw.githubusercontent.com/EuPath-ontology/EuPath-ontology/2019-04-02/eupath.owl";
 	
 	private final String baseOutput="target/generated/";
 	private OWLOntologyManager ontManager;
@@ -51,10 +51,10 @@ public class CoreUsageTest {
 				//set output directory
 				this.genPro.setOutputFolder(this.baseOutput);
 				//optional: add value to variables. You can add extra variable plus the variables provided into XML file
-				this.genPro.setVariable("targetOperatingSystem","Linux");
-				this.genPro.setVariable( "date_expire", "9-5-2019");				
-				this.genPro.setVariable( "timezone", "(GMT+01:00)");
-				File f = new File(baseOutput);
+//				this.genPro.setVariable("targetOperatingSystem","Linux");
+//				this.genPro.setVariable( "date_expire", "9-5-2019");				
+//				this.genPro.setVariable( "timezone", "(GMT+01:00)");
+				File f = new File(baseOutput); 
 				f.mkdirs();
 				genPro.process();
 		} catch (Exception e) {
