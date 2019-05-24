@@ -35,6 +35,8 @@
 				<output>index.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+					<FullyQualifiedName>org.semanticweb.owlapi.search.EntitySearcher</FullyQualifiedName>
+
 				</imports>
 			</macro>
 					
@@ -44,6 +46,8 @@
 				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/${ontology.getOntologyID().getOntologyIRI().get().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+					<FullyQualifiedName>org.semanticweb.owlapi.search.EntitySearcher</FullyQualifiedName>
+
 				</imports>
 			</macro>		
 
@@ -64,6 +68,8 @@
 				<output>./${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/individuals/${NamedIndividual.getIRI().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+					<FullyQualifiedName>org.semanticweb.owlapi.search.EntitySearcher</FullyQualifiedName>
+
 				</imports>
 			</macro>
 
@@ -73,6 +79,7 @@
 				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/ObjectProperty/${ObjectProperty.getIRI().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+					<FullyQualifiedName>org.semanticweb.owlapi.search.EntitySearcher</FullyQualifiedName>
 				</imports>
 			</macro>
 			
@@ -83,6 +90,7 @@
 				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/DataProperty/${DataProperty.getIRI().getFragment()}.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+					<FullyQualifiedName>org.semanticweb.owlapi.search.EntitySearcher</FullyQualifiedName>
 				</imports>
 			</macro>
 
@@ -94,6 +102,7 @@
 				<output>${ontology.getOntologyID().getOntologyIRI().get().getFragment()}/Annotations.html</output>
 				<imports>
 					<FullyQualifiedName>org.semanticweb.owlapi.model.AxiomType</FullyQualifiedName>
+					<FullyQualifiedName>org.semanticweb.owlapi.search.EntitySearcher</FullyQualifiedName>
 				</imports>
 			</macro>
 			  			
