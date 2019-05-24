@@ -1,64 +1,52 @@
 #set($axioms = ${ontology.getAxioms()})
-#set($declarations =$ontology.getAxioms($AxiomType.DECLARATIONS))
-#set($props_axioms =$ontology.getAxioms($AxiomType.DATA_PROPERTY_DOMAIN))
-##macro for NamedIndividuals
-#macro(ind)
-<h2>individuals</h2>
-        <table>
-        <tr>
-            <th>individuals</th>
-            <th>individuals IRI</th>
-        </tr>
-        #foreach ( $element in $EntitySearcher.getInstances($class, $ontology) )
-            <tr>
-                <td>${element.getIRI().getFragment()}</a></td>
-                <td>$esc.getText("${element.getIRI().getFragment()}")</td>
-            </tr>  
-        #end 
-</table>    
-#end
-#macro(dt_props)
-<h2>DataProperties</h2>
+#macro(superclasses $class)
+<h1>SuperClasses</h1>
     <table>
         <tr>
-            <th>Property</th>
-            <th>Property IRI</th>
-            <th>Property range</th>
+            <th>SuperClass name</th>
+            <th>SuperClass IRI</th>
         </tr>
-        #foreach ( $item in $ontology.getAxioms($AxiomType.DATA_PROPERTY_RANGE) )
-        <tr>
-            <td>${item.getProperty().getIRI().getFragment()}</a></td>
-            <td>$esc.getText("${item.getProperty().getIRI()}")</td>
-            <td>$esc.getText("${item.getRange()}")</td>
-        </tr>  
-        #end  
-    </table>  	
-#end
-##macro for Annotations
-#macro(class_annotatiions)
-<h2>Class Annotations</h2>
-
-        <table>
-        <tr>
-            <th>Property</th>
-            <th>IRI</th>
-            <th>Value</th>
-        </tr>
-    #foreach($ann in $axioms)
-        #if($ann.isOfType($AxiomType.DECLARATION) && $ann.getSignature().iterator().next().isOWLClass() )
-            #set( $aux = $ann.getSignature().iterator().next().asOWLClass() )
-            
-                    #foreach($iterable_element2 in $EntitySearcher.getAnnotationObjects($aux,$ontology)) 
-                        <tr>
-                            <td>${iterable_element2.getSignature().iterator().next().getIRI().getFragment()}</a></td>
-                            <td>$esc.getText("${iterable_element2.getSignature().iterator().next().getIRI().getFragment()}")</td>
-                            <td>${iterable_element2.getValue()}</td>
-                        </tr>  
+#foreach ($element in $ontology.getAxioms($AxiomType.DECLARATION))
+		#if(${element.getSignature().iterator().next().isOWLClass()}) 
+				#set($cls = ${element.getSignature().iterator().next().asOWLClass()})
+				#foreach($iterable in ${EntitySearcher.getSuperClasses($cls, $ontology)})
+                
+                    #if(${iterable.isClassExpressionLiteral()})
+                    <tr>
+                        <td><a href="./classes/${iterable.getSignature().iterator().next().getIRI().getFragment()}.html">${iterable.getSignature().iterator().next().getIRI().getFragment()}</a><br></td>
+                        <td>$esc.getText("${iterable.getSignature().iterator().next().getIRI()}")</td>
+                    </tr>
                     #end
-        #end
-    #end
-    </table>
+				#end
+               
+			#end
+		#end
+    </table>   
+    #*
+    		for (OWLDeclarationAxiom iterable_element : this.ontology.getAxioms(AxiomType.DECLARATION)) {
+			if(iterable_element.getSignature().iterator().next().isOWLClass()) {
+				OWLClass cls =iterable_element.getSignature().iterator().next().asOWLClass();
+				for (OWLClassExpression iterable: EntitySearcher.getSuperClasses(cls, ontology)) {
+					if(iterable.isClassExpressionLiteral()) {
+						System.out.println(iterable.getSignature().iterator().next().getIRI().getFragment());	
+					}
+					
+				}
+			}
+		}
+    *#
 #end
+#macro(supercls $OWLclass)
+#set( $superClasses = "${reasoner.getReasoner().getSuperClasses($OWLclass, true).getNodes()}")
+#if (${superClasses.size()} >= 1)
+	#foreach( $supercls in $superClasses)
+		#if (${ontology.containsClassInSignature($supercls.getIRI())}) 
+			$supercls
+		#end
+	#end
+#end
+#end
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,11 +67,7 @@
 </head>
 <body>
     <h1>Details for class  ${class.getIRI().getFragment()}</h1>
-    
-    #ind()
-    #dt_props()
-    #class_annotatiions()
-   
-	
+    #supercls($class)
+
 </body>
 </html>
