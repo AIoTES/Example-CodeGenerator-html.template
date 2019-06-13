@@ -28,6 +28,7 @@ import java.util.Properties;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
+import org.apache.velocity.tools.generic.EscapeTool;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -74,6 +75,11 @@ public class VelocityTest {
 			context.put("key7", "Maven Projects");
 			context.put("arrayOfMonths", arrayOfMonths);
 			context.put("date", new Date());
+			context.put("param","\"Pine Kernel\"@en");
+			context.put("esc",new EscapeTool());
+			
+			
+			//addToProperty
 			System.err.flush();
 			writer.flush();
 			System.err.println("");
@@ -114,6 +120,12 @@ public class VelocityTest {
 		System.out.println(sw.toString());
 	}
 
+	@Test
+	public void escapeTooltest() {
+		this.template = engine.getTemplate("escape.vm");
+		this.template.merge(context, sw);
+		System.out.println(sw.toString());
+	}
 	
 
 }
